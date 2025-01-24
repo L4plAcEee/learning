@@ -1,10 +1,16 @@
+'''
+基于OpenAI API格式的CLI AI查询工具.
+Author: l4place
+Date: 2025.01.01
+Version: 1.0
+'''
 import openai
 import requests
 import datetime
 
 # 设置全局变量
 api_key = ""  # 替换为你的 API Key
-user_id = "L4place"  # 替换为你的UserID
+user_id = ""  # 替换为你的UserID
 proxies = None  # 设置 proxies 为 None，表示不使用任何代理
 
 # 设置提示词
