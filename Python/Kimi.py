@@ -1,8 +1,9 @@
 '''
+@Author l4place
+@Date 2025.01.01
+@Version: 1.0
+
 基于OpenAI API格式的CLI AI查询工具.
-Author: l4place
-Date: 2025.01.01
-Version: 1.0
 '''
 import openai
 import requests

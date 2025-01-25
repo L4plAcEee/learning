@@ -1,8 +1,9 @@
+/* 
+@author l4place
+@date 2025.01.25
+*/
 #include <bits\stdc++.h>
 using namespace std;
-/*
-    编程之神保佑你！
-*/
 
 int main() {
     printf("Hello World!");
