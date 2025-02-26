@@ -1,2 +1,9 @@
+# 环境相关
+.venv/
+
+# 配置相关
 .vscode/
+.env
+
+# 杂项
 __run__.exe
