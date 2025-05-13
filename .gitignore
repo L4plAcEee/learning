@@ -10,3 +10,4 @@
 
 # 缓存
 __pycache__/
+build/main.exe
