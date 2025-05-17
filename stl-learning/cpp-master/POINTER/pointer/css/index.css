@@ -1,0 +1,36 @@
+#app > .row > div:first-child {
+  border: 1px solid gainsboro;
+}
+
+.item {
+  border: 1px solid gainsboro;
+}
+
+.btn {
+  margin: auto 10px auto 10px;
+}
+
+.card, .code-table {
+  font-size: 22px;
+}
+
+.memory {
+  height: 100vh;
+  overflow-y: scroll;
+  padding-top: 10px;
+  padding-bottom: 50px;
+}
+
+
+code {
+  height: 300px;
+  overflow-y: scroll;
+}
+
+.font-sm {
+  font-size: 18px;
+}
+
+.btn-struct:hover {
+  background-color: beige;
+}

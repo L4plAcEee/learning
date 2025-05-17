@@ -1,0 +1,28 @@
+span.dots {
+  display: none !important;
+}
+
+.toc-title {
+  font-size: 2rem !important;
+}
+
+.toc-h1 {
+  color: #4183CC !important;
+  font-weight: bold !important;
+  font-size: 1.2rem;
+}
+
+.toc-h2, .toc-h3, .toc-h4 {
+  color: #4183CF !important;
+  font-size: 1.0rem;
+}
+
+.toc-h2 {
+  font-size: 1.2rem;
+}
+
+
+.toc-h1:hover, .toc-h2:hover, .toc-h3:hover, .toc-h4:hover {
+  color: #4183EF !important;
+  text-decoration: underline !important;
+}
