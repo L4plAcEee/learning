@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr" class="client-nojs">
+<head>
+<title>默认比较(C++20 起)</title>
+<meta charset="UTF-8">
+<meta name="generator" content="MediaWiki 1.21.2">
+<link rel="shortcut icon" href="../../../common/favicon.ico">
+<link rel="stylesheet" href="../../../common/ext.css">
+<meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="../../../common/site_modules.css">
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}#toc{display:none}.editsection{display:none}
+/* cache key: mwiki1-mwiki_zh_:resourceloader:filter:minify-css:7:15cea3ec788a65b5187d4018eed543bf */</style>
+
+<script src="../../../common/startup_scripts.js"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"cpp/language/default_comparisons","wgTitle":"cpp/language/default comparisons","wgCurRevisionId":70888,"wgArticleId":10710,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"zh","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"zh","wgMonthNames":["","1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],"wgMonthNamesShort":["","1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],"wgRelevantPageName":"cpp/language/default_comparisons","wgUserVariant":"zh","wgRestrictionEdit":[],"wgRestrictionMove":[]});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":0,"showtoolbar":1,"skin":"cppreference2","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":0,
+"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"variant":"zh","language":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"gadget-MathJax":1,"gadget-ColiruCompiler":1});;},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});;},{},{});
+/* cache key: mwiki1-mwiki_zh_:resourceloader:filter:minify-js:7:258d7cd6aa9aa67dee25e01fb6a9e505 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-cpp {line-height: normal;}
+.source-cpp li, .source-cpp pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for cpp
+ * CSS class: source-cpp, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.cpp.source-cpp .de1, .cpp.source-cpp .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.cpp.source-cpp  {font-family:monospace;}
+.cpp.source-cpp .imp {font-weight: bold; color: red;}
+.cpp.source-cpp li, .cpp.source-cpp .li1 {font-weight: normal; vertical-align:top;}
+.cpp.source-cpp .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.cpp.source-cpp .li2 {font-weight: bold; vertical-align:top;}
+.cpp.source-cpp .kw1 {color: #0000dd;}
+.cpp.source-cpp .kw2 {color: #0000ff;}
+.cpp.source-cpp .kw3 {color: #0000dd;}
+.cpp.source-cpp .kw4 {color: #0000ff;}
+.cpp.source-cpp .co1 {color: #909090;}
+.cpp.source-cpp .co2 {color: #339900;}
+.cpp.source-cpp .coMULTI {color: #ff0000; font-style: italic;}
+.cpp.source-cpp .es0 {color: #008000; font-weight: bold;}
+.cpp.source-cpp .es1 {color: #008000; font-weight: bold;}
+.cpp.source-cpp .es2 {color: #008000; font-weight: bold;}
+.cpp.source-cpp .es3 {color: #008000; font-weight: bold;}
+.cpp.source-cpp .es4 {color: #008000; font-weight: bold;}
+.cpp.source-cpp .es5 {color: #008000; font-weight: bold;}
+.cpp.source-cpp .br0 {color: #008000;}
+.cpp.source-cpp .sy0 {color: #008000;}
+.cpp.source-cpp .sy1 {color: #000080;}
+.cpp.source-cpp .sy2 {color: #000040;}
+.cpp.source-cpp .sy3 {color: #000040;}
+.cpp.source-cpp .sy4 {color: #008080;}
+.cpp.source-cpp .st0 {color: #008000;}
+.cpp.source-cpp .nu0 {color: #000080;}
+.cpp.source-cpp .nu6 {color: #000080;}
+.cpp.source-cpp .nu8 {color: #000080;}
+.cpp.source-cpp .nu12 {color: #000080;}
+.cpp.source-cpp .nu16 {color:#000080;}
+.cpp.source-cpp .nu17 {color:#000080;}
+.cpp.source-cpp .nu18 {color:#000080;}
+.cpp.source-cpp .nu19 {color:#000080;}
+.cpp.source-cpp .ln-xtra, .cpp.source-cpp li.ln-xtra, .cpp.source-cpp div.ln-xtra {background-color: #ffc;}
+.cpp.source-cpp span.xtra { display:block; }
+
+/*]]>*/
+</style><!--[if lt IE 7]><style type="text/css">body{behavior:url("/mwiki/skins/cppreference2/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-cpp_language_default_comparisons skin-cppreference2 action-view cpp-navbar">
+        <!-- header -->
+        <!-- /header -->
+        <!-- content -->
+<div id="cpp-content-base">
+            <div id="content">
+                <a id="top"></a>
+                <div id="mw-js-message" style="display:none;"></div>
+                                <!-- firstHeading -->
+<h1 id="firstHeading" class="firstHeading">默认比较<span class="t-mark-rev t-since-cxx20">(C++20 起)</span></h1>
+                <!-- /firstHeading -->
+                <!-- bodyContent -->
+                <div id="bodyContent">
+                                        <!-- tagline -->
+                    <div id="siteSub">来自cppreference.com</div>
+                    <!-- /tagline -->
+                                        <!-- subtitle -->
+                    <div id="contentSub"><span class="subpages">&lt; <a href="../../cpp.html" title="cpp">cpp</a>‎ | <a href="../language.html" title="cpp/language">language</a></span></div>
+                    <!-- /subtitle -->
+                                                            <!-- bodycontent -->
+                    <div id="mw-content-text" lang="zh" dir="ltr" class="mw-content-ltr"><div class="t-navbar" style=""><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../../cpp.html" title="cpp"> C++</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em">
+<tr class="t-nv"><td colspan="5"> <a href="../language.html" title="cpp/language">语言</a> </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="../header.html" title="cpp/header">标准库头文件</a> </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="../freestanding.html" title="cpp/freestanding"> 自立与有宿主实现</a> </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="../named_req.html" title="cpp/named req">具名要求</a> </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="../utility.html#.E8.AF.AD.E8.A8.80.E6.94.AF.E6.8C.81" title="cpp/utility">语言支持库</a> </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="../concepts.html" title="cpp/concepts">概念库</a> <span class="t-mark-rev t-since-cxx20">(C++20)</span> </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="../error.html" title="cpp/error">诊断库</a> </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="../utility.html" title="cpp/utility">工具库</a> </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="../string.html" title="cpp/string">字符串库</a> </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="../container.html" title="cpp/container">容器库</a> </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="../iterator.html" title="cpp/iterator">迭代器库</a> </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="../ranges.html" title="cpp/ranges"> 范围库</a> <span class="t-mark-rev t-since-cxx20">(C++20)</span> </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="../algorithm.html" title="cpp/algorithm">算法库</a> </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="../numeric.html" title="cpp/numeric">数值库</a> </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="../locale.html" title="cpp/locale">本地化库</a> </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="../io.html" title="cpp/io">输入/输出库</a> </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="../filesystem.html" title="cpp/filesystem">文件系统库</a> <span class="t-mark-rev t-since-cxx17">(C++17)</span> </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="../regex.html" title="cpp/regex">正则表达式库</a> <span class="t-mark-rev t-since-cxx11">(C++11)</span> </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="../atomic.html" title="cpp/atomic">原子操作库</a> <span class="t-mark-rev t-since-cxx11">(C++11)</span> </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="../thread.html" title="cpp/thread">线程支持库</a> <span class="t-mark-rev t-since-cxx11">(C++11)</span> </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="../experimental.html" title="cpp/experimental">技术规范</a> </td></tr>
+</table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../language.html" title="cpp/language">C++ 语言</a></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="expressions.html" title="cpp/language/expressions"> 表达式</a><div class="t-navbar-menu"><div><div style="display:inline-block">
+<div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em">
+<tr class="t-nv-h2"><td colspan="5"> 概述 </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="value_category.html" title="cpp/language/value category"> 值类别</a>（左值 lvalue、右值 rvalue、亡值 xvalue）</td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="eval_order.html" title="cpp/language/eval order"> 求值顺序</a>（序列点）</td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="constant_expression.html" title="cpp/language/constant expression"> 常量表达式</a></td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="expressions.html#.E4.B8.8D.E6.B1.82.E5.80.BC.E8.A1.A8.E8.BE.BE.E5.BC.8F" title="cpp/language/expressions"> 不求值表达式</a></td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="expressions.html#.E5.88.9D.E7.AD.89.E8.A1.A8.E8.BE.BE.E5.BC.8F" title="cpp/language/expressions"> 初等表达式</a></td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="lambda.html" title="cpp/language/lambda">lambda 表达式</a><span class="t-mark-rev t-since-cxx11">(C++11)</span></td></tr>
+<tr class="t-nv-h2"><td colspan="5"> 字面量 </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="integer_literal.html" title="cpp/language/integer literal">整数字面量</a></td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="floating_literal.html" title="cpp/language/floating literal">浮点字面量</a></td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="bool_literal.html" title="cpp/language/bool literal">布尔字面量</a></td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="character_literal.html" title="cpp/language/character literal">字符字面量</a>，包含<a href="escape.html" title="cpp/language/escape">转义序列</a></td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="string_literal.html" title="cpp/language/string literal">字符串字面量</a></td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="nullptr.html" title="cpp/language/nullptr">空指针字面量</a><span class="t-mark-rev t-since-cxx11">(C++11)</span></td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="user_literal.html" title="cpp/language/user literal">用户定义字面量</a><span class="t-mark-rev t-since-cxx11">(C++11)</span></td></tr>
+<tr class="t-nv-h2"><td colspan="5"> 运算符 </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="operator_assignment.html" title="cpp/language/operator assignment"> 赋值运算符</a>:
+<code>a=b</code>, <code>a+=b</code>, <code>a-=b</code>, <code>a*=b</code>, <code>a/=b</code>, <code>a%=b</code>, <code>a&amp;=b</code>, <code>a|=b</code>, <code>a^=b</code>, <code>a&lt;&lt;=b</code>, <code>a&gt;&gt;=b</code></td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="operator_incdec.html" title="cpp/language/operator incdec"> 自增与自减</a>: <code>++a</code>, <code>--a</code>, <code>a++</code>, <code>a--</code></td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="operator_arithmetic.html" title="cpp/language/operator arithmetic"> 算术运算符</a>:
+<code>+a</code>, <code>-a</code>, <code>a+b</code>, <code>a-b</code>, <code>a*b</code>, <code>a/b</code>, <code>a%b</code>, <code>~a</code>, <code>a&amp;b</code>, <code>a|b</code>, <code>a^b</code>, <code>a&lt;&lt;b</code>, <code>a&gt;&gt;b</code> </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="operator_logical.html" title="cpp/language/operator logical"> 逻辑运算符</a>: <code>a||b</code>, <code>a&amp;&amp;b</code>, <code>!a</code></td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="operator_comparison.html" title="cpp/language/operator comparison"> 比较运算符</a>: <code>a==b</code>, <code>a!=b</code>, <code>a&lt;b</code>, <code>a&gt;b</code>, <code>a&lt;=b</code>, <code>a&gt;=b</code>, <code>a&lt;=&gt;b</code><span class="t-mark-rev t-since-cxx20">(C++20)</span></td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="operator_member_access.html" title="cpp/language/operator member access"> 成员访问运算符</a>: <code>a[b]</code>, <code>*a</code>, <code>&amp;a</code>, <code>a-&gt;b</code>, <code>a.b</code>, <code>a-&gt;*b</code>, <code>a.*b</code></td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="operator_other.html" title="cpp/language/operator other"> 其他运算符</a>: <code>a(...)</code>, <code>a,b</code>, <code>a?b:c</code> </td></tr>
+<tr class="t-nv"><td colspan="5"> <strong class="selflink">默认比较</strong><span class="t-mark-rev t-since-cxx20">(C++20)</span></td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="operator_alternative.html" title="cpp/language/operator alternative">运算符的代用表示</a></td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="operator_precedence.html" title="cpp/language/operator precedence">优先级和结合性</a></td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="fold.html" title="cpp/language/fold">折叠表达式</a><span class="t-mark-rev t-since-cxx17">(C++17)</span></td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="new.html" title="cpp/language/new">new 表达式</a></td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="delete.html" title="cpp/language/delete">delete 表达式</a></td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="throw.html" title="cpp/language/throw">throw 表达式</a></td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="alignof.html" title="cpp/language/alignof">alignof</a></td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="sizeof.html" title="cpp/language/sizeof">sizeof</a></td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="sizeof....html" title="cpp/language/sizeof...">sizeof...</a><span class="t-mark-rev t-since-cxx11">(C++11)</span></td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="typeid.html" title="cpp/language/typeid">typeid</a></td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="noexcept.html" title="cpp/language/noexcept">noexcept</a><span class="t-mark-rev t-since-cxx11">(C++11)</span></td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="operators.html" title="cpp/language/operators">运算符重载</a></td></tr>
+<tr class="t-nv-h2"><td colspan="5"> 类型转换 </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="implicit_cast.html" title="cpp/language/implicit conversion">隐式转换</a></td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="const_cast.html" title="cpp/language/const cast">const_cast</a></td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="static_cast.html" title="cpp/language/static cast">static_cast</a></td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="reinterpret_cast.html" title="cpp/language/reinterpret cast">reinterpret_cast</a></td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="dynamic_cast.html" title="cpp/language/dynamic cast">dynamic_cast</a></td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="explicit_cast.html" title="cpp/language/explicit cast">显式转换</a> <code>(T)a</code>, <code>T(a)</code></td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="cast_operator.html" title="cpp/language/cast operator">用户定义转换</a></td></tr>
+</table></div>
+</div><div></div></div></div></div><div class="t-navbar-sep"> </div></div>
+<p>提供一种方式，以要求编译器为某个类生成相一致的比较运算符。
+</p>
+<h3><span class="mw-headline" id=".E8.AF.AD.E6.B3.95">语法</span></h3>
+<table class="t-sdsc-begin">
+
+<tr>
+<td colspan="10" class="t-sdsc-sep">
+</td></tr>
+<tr class="t-sdsc">
+<td> <span class="t-spar">返回类型</span> <span class="t-spar">类名</span><code><b>::operator</b></code><span class="t-spar">运算符</span><code><b>(</b></code> <code><b>const</b></code> <span class="t-spar">类名</span> <code><b>&amp;</b></code> <code><b>) const</b></code> <code><b>&amp;</b></code><span class="t-mark">(可选)</span> <code><b>= default;</b></code>
+</td>
+<td> (1)
+</td>
+<td class="t-sdsc-nopad">
+</td></tr>
+
+
+
+<tr>
+<td colspan="10" class="t-sdsc-sep">
+</td></tr>
+<tr class="t-sdsc">
+<td> <code><b>friend</b></code> <span class="t-spar">返回类型</span> <code><b>operator</b></code><span class="t-spar">运算符</span><code><b>(</b></code> <code><b>const</b></code> <span class="t-spar">类名</span> <code><b>&amp;</b></code><code><b>,</b></code> <code><b>const</b></code> <span class="t-spar">类名</span> <code><b>&amp;</b></code> <code><b>) = default;</b></code>
+</td>
+<td> (2)
+</td>
+<td class="t-sdsc-nopad">
+</td></tr>
+
+
+
+<tr>
+<td colspan="10" class="t-sdsc-sep">
+</td></tr>
+<tr class="t-sdsc">
+<td> <code><b>friend</b></code> <span class="t-spar">返回类型</span> <code><b>operator</b></code><span class="t-spar">运算符</span><code><b>(</b></code> <span class="t-spar">类名</span><code><b>,</b></code> <span class="t-spar">类名</span> <code><b>) = default;</b></code>
+</td>
+<td> (3)
+</td>
+<td class="t-sdsc-nopad">
+</td></tr>
+
+
+
+<tr>
+<td colspan="10" class="t-sdsc-sep">
+</td></tr></table>
+<table class="t-par-begin">
+
+
+<tr class="t-par">
+<td>  <span class="t-spar">运算符</span>
+</td>
+<td> -
+</td>
+<td>  比较运算符（<code>&lt;=&gt;</code>，<code>==</code>，<code>!=</code>，<code>&lt;</code>，<code>&gt;</code>，<code>&lt;=</code>，或 <code>&gt;=</code>）
+</td></tr>
+<tr class="t-par">
+<td>  <span class="t-spar">返回类型</span>
+</td>
+<td> -
+</td>
+<td>  运算符函数的返回类型
+<ul><li> 如果<span class="t-spar">运算符</span>是 <code><b>&lt;=&gt;</b></code>，必须是 <a href="auto.html" title="cpp/language/auto"><code>auto</code></a> 或<a href="default_comparisons.html#.E8.87.AA.E5.AE.9A.E4.B9.89.E7.9A.84.E6.AF.94.E8.BE.83.E5.92.8C.E6.AF.94.E8.BE.83.E7.B1.BB.E5.88.AB">三种比较类别</a>之一，
+</li><li> 其他情况下，必须是 <span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="kw4">bool</span></span></span>
+</li></ul>
+</td></tr></table>
+<h3><span class="mw-headline" id=".E8.A7.A3.E9.87.8A">解释</span></h3>
+<div class="t-li1"><span class="t-li">1)</span> 将默认比较函数声明为成员函数。</div>
+<div class="t-li1"><span class="t-li">2)</span> 将默认比较函数声明为非成员函数。</div>
+<div class="t-li1"><span class="t-li">3)</span> 将默认比较函数声明为非成员函数。参数按值传递。</div>
+<p>每当有值通过 <code>&lt;</code>，<code>&gt;</code>，<code>&lt;=</code>，<code>&gt;=</code>，或 <code>&lt;=&gt;</code> 被比较且重载决议选择该重载时，三路比较函数（不管是否为默认）会被调用。
+</p><p>每当有值通过 <code>==</code> 或 <code>!=</code> 被比较且重载决议选择该重载时，相等比较函数（不管是否为默认）会被调用。
+</p><p>与默认的特殊成员函数类似，默认的比较函数在<a href="definition.html#ODR-use" title="cpp/language/definition">被 ODR 使用</a>或<a href="constant_expression.html#Functions_and_variables_needed_for_constant_evaluation" title="cpp/language/constant expression">被常量求值所需</a>时被定义。
+</p>
+<h3><span class="mw-headline" id=".E9.BB.98.E8.AE.A4.E6.AF.94.E8.BE.83">默认比较</span></h3>
+<h4><span class="mw-headline" id=".E9.BB.98.E8.AE.A4.E4.B8.89.E8.B7.AF.E6.AF.94.E8.BE.83">默认三路比较</span></h4>
+<p>默认的 <code>operator&lt;=&gt;</code> 通过依次以计算 <code>&lt;=&gt;</code> 比较基类（从左到右，深度优先），然后是非静态成员（按声明顺序）子对象，递归地展开数组成员（按下标递增），并在发现不相等的结果时提前停止的方式执行字典序比较，即：
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="cpp source-cpp"><pre class="de1"><span class="kw1">for</span> <span class="coMULTI">/* T 的每个基类或子对象 o */</span>
+   <span class="kw1">if</span> <span class="br0">(</span><span class="kw4">auto</span> cmp <span class="sy1">=</span> <span class="kw1">static_cast</span><span class="sy1">&lt;</span>R<span class="sy1">&gt;</span><span class="br0">(</span>compare<span class="br0">(</span>lhs.<span class="me1">o</span>, rhs.<span class="me1">o</span><span class="br0">)</span><span class="br0">)</span><span class="sy4">;</span> cmp <span class="sy3">!</span><span class="sy1">=</span> <span class="nu0">0</span><span class="br0">)</span> <span class="kw1">return</span> cmp<span class="sy4">;</span>
+<span class="kw1">return</span> <span class="kw1">static_cast</span><span class="sy1">&lt;</span>R<span class="sy1">&gt;</span><span class="br0">(</span>strong_ordering<span class="sy4">::</span><span class="me2">equal</span><span class="br0">)</span><span class="sy4">;</span></pre></div></div>
+<p>虚基子对象是否会多次被比较未被指明。
+</p><p>如果被声明的返回类型是 <span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="kw4">auto</span></span></span>，实际的返回类型是要被比较的基类，成员子对象和成员数组元素的公共比较类别（见 <a href="../utility/compare/common_comparison_category.html" title="cpp/utility/compare/common comparison category"><tt>std::common_comparison_category</tt></a>）。这样在编写返回类型非平凡地依赖于成员的场合时会更容易，例如：
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="cpp source-cpp"><pre class="de1"><span class="kw1">template</span><span class="sy1">&lt;</span><span class="kw1">class</span> T1, <span class="kw1">class</span> T2<span class="sy1">&gt;</span>
+<span class="kw1">struct</span> P <span class="br0">{</span>
+ T1 x1<span class="sy4">;</span>
+ T2 x2<span class="sy4">;</span>
+ <span class="kw1">friend</span> <span class="kw4">auto</span> operator<span class="sy1">&lt;=&gt;</span><span class="br0">(</span><span class="kw4">const</span> P<span class="sy3">&amp;</span>, <span class="kw4">const</span> P<span class="sy3">&amp;</span><span class="br0">)</span> <span class="sy1">=</span> <span class="kw1">default</span><span class="sy4">;</span>
+<span class="br0">}</span><span class="sy4">;</span></pre></div></div>
+<p>将返回类型设为 <span class="t-c"><span class="mw-geshi cpp source-cpp">R</span></span> ，每一对子对象 <span class="t-c"><span class="mw-geshi cpp source-cpp">a</span></span>, <span class="t-c"><span class="mw-geshi cpp source-cpp">b</span></span> 按如下方法进行比较：
+</p>
+<ul><li> 如果 <span class="t-c"><span class="mw-geshi cpp source-cpp">a <span class="sy1">&lt;=&gt;</span> b</span></span> 可用，比较结果为 <span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="kw1">static_cast</span><span class="sy1">&lt;</span>R<span class="sy1">&gt;</span><span class="br0">(</span>a <span class="sy1">&lt;=&gt;</span> b<span class="br0">)</span></span></span>。
+</li><li> 否则，如果 <span class="t-c"><span class="mw-geshi cpp source-cpp">operator<span class="sy1">&lt;=&gt;</span></span></span> 的重载决议为 <span class="t-c"><span class="mw-geshi cpp source-cpp">a <span class="sy1">&lt;=&gt;</span> b</span></span> 执行且至少找到一个候选，比较未定义（<code>operator&lt;=&gt;</code> 被定义为弃置的）。
+</li><li> 否则，如果 <span class="t-c"><span class="mw-geshi cpp source-cpp">R</span></span> 不是一个比较类别（见下文）或 <span class="t-c"><span class="mw-geshi cpp source-cpp">a <span class="sy1">==</span> b</span></span> 与 <span class="t-c"><span class="mw-geshi cpp source-cpp">a <span class="sy1">&lt;</span> b</span></span> 有其一不可用，比较未定义（<code>operator&lt;=&gt;</code> 被定义为弃置的）。
+</li><li> 否则，如果 <span class="t-c"><span class="mw-geshi cpp source-cpp">R</span></span> 是 <span class="t-c"><span class="mw-geshi cpp source-cpp">std<span class="sy4">::</span><span class="me2">strong_ordering</span></span></span>，结果是
+</li></ul>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="cpp source-cpp"><pre class="de1">a <span class="sy1">==</span> b <span class="sy4">?</span> R<span class="sy4">::</span><span class="me2">equal</span> <span class="sy4">:</span>
+a <span class="sy1">&lt;</span> b  <span class="sy4">?</span> R<span class="sy4">::</span><span class="me2">less</span> <span class="sy4">:</span>
+         R<span class="sy4">::</span><span class="me2">greater</span></pre></div></div>
+<ul><li> 否则，如果 <span class="t-c"><span class="mw-geshi cpp source-cpp">R</span></span> 是 <span class="t-c"><span class="mw-geshi cpp source-cpp">std<span class="sy4">::</span><span class="me2">weak_ordering</span></span></span>，结果是
+</li></ul>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="cpp source-cpp"><pre class="de1">a <span class="sy1">==</span> b <span class="sy4">?</span> R<span class="sy4">::</span><span class="me2">equivalent</span> <span class="sy4">:</span>
+a <span class="sy1">&lt;</span> b  <span class="sy4">?</span> R<span class="sy4">::</span><span class="me2">less</span> <span class="sy4">:</span>
+         R<span class="sy4">::</span><span class="me2">greater</span></pre></div></div>
+<ul><li> 否则（<span class="t-c"><span class="mw-geshi cpp source-cpp">R</span></span> 是 <span class="t-c"><span class="mw-geshi cpp source-cpp">std<span class="sy4">::</span><span class="me2">partial_ordering</span></span></span>），结果是
+</li></ul>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="cpp source-cpp"><pre class="de1">a <span class="sy1">==</span> b <span class="sy4">?</span> R<span class="sy4">::</span><span class="me2">equal</span> <span class="sy4">:</span>
+a <span class="sy1">&lt;</span> b  <span class="sy4">?</span> R<span class="sy4">::</span><span class="me2">less</span> <span class="sy4">:</span>
+b <span class="sy1">&lt;</span> a  <span class="sy4">?</span> R<span class="sy4">::</span><span class="me2">greater</span> <span class="sy4">:</span> 
+         R<span class="sy4">::</span><span class="me2">unordered</span></pre></div></div>
+<p>与任何 <span class="t-c"><span class="mw-geshi cpp source-cpp">operator<span class="sy1">&lt;=&gt;</span></span></span> 重载的规则一样，默认的 <code>&lt;=&gt;</code> 重载也允许类型被 <code>&lt;</code>，<code>&gt;</code>，<code>&lt;=</code>，和 <code>&gt;=</code> 比较。
+</p><p><br>
+如果 <span class="t-c"><span class="mw-geshi cpp source-cpp">operator<span class="sy1">&lt;=&gt;</span></span></span> 是默认版本且 <span class="t-c"><span class="mw-geshi cpp source-cpp">operator<span class="sy1">==</span></span></span> 完全没有被声明，那么 <span class="t-c"><span class="mw-geshi cpp source-cpp">operator<span class="sy1">==</span></span></span> 将隐式地采用默认版本。
+</p>
+<div class="t-example"><div class="t-example-live-link"><div class="coliru-btn coliru-btn-run-init">运行此代码</div></div>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="cpp source-cpp"><pre class="de1"><span class="co2">#include &lt;compare&gt;</span>
+<span class="kw1">struct</span> Point <span class="br0">{</span>
+  <span class="kw4">int</span> x<span class="sy4">;</span>
+  <span class="kw4">int</span> y<span class="sy4">;</span>
+  <span class="kw4">auto</span> operator<span class="sy1">&lt;=&gt;</span><span class="br0">(</span><span class="kw4">const</span> Point<span class="sy3">&amp;</span><span class="br0">)</span> <span class="kw4">const</span> <span class="sy1">=</span> <span class="kw1">default</span><span class="sy4">;</span>
+  <span class="co1">// ... 非比较函数 ...</span>
+<span class="br0">}</span><span class="sy4">;</span>
+<span class="co1">// 编译器生成全部六个比较运算符</span>
+ 
+<span class="co2">#include &lt;iostream&gt;</span>
+<span class="co2">#include &lt;set&gt;</span>
+<span class="kw4">int</span> main<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+  Point pt1<span class="br0">{</span><span class="nu0">1</span>, <span class="nu0">1</span><span class="br0">}</span>, pt2<span class="br0">{</span><span class="nu0">1</span>, <span class="nu0">2</span><span class="br0">}</span><span class="sy4">;</span>
+  <a href="../container/set.html"><span class="kw1277">std::<span class="me2">set</span></span></a><span class="sy1">&lt;</span>Point<span class="sy1">&gt;</span> s<span class="sy4">;</span> <span class="co1">// ok</span>
+  s.<span class="me1">insert</span><span class="br0">(</span>pt1<span class="br0">)</span><span class="sy4">;</span>     <span class="co1">// ok</span>
+  <a href="../io/cout.html"><span class="kw1758">std::<span class="me2">cout</span></span></a> <span class="sy1">&lt;&lt;</span> <a href="../io/manip/boolalpha.html"><span class="kw1764">std::<span class="me2">boolalpha</span></span></a>
+    <span class="sy1">&lt;&lt;</span> <span class="br0">(</span>pt1 <span class="sy1">==</span> pt2<span class="br0">)</span> <span class="sy1">&lt;&lt;</span> <span class="st0">' '</span> <span class="co1">// false；operator== 隐式地采用默认版本</span>
+    <span class="sy1">&lt;&lt;</span> <span class="br0">(</span>pt1 <span class="sy3">!</span><span class="sy1">=</span> pt2<span class="br0">)</span> <span class="sy1">&lt;&lt;</span> <span class="st0">' '</span> <span class="co1">// true</span>
+    <span class="sy1">&lt;&lt;</span> <span class="br0">(</span>pt1 <span class="sy1">&lt;</span>  pt2<span class="br0">)</span> <span class="sy1">&lt;&lt;</span> <span class="st0">' '</span> <span class="co1">// true</span>
+    <span class="sy1">&lt;&lt;</span> <span class="br0">(</span>pt1 <span class="sy1">&lt;=</span> pt2<span class="br0">)</span> <span class="sy1">&lt;&lt;</span> <span class="st0">' '</span> <span class="co1">// true</span>
+    <span class="sy1">&lt;&lt;</span> <span class="br0">(</span>pt1 <span class="sy1">&gt;</span>  pt2<span class="br0">)</span> <span class="sy1">&lt;&lt;</span> <span class="st0">' '</span> <span class="co1">// false</span>
+    <span class="sy1">&lt;&lt;</span> <span class="br0">(</span>pt1 <span class="sy1">&gt;=</span> pt2<span class="br0">)</span> <span class="sy1">&lt;&lt;</span> <span class="st0">' '</span><span class="sy4">;</span><span class="co1">// false</span>
+<span class="br0">}</span></pre></div></div>
+</div>
+<h4><span class="mw-headline" id=".E9.BB.98.E8.AE.A4.E7.9B.B8.E7.AD.89.E6.AF.94.E8.BE.83">默认相等比较</span></h4>
+<p>类可以定义 <span class="t-c"><span class="mw-geshi cpp source-cpp">operator<span class="sy1">==</span></span></span> 为默认版本，它返回一个 <span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="kw4">bool</span></span></span> 值。这会以声明顺序对每个基类和成员子对象生成一轮相等比较。两个对象在它们每个基类和成员相等时相等。该检测会以声明顺序在找到基类或成员里出现不相等的情况下短路。
+</p><p>与任何 <span class="t-c"><span class="mw-geshi cpp source-cpp">operator<span class="sy1">==</span></span></span> 重载的规则一样，不等测试也能被允许：
+</p>
+<div class="t-example"><div class="t-example-live-link"><div class="coliru-btn coliru-btn-run-init">运行此代码</div></div>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="cpp source-cpp"><pre class="de1"><span class="kw1">struct</span> Point <span class="br0">{</span>
+  <span class="kw4">int</span> x<span class="sy4">;</span>
+  <span class="kw4">int</span> y<span class="sy4">;</span>
+  <span class="kw4">bool</span> operator<span class="sy1">==</span><span class="br0">(</span><span class="kw4">const</span> Point<span class="sy3">&amp;</span><span class="br0">)</span> <span class="kw4">const</span> <span class="sy1">=</span> <span class="kw1">default</span><span class="sy4">;</span>
+  <span class="co1">// ... 非比较函数 ...</span>
+<span class="br0">}</span><span class="sy4">;</span>
+<span class="co1">// 编译器生成分成员的相等比较</span>
+ 
+<span class="co2">#include &lt;iostream&gt;</span>
+<span class="kw4">int</span> main<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+  Point pt1<span class="br0">{</span><span class="nu0">3</span>, <span class="nu0">5</span><span class="br0">}</span>, pt2<span class="br0">{</span><span class="nu0">2</span>, <span class="nu0">5</span><span class="br0">}</span><span class="sy4">;</span>
+  <a href="../io/cout.html"><span class="kw1758">std::<span class="me2">cout</span></span></a> <span class="sy1">&lt;&lt;</span> <a href="../io/manip/boolalpha.html"><span class="kw1764">std::<span class="me2">boolalpha</span></span></a>
+    <span class="sy1">&lt;&lt;</span> <span class="br0">(</span>pt1 <span class="sy3">!</span><span class="sy1">=</span> pt2<span class="br0">)</span> <span class="sy1">&lt;&lt;</span> <span class="st0">'<span class="es1">\n</span>'</span>  <span class="co1">// true</span>
+    <span class="sy1">&lt;&lt;</span> <span class="br0">(</span>pt1 <span class="sy1">==</span> pt1<span class="br0">)</span> <span class="sy1">&lt;&lt;</span> <span class="st0">'<span class="es1">\n</span>'</span><span class="sy4">;</span> <span class="co1">// true</span>
+  <span class="kw1">struct</span> <span class="br0">[</span><span class="br0">[</span>maybe_unused<span class="br0">]</span><span class="br0">]</span> <span class="br0">{</span> <span class="kw4">int</span> x<span class="br0">{</span><span class="br0">}</span>, y<span class="br0">{</span><span class="br0">}</span><span class="sy4">;</span> <span class="br0">}</span> p, q<span class="sy4">;</span>
+  <span class="co1">// if (p == q) { } // 错误：'operator==' 未被定义</span>
+<span class="br0">}</span></pre></div></div>
+</div>
+<h4><span class="mw-headline" id=".E5.85.B6.E4.BB.96.E9.BB.98.E8.AE.A4.E6.AF.94.E8.BE.83.E6.93.8D.E4.BD.9C.E7.AC.A6">其他默认比较操作符</span></h4>
+<p>四个关系运算符（<code>&lt;</code>，<code>&gt;</code>，<code>&lt;=</code>，<code>&gt;=</code>）均可以显式指定为默认版本。默认的关系运算符必须返回 <span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="kw4">bool</span></span></span>。
+</p><p>如果 <code>x &lt;=&gt; y</code> 的重载决议（包括参数交换后的 <code>operator&lt;=&gt;</code>）失败，或 <code>operator@</code> 无法被应用到 <code>x &lt;=&gt; y</code> 的结果，该操作符是弃置的。否则，默认的 <code>operator@</code> 在重载决议选择参数顺序不变的 <code>operator&lt;=&gt;</code> 时调用 <span class="t-c"><span class="mw-geshi cpp source-cpp">x <span class="sy1">&lt;=&gt;</span> y @ <span class="nu0">0</span></span></span> ，否则调用 <span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">0</span> @ y <span class="sy1">&lt;=&gt;</span> x</span></span>：
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="cpp source-cpp"><pre class="de1"><span class="kw1">struct</span> HasNoRelational <span class="br0">{</span><span class="br0">}</span><span class="sy4">;</span>
+ 
+<span class="kw1">struct</span> C <span class="br0">{</span>
+  <span class="kw1">friend</span> HasNoRelational operator<span class="sy1">&lt;=&gt;</span><span class="br0">(</span><span class="kw4">const</span> C<span class="sy3">&amp;</span>, <span class="kw4">const</span> C<span class="sy3">&amp;</span><span class="br0">)</span><span class="sy4">;</span>
+  <span class="kw4">bool</span> operator<span class="sy1">&lt;</span><span class="br0">(</span><span class="kw4">const</span> C<span class="sy3">&amp;</span><span class="br0">)</span> <span class="sy1">=</span> <span class="kw1">default</span><span class="sy4">;</span>                       <span class="co1">// OK：函数被弃置</span>
+<span class="br0">}</span><span class="sy4">;</span></pre></div></div>
+<p>与此类似，<code>operator!=</code> 也可以显式指定为默认版本。如果 <code>x &lt;=&gt; y</code> 的重载决议失败，或 <code>x == y</code> 结果的类型不为 <span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="kw4">bool</span></span></span>，它也会被弃置。默认的 <code>operator!=</code> 会根据重载决议的选择调用 <span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="sy3">!</span><span class="br0">(</span>x <span class="sy1">==</span> y<span class="br0">)</span></span></span> 或者 <span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="sy3">!</span><span class="br0">(</span>y <span class="sy1">==</span> x<span class="br0">)</span></span></span>。
+</p><p>指定关系运算符使用默认版本可用于创建可取址的函数。其他场合仅需提供 <span class="t-c"><span class="mw-geshi cpp source-cpp">operator<span class="sy1">&lt;=&gt;</span></span></span> 和 <span class="t-c"><span class="mw-geshi cpp source-cpp">operator<span class="sy1">==</span></span></span>。
+</p>
+<h3><span class="mw-headline" id=".E8.87.AA.E5.AE.9A.E4.B9.89.E7.9A.84.E6.AF.94.E8.BE.83.E5.92.8C.E6.AF.94.E8.BE.83.E7.B1.BB.E5.88.AB">自定义的比较和比较类别</span></h3>
+<p>在默认语义不适用的情况下，例如成员不能按顺序比较，或者不能采用自然比较，那么程序员可以自定义 <span class="t-c"><span class="mw-geshi cpp source-cpp">operator<span class="sy1">&lt;=&gt;</span></span></span> 并让编译器生成合适的比较运算符。比较运算符的种类由用户定义的 <span class="t-c"><span class="mw-geshi cpp source-cpp">operator<span class="sy1">&lt;=&gt;</span></span></span> 决定。
+</p><p>返回类型有三种：
+</p>
+<table class="wikitable" style="font-size:85%; text-align:center;">
+
+<tr>
+<th> 返回类型
+</th>
+<th> 运算符
+</th>
+<th> 等价的值
+</th>
+<th> 无法比较的值
+</th></tr>
+<tr>
+<td> <a href="../utility/compare/strong_ordering.html" title="cpp/utility/compare/strong ordering"><tt>std::strong_ordering</tt></a>
+</td>
+<td> == != &lt; &gt; &lt;= &gt;=
+</td>
+<td> 不可以被区分
+</td>
+<td> 不允许比较
+</td></tr>
+<tr>
+<td> <a href="../utility/compare/weak_ordering.html" title="cpp/utility/compare/weak ordering"><tt>std::weak_ordering</tt></a>
+</td>
+<td> == != &lt; &gt; &lt;= &gt;=
+</td>
+<td> 可以被区分
+</td>
+<td> 不允许比较
+</td></tr>
+<tr>
+<td> <a href="../utility/compare/partial_ordering.html" title="cpp/utility/compare/partial ordering"><tt>std::partial_ordering</tt></a>
+</td>
+<td> == != &lt; &gt; &lt;= &gt;=
+</td>
+<td> 可以被区分
+</td>
+<td> 允许比较
+</td></tr></table>
+<h4><span class="mw-headline" id=".E5.BC.BA.E5.BA.8F">强序</span></h4>
+<p>在这个自定义 <code>operator&lt;=&gt;</code> 返回 <a href="../utility/compare/strong_ordering.html" title="cpp/utility/compare/strong ordering"><tt>std::strong_ordering</tt></a> 的例子中，该操作符比较了类的每个成员，只是顺序不同（在这里名在姓前面比较）。
+</p>
+<div class="t-example"><div class="t-example-live-link"><div class="coliru-btn coliru-btn-run-init">运行此代码</div></div>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="cpp source-cpp"><pre class="de1"><span class="co2">#include &lt;compare&gt;</span>
+<span class="co2">#include &lt;string&gt;</span>
+<span class="kw1">struct</span> Base <span class="br0">{</span>
+    <a href="../string/basic_string.html"><span class="kw1230">std::<span class="me2">string</span></span></a> zip<span class="sy4">;</span>
+    <span class="kw4">auto</span> operator<span class="sy1">&lt;=&gt;</span><span class="br0">(</span><span class="kw4">const</span> Base<span class="sy3">&amp;</span><span class="br0">)</span> <span class="kw4">const</span> <span class="sy1">=</span> <span class="kw1">default</span><span class="sy4">;</span>
+<span class="br0">}</span><span class="sy4">;</span>
+<span class="kw1">struct</span> TotallyOrdered <span class="sy4">:</span> Base <span class="br0">{</span>
+  <a href="../string/basic_string.html"><span class="kw1230">std::<span class="me2">string</span></span></a> tax_id<span class="sy4">;</span>
+  <a href="../string/basic_string.html"><span class="kw1230">std::<span class="me2">string</span></span></a> first_name<span class="sy4">;</span>
+  <a href="../string/basic_string.html"><span class="kw1230">std::<span class="me2">string</span></span></a> last_name<span class="sy4">;</span>
+<span class="kw1">public</span><span class="sy4">:</span>
+ <span class="co1">// 自定义 operator&lt;=&gt; ，因为我们希望（在比较姓前）先比较名：</span>
+ std<span class="sy4">::</span><span class="me2">strong_ordering</span> operator<span class="sy1">&lt;=&gt;</span><span class="br0">(</span><span class="kw4">const</span> TotallyOrdered<span class="sy3">&amp;</span> that<span class="br0">)</span> <span class="kw4">const</span> <span class="br0">{</span>
+   <span class="kw1">if</span> <span class="br0">(</span><span class="kw4">auto</span> cmp <span class="sy1">=</span> <span class="br0">(</span>Base<span class="sy3">&amp;</span><span class="br0">)</span><span class="br0">(</span><span class="sy2">*</span>this<span class="br0">)</span> <span class="sy1">&lt;=&gt;</span> <span class="br0">(</span>Base<span class="sy3">&amp;</span><span class="br0">)</span>that<span class="sy4">;</span> cmp <span class="sy3">!</span><span class="sy1">=</span> <span class="nu0">0</span><span class="br0">)</span>
+       <span class="kw1">return</span> cmp<span class="sy4">;</span>
+   <span class="kw1">if</span> <span class="br0">(</span><span class="kw4">auto</span> cmp <span class="sy1">=</span> last_name <span class="sy1">&lt;=&gt;</span> that.<span class="me1">last_name</span><span class="sy4">;</span> cmp <span class="sy3">!</span><span class="sy1">=</span> <span class="nu0">0</span><span class="br0">)</span>
+       <span class="kw1">return</span> cmp<span class="sy4">;</span>
+   <span class="kw1">if</span> <span class="br0">(</span><span class="kw4">auto</span> cmp <span class="sy1">=</span> first_name <span class="sy1">&lt;=&gt;</span> that.<span class="me1">first_name</span><span class="sy4">;</span> cmp <span class="sy3">!</span><span class="sy1">=</span> <span class="nu0">0</span><span class="br0">)</span>
+       <span class="kw1">return</span> cmp<span class="sy4">;</span>
+   <span class="kw1">return</span> tax_id <span class="sy1">&lt;=&gt;</span> that.<span class="me1">tax_id</span><span class="sy4">;</span>
+ <span class="br0">}</span>
+ <span class="co1">// ... 非比较函数 ...</span>
+<span class="br0">}</span><span class="sy4">;</span>
+<span class="co1">// 编译器生成全部四个关系运算符</span>
+ 
+<span class="co2">#include &lt;cassert&gt;</span>
+<span class="co2">#include &lt;set&gt;</span>
+<span class="kw4">int</span> main<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+  TotallyOrdered to1<span class="br0">{</span><span class="st0">"a"</span>,<span class="st0">"b"</span>,<span class="st0">"c"</span>,<span class="st0">"d"</span><span class="br0">}</span>, to2<span class="br0">{</span><span class="st0">"a"</span>,<span class="st0">"b"</span>,<span class="st0">"d"</span>,<span class="st0">"c"</span><span class="br0">}</span><span class="sy4">;</span>
+  <a href="../container/set.html"><span class="kw1277">std::<span class="me2">set</span></span></a><span class="sy1">&lt;</span>TotallyOrdered<span class="sy1">&gt;</span> s<span class="sy4">;</span> <span class="co1">// OK</span>
+  s.<span class="me1">insert</span><span class="br0">(</span>to1<span class="br0">)</span><span class="sy4">;</span> <span class="co1">// OK</span>
+  <a href="../error/assert.html"><span class="kw774">assert</span></a><span class="br0">(</span>to2 <span class="sy1">&lt;=</span> to1<span class="br0">)</span><span class="sy4">;</span> <span class="co1">// OK，调用 &lt;=&gt; 一次</span>
+<span class="br0">}</span></pre></div></div>
+</div>
+<p>注：返回 <a href="../utility/compare/strong_ordering.html" title="cpp/utility/compare/strong ordering"><tt>std::strong_ordering</tt></a> 的操作符需要比较每个成员，因为如果有成员没有被比较，可替换性会受牵连：两个可被区分的值有可能会比较相等。
+</p>
+<h4><span class="mw-headline" id=".E5.BC.B1.E5.BA.8F">弱序</span></h4>
+<p>在这个自定义 <code>operator&lt;=&gt;</code> 返回 <a href="../utility/compare/weak_ordering.html" title="cpp/utility/compare/weak ordering"><tt>std::weak_ordering</tt></a> 的例子中，该操作符不分大小写地比较了类的字符串成员：这和默认比较不同（因此需要自定义运算符）且通过这种方式比较相等的两个字符串可能可以被区分。
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="cpp source-cpp"><pre class="de1"><span class="kw1">class</span> CaseInsensitiveString <span class="br0">{</span>
+  <a href="../string/basic_string.html"><span class="kw1230">std::<span class="me2">string</span></span></a> s<span class="sy4">;</span>
+<span class="kw1">public</span><span class="sy4">:</span>
+  std<span class="sy4">::</span><span class="me2">weak_ordering</span> operator<span class="sy1">&lt;=&gt;</span><span class="br0">(</span><span class="kw4">const</span> CaseInsensitiveString<span class="sy3">&amp;</span> b<span class="br0">)</span> <span class="kw4">const</span> <span class="br0">{</span>
+    <span class="kw1">return</span> case_insensitive_compare<span class="br0">(</span>s.<span class="me1">c_str</span><span class="br0">(</span><span class="br0">)</span>, b.<span class="me1">s</span>.<span class="me1">c_str</span><span class="br0">(</span><span class="br0">)</span><span class="br0">)</span><span class="sy4">;</span>
+  <span class="br0">}</span>
+  std<span class="sy4">::</span><span class="me2">weak_ordering</span> operator<span class="sy1">&lt;=&gt;</span><span class="br0">(</span><span class="kw4">const</span> <span class="kw4">char</span><span class="sy2">*</span> b<span class="br0">)</span> <span class="kw4">const</span> <span class="br0">{</span>
+    <span class="kw1">return</span> case_insensitive_compare<span class="br0">(</span>s.<span class="me1">c_str</span><span class="br0">(</span><span class="br0">)</span>, b<span class="br0">)</span><span class="sy4">;</span>
+  <span class="br0">}</span>
+  <span class="co1">// ... 非比较函数 ...</span>
+<span class="br0">}</span><span class="sy4">;</span>
+ 
+<span class="co1">// 编译器生成全部四个关系运算符</span>
+CaseInsensitiveString cis1, cis2<span class="sy4">;</span>
+<a href="../container/set.html"><span class="kw1277">std::<span class="me2">set</span></span></a><span class="sy1">&lt;</span>CaseInsensitiveString<span class="sy1">&gt;</span> s<span class="sy4">;</span> <span class="co1">// OK</span>
+s.<span class="me1">insert</span><span class="br0">(</span><span class="coMULTI">/*...*/</span><span class="br0">)</span><span class="sy4">;</span> <span class="co1">// ok</span>
+<span class="kw1">if</span> <span class="br0">(</span>cis1 <span class="sy1">&lt;=</span> cis2<span class="br0">)</span> <span class="br0">{</span> <span class="coMULTI">/*...*/</span> <span class="br0">}</span> <span class="co1">// OK，执行一次比较操作</span>
+ 
+<span class="co1">// 编译器也生成了全部八个混合参数的关系运算符</span>
+<span class="kw1">if</span> <span class="br0">(</span>cis1 <span class="sy1">&lt;=</span> <span class="st0">"xyzzy"</span><span class="br0">)</span> <span class="br0">{</span> <span class="coMULTI">/*...*/</span> <span class="br0">}</span> <span class="co1">// OK，执行一次比较操作</span>
+<span class="kw1">if</span> <span class="br0">(</span><span class="st0">"xyzzy"</span> <span class="sy1">&gt;=</span> cis1<span class="br0">)</span> <span class="br0">{</span> <span class="coMULTI">/*...*/</span> <span class="br0">}</span> <span class="co1">// OK，语义相同</span></pre></div></div>
+<p>注：这个例子展示了参数类型不同的 <code>operator&lt;=&gt;</code> 的效果：它生成了双向的不同类型参数的比较。
+</p>
+<h4><span class="mw-headline" id=".E5.81.8F.E5.BA.8F">偏序</span></h4>
+<p>偏序是一种允许无法比较（无序）的值的比较的排序，比如包括 NaN 值的浮点排序，或在这个例子里的没有关联的人：
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="cpp source-cpp"><pre class="de1"><span class="kw1">class</span> PersonInFamilyTree <span class="br0">{</span> <span class="co1">// ...</span>
+<span class="kw1">public</span><span class="sy4">:</span>
+  std<span class="sy4">::</span><span class="me2">partial_ordering</span> operator<span class="sy1">&lt;=&gt;</span><span class="br0">(</span><span class="kw4">const</span> PersonInFamilyTree<span class="sy3">&amp;</span> that<span class="br0">)</span> <span class="kw4">const</span> <span class="br0">{</span>
+    <span class="kw1">if</span> <span class="br0">(</span>this<span class="sy2">-</span><span class="sy1">&gt;</span>is_the_same_person_as <span class="br0">(</span> that<span class="br0">)</span><span class="br0">)</span> <span class="kw1">return</span> partial_ordering<span class="sy4">::</span><span class="me2">equivalent</span><span class="sy4">;</span>
+    <span class="kw1">if</span> <span class="br0">(</span>this<span class="sy2">-</span><span class="sy1">&gt;</span>is_transitive_child_of<span class="br0">(</span> that<span class="br0">)</span><span class="br0">)</span> <span class="kw1">return</span> partial_ordering<span class="sy4">::</span><span class="me2">less</span><span class="sy4">;</span>
+    <span class="kw1">if</span> <span class="br0">(</span>that. <span class="me1">is_transitive_child_of</span><span class="br0">(</span><span class="sy2">*</span>this<span class="br0">)</span><span class="br0">)</span> <span class="kw1">return</span> partial_ordering<span class="sy4">::</span><span class="me2">greater</span><span class="sy4">;</span>
+    <span class="kw1">return</span> partial_ordering<span class="sy4">::</span><span class="me2">unordered</span><span class="sy4">;</span>
+  <span class="br0">}</span>
+  <span class="co1">// ... 非比较函数 ...</span>
+<span class="br0">}</span><span class="sy4">;</span>
+<span class="co1">// 编译器生成全部四个关系运算符</span>
+PersonInFamilyTree per1, per2<span class="sy4">;</span>
+<span class="kw1">if</span> <span class="br0">(</span>per1 <span class="sy1">&lt;</span> per2<span class="br0">)</span> <span class="br0">{</span> <span class="coMULTI">/*...*/</span> <span class="br0">}</span> <span class="co1">// OK，per2 是 per1 的先人</span>
+<span class="kw1">else</span> <span class="kw1">if</span> <span class="br0">(</span>per1 <span class="sy1">&gt;</span> per2<span class="br0">)</span> <span class="br0">{</span> <span class="coMULTI">/*...*/</span> <span class="br0">}</span> <span class="co1">// OK，per1 是 per2 的先人</span>
+<span class="kw1">else</span> <span class="kw1">if</span> <span class="br0">(</span>std<span class="sy4">::</span><span class="me2">is_eq</span><span class="br0">(</span>per1 <span class="sy1">&lt;=&gt;</span> per2<span class="br0">)</span><span class="br0">)</span> <span class="br0">{</span> <span class="coMULTI">/*...*/</span> <span class="br0">}</span> <span class="co1">// OK，per1 是 per2（同一人）</span>
+<span class="kw1">else</span> <span class="br0">{</span> <span class="coMULTI">/*...*/</span> <span class="br0">}</span> <span class="co1">// per1 与 per2 没有（直系）关联</span>
+<span class="kw1">if</span> <span class="br0">(</span>per1 <span class="sy1">&lt;=</span> per2<span class="br0">)</span> <span class="br0">{</span> <span class="coMULTI">/*...*/</span> <span class="br0">}</span> <span class="co1">// OK，per2 是 per1 或 per1 的先人</span>
+<span class="kw1">if</span> <span class="br0">(</span>per1 <span class="sy1">&gt;=</span> per2<span class="br0">)</span> <span class="br0">{</span> <span class="coMULTI">/*...*/</span> <span class="br0">}</span> <span class="co1">// OK，per1 是 per2 或 per2 的先人</span>
+<span class="kw1">if</span> <span class="br0">(</span>std<span class="sy4">::</span><span class="me2">is_neq</span><span class="br0">(</span>per1 <span class="sy1">&lt;=&gt;</span> per2<span class="br0">)</span><span class="br0">)</span> <span class="br0">{</span> <span class="coMULTI">/*...*/</span> <span class="br0">}</span> <span class="co1">// OK，per1 不是 per2（但可能有直系关联）</span></pre></div></div>
+<h3><span class="mw-headline" id=".E5.8F.82.E9.98.85">参阅</span></h3>
+<ul><li> 调用重载运算符中的<a href="overload_resolution.html#.E8.B0.83.E7.94.A8.E9.87.8D.E8.BD.BD.E8.BF.90.E7.AE.97.E7.AC.A6" title="cpp/language/overload resolution">重载决议</a>
+</li><li> 内建的<a href="operator_comparison.html#.E4.B8.89.E8.B7.AF.E6.AF.94.E8.BE.83" title="cpp/language/operator comparison">三路比较运算符</a>
+</li><li> 比较运算符的<a href="operators.html#.E6.AF.94.E8.BE.83.E8.BF.90.E7.AE.97.E7.AC.A6" title="cpp/language/operators">运算符重载</a>
+</li></ul>
+
+<!-- 
+NewPP limit report
+Preprocessor visited node count: 2985/1000000
+Preprocessor generated node count: 6808/1000000
+Post‐expand include size: 67310/2097152 bytes
+Template argument size: 19264/2097152 bytes
+Highest expansion depth: 13/40
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key mwiki1-mwiki_zh_:pcache:idhash:10710-0!*!0!!zh!*!zh!* and timestamp 20211022194130 -->
+</div>                    <!-- /bodycontent -->
+                                        <!-- printfooter -->
+                    <div class="printfooter">
+                    来自“<a href="https://zh.cppreference.com/mwiki/index.php?title=cpp/language/default_comparisons&amp;oldid=70888">https://zh.cppreference.com/mwiki/index.php?title=cpp/language/default_comparisons&amp;oldid=70888</a>”                    </div>
+                    <!-- /printfooter -->
+                                                            <!-- catlinks -->
+                    <!-- /catlinks -->
+                                                            <div class="visualClear"></div>
+                    <!-- debughtml -->
+                                        <!-- /debughtml -->
+                </div>
+                <!-- /bodyContent -->
+            </div>
+        </div>
+        <!-- /content -->
+        <!-- footer -->
+        <div id="cpp-footer-base" class="noprint">
+            <div id="footer">
+                        <div id="cpp-navigation">
+            <h5>导航</h5>
+            <ul><li><a href="https://zh.cppreference.com/w/cpp/language/default_comparisons">Online version</a></li><li>Offline version retrieved 2022-01-01 00:37.</li></ul></div>
+                        <ul id="footer-info">
+                                    <li id="footer-info-lastmod"> 本页面最后修改于2021年6月16日 (星期三) 22:33。</li>
+                                    <li id="footer-info-viewcount">此页面已被浏览过5,739次。</li>
+                            </ul>
+                    </div>
+        </div>
+        <!-- /footer -->
+        <script>if(window.mw){
+mw.loader.state({"site":"loading","user":"missing","user.groups":"ready"});
+}</script>
+<script src="../../../common/skin_scripts.js"></script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.action.view.postEdit","mediawiki.user","mediawiki.page.ready","mediawiki.searchSuggest","mediawiki.hidpi","ext.gadget.MathJax","ext.gadget.ColiruCompiler"], null, true);
+}</script>
+<script src="../../../common/site_scripts.js"></script>
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-2828341-1']);
+_gaq.push(['_setDomainName', 'cppreference.com']);
+_gaq.push(['_trackPageview']);
+</script><!-- Served in 3.321 secs. -->
+	</body>
+<!-- Cached 20211022194130 -->
+</html>

@@ -1,0 +1,2361 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr" class="client-nojs">
+<head>
+<title>功能特性测试 (C++20)</title>
+<meta charset="UTF-8">
+<meta name="generator" content="MediaWiki 1.21.2">
+<link rel="shortcut icon" href="../../common/favicon.ico">
+<link rel="stylesheet" href="../../common/ext.css">
+<meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="../../common/site_modules.css">
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}#toc{display:none}.editsection{display:none}
+/* cache key: mwiki1-mwiki_zh_:resourceloader:filter:minify-css:7:15cea3ec788a65b5187d4018eed543bf */</style>
+
+<script src="../../common/startup_scripts.js"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"cpp/feature_test","wgTitle":"cpp/feature test","wgCurRevisionId":70849,"wgArticleId":9572,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"zh","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"zh","wgMonthNames":["","1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],"wgMonthNamesShort":["","1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],"wgRelevantPageName":"cpp/feature_test","wgUserVariant":"zh","wgRestrictionEdit":[],"wgRestrictionMove":[]});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":0,"showtoolbar":1,"skin":"cppreference2","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":0,
+"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"variant":"zh","language":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"gadget-MathJax":1,"gadget-ColiruCompiler":1});;},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});;},{},{});
+/* cache key: mwiki1-mwiki_zh_:resourceloader:filter:minify-js:7:258d7cd6aa9aa67dee25e01fb6a9e505 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-cpp {line-height: normal;}
+.source-cpp li, .source-cpp pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for cpp
+ * CSS class: source-cpp, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.cpp.source-cpp .de1, .cpp.source-cpp .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.cpp.source-cpp  {font-family:monospace;}
+.cpp.source-cpp .imp {font-weight: bold; color: red;}
+.cpp.source-cpp li, .cpp.source-cpp .li1 {font-weight: normal; vertical-align:top;}
+.cpp.source-cpp .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.cpp.source-cpp .li2 {font-weight: bold; vertical-align:top;}
+.cpp.source-cpp .kw1 {color: #0000dd;}
+.cpp.source-cpp .kw2 {color: #0000ff;}
+.cpp.source-cpp .kw3 {color: #0000dd;}
+.cpp.source-cpp .kw4 {color: #0000ff;}
+.cpp.source-cpp .co1 {color: #909090;}
+.cpp.source-cpp .co2 {color: #339900;}
+.cpp.source-cpp .coMULTI {color: #ff0000; font-style: italic;}
+.cpp.source-cpp .es0 {color: #008000; font-weight: bold;}
+.cpp.source-cpp .es1 {color: #008000; font-weight: bold;}
+.cpp.source-cpp .es2 {color: #008000; font-weight: bold;}
+.cpp.source-cpp .es3 {color: #008000; font-weight: bold;}
+.cpp.source-cpp .es4 {color: #008000; font-weight: bold;}
+.cpp.source-cpp .es5 {color: #008000; font-weight: bold;}
+.cpp.source-cpp .br0 {color: #008000;}
+.cpp.source-cpp .sy0 {color: #008000;}
+.cpp.source-cpp .sy1 {color: #000080;}
+.cpp.source-cpp .sy2 {color: #000040;}
+.cpp.source-cpp .sy3 {color: #000040;}
+.cpp.source-cpp .sy4 {color: #008080;}
+.cpp.source-cpp .st0 {color: #008000;}
+.cpp.source-cpp .nu0 {color: #000080;}
+.cpp.source-cpp .nu6 {color: #000080;}
+.cpp.source-cpp .nu8 {color: #000080;}
+.cpp.source-cpp .nu12 {color: #000080;}
+.cpp.source-cpp .nu16 {color:#000080;}
+.cpp.source-cpp .nu17 {color:#000080;}
+.cpp.source-cpp .nu18 {color:#000080;}
+.cpp.source-cpp .nu19 {color:#000080;}
+.cpp.source-cpp .ln-xtra, .cpp.source-cpp li.ln-xtra, .cpp.source-cpp div.ln-xtra {background-color: #ffc;}
+.cpp.source-cpp span.xtra { display:block; }
+
+/*]]>*/
+</style><style type="text/css">/*<![CDATA[*/
+.source-text {line-height: normal;}
+.source-text li, .source-text pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for text
+ * CSS class: source-text, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.text.source-text .de1, .text.source-text .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.text.source-text  {font-family:monospace;}
+.text.source-text .imp {font-weight: bold; color: red;}
+.text.source-text li, .text.source-text .li1 {font-weight: normal; vertical-align:top;}
+.text.source-text .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.text.source-text .li2 {font-weight: bold; vertical-align:top;}
+.text.source-text .ln-xtra, .text.source-text li.ln-xtra, .text.source-text div.ln-xtra {background-color: #ffc;}
+.text.source-text span.xtra { display:block; }
+
+/*]]>*/
+</style><!--[if lt IE 7]><style type="text/css">body{behavior:url("/mwiki/skins/cppreference2/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-cpp_feature_test skin-cppreference2 action-view cpp-navbar">
+        <!-- header -->
+        <!-- /header -->
+        <!-- content -->
+<div id="cpp-content-base">
+            <div id="content">
+                <a id="top"></a>
+                <div id="mw-js-message" style="display:none;"></div>
+                                <!-- firstHeading -->
+<h1 id="firstHeading" class="firstHeading">功能特性测试 <span class="t-mark-rev t-since-cxx20">(C++20)</span></h1>
+                <!-- /firstHeading -->
+                <!-- bodyContent -->
+                <div id="bodyContent">
+                                        <!-- tagline -->
+                    <div id="siteSub">来自cppreference.com</div>
+                    <!-- /tagline -->
+                                        <!-- subtitle -->
+                    <div id="contentSub"><span class="subpages">&lt; <a href="../cpp.html" title="cpp">cpp</a></span></div>
+                    <!-- /subtitle -->
+                                                            <!-- bodycontent -->
+                    <div id="mw-content-text" lang="zh" dir="ltr" class="mw-content-ltr"><div class="t-navbar" style=""><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../cpp.html" title="cpp"> C++</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em">
+<tr class="t-nv"><td colspan="5"> <a href="language.html" title="cpp/language">语言</a> </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="header.html" title="cpp/header">标准库头文件</a> </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="freestanding.html" title="cpp/freestanding"> 自立与有宿主实现</a> </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="named_req.html" title="cpp/named req">具名要求</a> </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="utility.html#.E8.AF.AD.E8.A8.80.E6.94.AF.E6.8C.81" title="cpp/utility">语言支持库</a> </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="concepts.html" title="cpp/concepts">概念库</a> <span class="t-mark-rev t-since-cxx20">(C++20)</span> </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="error.html" title="cpp/error">诊断库</a> </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="utility.html" title="cpp/utility">工具库</a> </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="string.html" title="cpp/string">字符串库</a> </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="container.html" title="cpp/container">容器库</a> </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="iterator.html" title="cpp/iterator">迭代器库</a> </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="ranges.html" title="cpp/ranges"> 范围库</a> <span class="t-mark-rev t-since-cxx20">(C++20)</span> </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="algorithm.html" title="cpp/algorithm">算法库</a> </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="numeric.html" title="cpp/numeric">数值库</a> </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="locale.html" title="cpp/locale">本地化库</a> </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="io.html" title="cpp/io">输入/输出库</a> </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="filesystem.html" title="cpp/filesystem">文件系统库</a> <span class="t-mark-rev t-since-cxx17">(C++17)</span> </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="regex.html" title="cpp/regex">正则表达式库</a> <span class="t-mark-rev t-since-cxx11">(C++11)</span> </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="atomic.html" title="cpp/atomic">原子操作库</a> <span class="t-mark-rev t-since-cxx11">(C++11)</span> </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="thread.html" title="cpp/thread">线程支持库</a> <span class="t-mark-rev t-since-cxx11">(C++11)</span> </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="experimental.html" title="cpp/experimental">技术规范</a> </td></tr>
+</table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><strong class="selflink"> 功能特性测试</strong></div><div class="t-navbar-sep"> </div></div>
+<p>标准中为 C++11 和其后所引入的 C++ 语言和程序库的功能特性定义了一组<a href="preprocessor/replace.html" title="cpp/preprocessor/replace">预处理器宏</a>。标准有意使之成为检测这些功能特性是否存在的一种简单且可移植的方式。
+</p>
+<h3><span class="mw-headline" id=".E5.B1.9E.E6.80.A7">属性</span></h3>
+<table class="t-sdsc-begin">
+
+<tr>
+<td colspan="10" class="t-sdsc-sep">
+</td></tr>
+<tr class="t-sdsc">
+<td class="t-sdsc-nopad"> <code><b>__has_cpp_attribute( </b></code><span class="t-spar">属性记号</span><code><b> )</b></code>
+</td>
+<td class="t-sdsc-nopad">
+</td>
+<td class="t-sdsc-nopad">
+</td></tr>
+
+
+
+<tr>
+<td colspan="10" class="t-sdsc-sep">
+</td></tr></table>
+<p>检查（宏展开后） <span class="t-spar">属性记号</span> 所指名的<a href="language/attributes.html" title="cpp/language/attributes">属性</a>的存在。
+</p><p>对于标准属性，它将展开成该属性被添加到工作草案中时的年份和月份（见下表），特定于厂商的属性则以某个非零值确定。
+</p><p>能在 <a href="preprocessor/conditional.html" title="cpp/preprocessor/conditional"><tt>
+#if</tt></a> 与 <a href="preprocessor/conditional.html" title="cpp/preprocessor/conditional"><tt>
+#elif</tt></a> 的表达式中展开 <code>__has_cpp_attribute</code> 。 <a href="preprocessor/conditional.html" title="cpp/preprocessor/conditional"><tt>
+#ifdef</tt></a> 、 <a href="preprocessor/conditional.html" title="cpp/preprocessor/conditional"><tt>
+#ifndef</tt></a> 和 <a href="preprocessor/conditional.html" title="cpp/preprocessor/conditional"><tt>defined</tt></a> 把它当做已定义的宏，但不能在别处使用它。
+</p>
+<table class="wikitable sortable">
+
+<tr>
+<th> <span class="t-spar">属性记号</span>
+</th>
+<th> 属性
+</th>
+<th> 值
+</th>
+<th><abbr title="引入该特性的标准">标准</abbr>
+</th></tr>
+<tr>
+<td><code>carries_dependency</code>
+</td>
+<td><code>[[<a href="language/attributes/carries_dependency.html" title="cpp/language/attributes/carries dependency">carries_dependency</a>]]</code>
+</td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">200809L</span></span></span>
+</td>
+<td><span class="t-mark-rev t-since-cxx11">(C++11)</span>
+</td></tr>
+<tr>
+<td><code>deprecated</code>
+</td>
+<td><code>[[<a href="language/attributes/deprecated.html" title="cpp/language/attributes/deprecated">deprecated</a>]]</code>
+</td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201309L</span></span></span>
+</td>
+<td><span class="t-mark-rev t-since-cxx14">(C++14)</span>
+</td></tr>
+<tr>
+<td><code>fallthrough</code>
+</td>
+<td><code>[[<a href="language/attributes/fallthrough.html" title="cpp/language/attributes/fallthrough">fallthrough</a>]]</code>
+</td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201603L</span></span></span>
+</td>
+<td><span class="t-mark-rev t-since-cxx17">(C++17)</span>
+</td></tr>
+<tr>
+<td><code>likely</code>
+</td>
+<td><code>[[<a href="language/attributes/likely.html" title="cpp/language/attributes/likely">likely</a>]]</code>
+</td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201803L</span></span></span>
+</td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td><code>maybe_unused</code>
+</td>
+<td><code>[[<a href="language/attributes/maybe_unused.html" title="cpp/language/attributes/maybe unused">maybe_unused</a>]]</code>
+</td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201603L</span></span></span>
+</td>
+<td><span class="t-mark-rev t-since-cxx17">(C++17)</span>
+</td></tr>
+<tr>
+<td><code>no_unique_address</code>
+</td>
+<td><code>[[<a href="language/attributes/no_unique_address.html" title="cpp/language/attributes/no unique address">no_unique_address</a>]]</code>
+</td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201803L</span></span></span>
+</td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td rowspan="2"><code>nodiscard</code>
+</td>
+<td rowspan="2"><code>[[<a href="language/attributes/nodiscard.html" title="cpp/language/attributes/nodiscard">nodiscard</a>]]</code>
+</td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201603L</span></span></span>
+</td>
+<td><span class="t-mark-rev t-since-cxx17">(C++17)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201907L</span></span></span>
+</td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td><code>noreturn</code>
+</td>
+<td><code>[[<a href="language/attributes/noreturn.html" title="cpp/language/attributes/noreturn">noreturn</a>]]</code>
+</td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">200809L</span></span></span>
+</td>
+<td><span class="t-mark-rev t-since-cxx11">(C++11)</span>
+</td></tr>
+<tr>
+<td><code>unlikely</code>
+</td>
+<td><code>[[<a href="language/attributes/likely.html" title="cpp/language/attributes/likely">unlikely</a>]]</code>
+</td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201803L</span></span></span>
+</td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr></table>
+<h3><span class="mw-headline" id=".E8.AF.AD.E8.A8.80.E5.8A.9F.E8.83.BD.E7.89.B9.E6.80.A7">语言功能特性</span></h3>
+<p>下列宏预定义于每个翻译单元。每个宏都展开成对应于相应功能特性被包含到工作草案时的年份与月份的整数字面量。
+</p><p>当功能特性发生了显著变更时，宏会相应地更新。
+</p>
+<div class="t-template-editlink" style="">
+</div>
+<table class="wikitable sortable">
+
+<tr>
+<th>宏名
+</th>
+<th>功能特性
+</th>
+<th>值
+</th>
+<th><abbr title="引入该特性的标准">标准</abbr>
+</th></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_aggregate_bases</span></span></td>
+<td>拥有基类的<a href="language/aggregate_initialization.html" title="cpp/language/aggregate initialization">聚合类</a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201603L</span></span></span></td>
+<td><span class="t-mark-rev t-since-cxx17">(C++17)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_aggregate_nsdmi</span></span></td>
+<td>拥有<a href="language/data_members.html#.E6.88.90.E5.91.98.E5.88.9D.E5.A7.8B.E5.8C.96" title="cpp/language/data members">默认成员初始化器</a>的<a href="language/aggregate_initialization.html" title="cpp/language/aggregate initialization">聚合类</a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201304L</span></span></span></td>
+<td><span class="t-mark-rev t-since-cxx14">(C++14)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_aggregate_paren_init</span></span></td>
+<td>形式为<a href="language/direct_initialization.html" title="cpp/language/direct initialization">直接初始化</a>的<a href="language/aggregate_initialization.html" title="cpp/language/aggregate initialization">聚合初始化</a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201902L</span></span></span></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_alias_templates</span></span></td>
+<td><a href="language/type_alias.html" title="cpp/language/type alias">别名模版</a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">200704L</span></span></span></td>
+<td><span class="t-mark-rev t-since-cxx11">(C++11)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_aligned_new</span></span></td>
+<td><a href="memory/new/align_val_t.html" title="cpp/memory/new/align val t">过对齐数据的动态内存分配</a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201606L</span></span></span></td>
+<td><span class="t-mark-rev t-since-cxx17">(C++17)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_attributes</span></span></td>
+<td><a href="language/attributes.html" title="cpp/language/attributes">属性</a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">200809L</span></span></span></td>
+<td><span class="t-mark-rev t-since-cxx11">(C++11)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_binary_literals</span></span></td>
+<td><a href="language/integer_literal.html" title="cpp/language/integer literal">二进制字面量</a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201304L</span></span></span></td>
+<td><span class="t-mark-rev t-since-cxx14">(C++14)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_capture_star_this</span></span></td>
+<td><a href="language/lambda.html#Lambda_.E6.8D.95.E8.8E.B7" title="cpp/language/lambda">以 <code>[=,*this]</code> 进行 <code>*this</code> 的按值 lambda 捕获</a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201603L</span></span></span></td>
+<td><span class="t-mark-rev t-since-cxx17">(C++17)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_char8_t</span></span></td>
+<td><a href="keyword/char8_t.html" title="cpp/keyword/char8 t"><tt>char8_t</tt></a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201811L</span></span></span></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_concepts</span></span></td>
+<td><a href="language/constraints.html" title="cpp/language/constraints">概念</a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201907L</span></span></span></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_conditional_explicit</span></span></td>
+<td><a href="language/explicit.html" title="cpp/language/explicit"><tt>explicit(bool)</tt></a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201806L</span></span></span></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_consteval</span></span></td>
+<td><a href="language/consteval.html" title="cpp/language/consteval">立即函数</a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201811L</span></span></span></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td rowspan="5"> <span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_constexpr</span></span></td>
+<td><a href="language/constexpr.html" title="cpp/language/constexpr"><tt>constexpr</tt></a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">200704L</span></span></span></td>
+<td><span class="t-mark-rev t-since-cxx11">(C++11)</span>
+</td></tr>
+<tr>
+<td><a href="language/constexpr.html#relaxed-constexpr" title="cpp/language/constexpr">放松 constexpr 函数上的限制</a>和及非 <code>const</code> 的 constexpr 非静态成员函数</td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201304L</span></span></span></td>
+<td><span class="t-mark-rev t-since-cxx14">(C++14)</span>
+</td></tr>
+<tr>
+<td><a href="language/lambda.html" title="cpp/language/lambda">Constexpr lambda</a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201603L</span></span></span></td>
+<td><span class="t-mark-rev t-since-cxx17">(C++17)</span>
+</td></tr>
+<tr>
+<td>constexpr 函数中的平凡<a href="language/default_initialization.html" title="cpp/language/default initialization">默认初始化</a>与<a href="language/asm.html" title="cpp/language/asm">汇编声明</a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201907L</span></span></span></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td>constexpr 函数中的非<a href="named_req/LiteralType.html" title="cpp/named req/LiteralType">字面</a>变量、标签及 <a href="language/goto.html" title="cpp/language/goto"><tt>goto</tt></a> 语句</td>
+<td> <span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">202110L</span></span></span> </td>
+<td> <span class="t-mark-rev t-since-cxx23">(C++23)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_constexpr_dynamic_alloc</span></span></td>
+<td>constexpr 函数中的动态存储期操作</td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201907L</span></span></span></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_constexpr_in_decltype</span></span></td>
+<td>在为<a href="language/constant_expression.html#.E5.B8.B8.E9.87.8F.E6.B1.82.E5.80.BC.E6.89.80.E9.9C.80.E8.A6.81.E7.9A.84.E5.87.BD.E6.95.B0.E4.B8.8E.E5.8F.98.E9.87.8F" title="cpp/language/constant expression">常量求值所需要</a>时生成函数和变量的定义</td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201711L</span></span></span></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_constinit</span></span></td>
+<td><a href="language/constinit.html" title="cpp/language/constinit"><tt>constinit</tt></a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201907L</span></span></span></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_coroutines</span></span></td>
+<td>协程</td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201902L</span></span></span></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_decltype</span></span></td>
+<td><a href="language/decltype.html" title="cpp/language/decltype"><tt>decltype</tt></a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">200707L</span></span></span></td>
+<td><span class="t-mark-rev t-since-cxx11">(C++11)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_decltype_auto</span></span></td>
+<td><a href="language/auto.html" title="cpp/language/auto">常规函数的返回类型推导</a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201304L</span></span></span></td>
+<td><span class="t-mark-rev t-since-cxx14">(C++14)</span>
+</td></tr>
+<tr>
+<td rowspan="2"><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_deduction_guides</span></span></td>
+<td><a href="language/class_template_argument_deduction.html" title="cpp/language/class template argument deduction">类模板的模板实参推导</a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201703L</span></span></span></td>
+<td><span class="t-mark-rev t-since-cxx17">(C++17)</span>
+</td></tr>
+<tr>
+<td><a href="language/class_template_argument_deduction.html" title="cpp/language/class template argument deduction">聚合体与别名的 <abbr title="类模板实参推导">CTAD</abbr></a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201907L</span></span></span></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_delegating_constructors</span></span></td>
+<td><a href="language/initializer_list.html#.E5.A7.94.E6.89.98.E6.9E.84.E9.80.A0.E5.87.BD.E6.95.B0" title="cpp/language/initializer list" class="mw-redirect">委托构造函数</a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">200604L</span></span></span></td>
+<td><span class="t-mark-rev t-since-cxx11">(C++11)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_designated_initializers</span></span></td>
+<td><a href="language/aggregate_initialization.html#.E6.8C.87.E6.B4.BE.E5.88.9D.E5.A7.8B.E5.8C.96.E5.99.A8" title="cpp/language/aggregate initialization">指派初始化器</a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201707L</span></span></span></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_enumerator_attributes</span></span></td>
+<td><a href="language/enum.html" title="cpp/language/enum">枚举项</a>的属性</td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201411L</span></span></span></td>
+<td><span class="t-mark-rev t-since-cxx17">(C++17)</span>
+</td></tr>
+<tr>
+<td> <span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_explicit_this_parameter</span></span> </td>
+<td> 显式对象形参 </td>
+<td> <span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">202110L</span></span></span> </td>
+<td> <span class="t-mark-rev t-since-cxx23">(C++23)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_fold_expressions</span></span></td>
+<td><a href="language/fold.html" title="cpp/language/fold">折叠表达式</a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201603L</span></span></span></td>
+<td><span class="t-mark-rev t-since-cxx17">(C++17)</span>
+</td></tr>
+<tr>
+<td rowspan="2"><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_generic_lambdas</span></span></td>
+<td><a href="language/lambda.html" title="cpp/language/lambda">泛型 lambda 表达式</a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201304L</span></span></span></td>
+<td><span class="t-mark-rev t-since-cxx14">(C++14)</span>
+</td></tr>
+<tr>
+<td><a href="language/lambda.html" title="cpp/language/lambda">泛型 lambda</a> 的显式模板形参列表</td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201707L</span></span></span></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_guaranteed_copy_elision</span></span></td>
+<td>通过简化<a href="language/value_category.html" title="cpp/language/value category">值类别</a>保证复制消除</td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201606L</span></span></span></td>
+<td><span class="t-mark-rev t-since-cxx17">(C++17)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_hex_float</span></span></td>
+<td><a href="language/floating_literal.html" title="cpp/language/floating literal">十六进制浮点字面量</a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201603L</span></span></span></td>
+<td><span class="t-mark-rev t-since-cxx17">(C++17)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_if_consteval</span></span></td>
+<td><a href="language/if.html" title="cpp/language/if"><code>consteval if</code></a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">202106L</span></span></span></td>
+<td><span class="t-mark-rev t-since-cxx23">(C++23)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_if_constexpr</span></span></td>
+<td><a href="language/if.html" title="cpp/language/if"><code>constexpr if</code></a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201606L</span></span></span></td>
+<td><span class="t-mark-rev t-since-cxx17">(C++17)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_impl_coroutine</span></span></td>
+<td><a href="language/coroutines.html" title="cpp/language/coroutines">协程</a>（编译器支持）</td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201902L</span></span></span></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_impl_destroying_delete</span></span></td>
+<td><a href="memory/new/operator_delete.html" title="cpp/memory/new/operator delete">销毁的 <code>operator delete</code></a> （编译器支持）</td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201806L</span></span></span></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_impl_three_way_comparison</span></span></td>
+<td><a href="language/operator_comparison.html#.E4.B8.89.E8.B7.AF.E6.AF.94.E8.BE.83" title="cpp/language/operator comparison">三路比较</a>（编译器支持）</td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201907L</span></span></span></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td rowspan="2"> <span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_inheriting_constructors</span></span></td>
+<td><a href="language/using_declaration.html#.E7.BB.A7.E6.89.BF.E6.9E.84.E9.80.A0.E5.87.BD.E6.95.B0" title="cpp/language/using declaration">继承构造函数</a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">200802L</span></span></span></td>
+<td><span class="t-mark-rev t-since-cxx11">(C++11)</span>
+</td></tr>
+<tr>
+<td>重述继承构造函数</td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201511L</span></span></span></td>
+<td><span class="t-mark-rev t-since-cxx17">(C++17)</span>
+</td></tr>
+<tr>
+<td rowspan="2"> <span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_init_captures</span></span></td>
+<td><a href="language/lambda.html" title="cpp/language/lambda">Lambda 初始化捕获</a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201304L</span></span></span></td>
+<td><span class="t-mark-rev t-since-cxx14">(C++14)</span>
+</td></tr>
+<tr>
+<td><a href="language/lambda.html" title="cpp/language/lambda">Lambda</a> 初始化捕获中的包展开</td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201803L</span></span></span></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_initializer_lists</span></span></td>
+<td><a href="language/list_initialization.html" title="cpp/language/list initialization">列表初始化</a>与 <span class="t-lc"><a href="utility/initializer_list.html" title="cpp/utility/initializer list">std::initializer_list</a></span></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">200806L</span></span></span></td>
+<td><span class="t-mark-rev t-since-cxx11">(C++11)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_inline_variables</span></span></td>
+<td><a href="language/inline.html" title="cpp/language/inline">inline 变量</a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201606L</span></span></span></td>
+<td><span class="t-mark-rev t-since-cxx17">(C++17)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lambdas</span></span></td>
+<td><a href="language/lambda.html" title="cpp/language/lambda">Lambda 表达式</a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">200907L</span></span></span></td>
+<td><span class="t-mark-rev t-since-cxx11">(C++11)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_modules</span></span></td>
+<td><a href="language/modules.html" title="cpp/language/modules">模块</a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201907L</span></span></span></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td> <span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_multidimensional_subscript</span></span> </td>
+<td> 多维<a href="language/operator_member_access.html" title="cpp/language/operator member access">下标运算符</a> </td>
+<td> <span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">202110L</span></span></span> </td>
+<td> <span class="t-mark-rev t-since-cxx23">(C++23)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_namespace_attributes</span></span></td>
+<td><a href="language/namespace.html" title="cpp/language/namespace">命名空间</a>的属性</td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201411L</span></span></span></td>
+<td><span class="t-mark-rev t-since-cxx17">(C++17)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_noexcept_function_type</span></span></td>
+<td>令<a href="language/noexcept_spec.html" title="cpp/language/noexcept spec">异常规定</a>为类型系统的一部分</td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201510L</span></span></span></td>
+<td><span class="t-mark-rev t-since-cxx17">(C++17)</span>
+</td></tr>
+<tr>
+<td rowspan="2"><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_nontype_template_args</span></span></td>
+<td>允许全部<a href="language/template_parameters.html#.E9.9D.9E.E7.B1.BB.E5.9E.8B.E6.A8.A1.E6.9D.BF.E5.AE.9E.E5.8F.82" title="cpp/language/template parameters">非类型模板实参</a>的常量求值</td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201411L</span></span></span></td>
+<td><span class="t-mark-rev t-since-cxx17">(C++17)</span>
+</td></tr>
+<tr>
+<td><a href="language/template_parameters.html#.E9.9D.9E.E7.B1.BB.E5.9E.8B.E6.A8.A1.E6.9D.BF.E5.BD.A2.E5.8F.82" title="cpp/language/template parameters">非类型模板形参</a>中的类类型与浮点类型 </td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201911L</span></span></span></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_nontype_template_</span></span><span class="t-c"><span class="mw-geshi cpp source-cpp">parameter_auto</span></span></td>
+<td>以 <span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="kw4">auto</span></span></span> 声明<a href="language/template_parameters.html#.E9.9D.9E.E7.B1.BB.E5.9E.8B.E6.A8.A1.E6.9D.BF.E5.BD.A2.E5.8F.82" title="cpp/language/template parameters">非类型模板形参</a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201606L</span></span></span></td>
+<td><span class="t-mark-rev t-since-cxx17">(C++17)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_nsdmi</span></span></td>
+<td><a href="language/data_members.html#.E6.88.90.E5.91.98.E5.88.9D.E5.A7.8B.E5.8C.96" title="cpp/language/data members">非静态数据成员初始化器</a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">200809L</span></span></span></td>
+<td><span class="t-mark-rev t-since-cxx11">(C++11)</span>
+</td></tr>
+<tr>
+<td rowspan="2"> <span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_range_based_for</span></span></td>
+<td><a href="language/range-for.html" title="cpp/language/range-for">基于范围的 for 循环</a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">200907L</span></span></span></td>
+<td><span class="t-mark-rev t-since-cxx11">(C++11)</span>
+</td></tr>
+<tr>
+<td>拥有相异的 <code>begin</code>/<code>end</code> 类型的基于范围的 <code>for</code> 循环</td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201603L</span></span></span></td>
+<td><span class="t-mark-rev t-since-cxx17">(C++17)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_raw_strings</span></span></td>
+<td><a href="language/string_literal.html" title="cpp/language/string literal">原始字符串字面量</a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">200710L</span></span></span></td>
+<td><span class="t-mark-rev t-since-cxx11">(C++11)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_ref_qualifiers</span></span></td>
+<td><a href="language/member_functions.html" title="cpp/language/member functions">引用限定符</a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">200710L</span></span></span></td>
+<td><span class="t-mark-rev t-since-cxx11">(C++11)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_return_type_deduction</span></span></td>
+<td><a href="language/auto.html" title="cpp/language/auto">常规函数的返回类型推导</a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201304L</span></span></span></td>
+<td><span class="t-mark-rev t-since-cxx14">(C++14)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_rvalue_references</span></span></td>
+<td><a href="language/reference.html" title="cpp/language/reference">右值引用</a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">200610L</span></span></span></td>
+<td><span class="t-mark-rev t-since-cxx11">(C++11)</span>
+</td></tr>
+<tr>
+<td> <span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_size_t_suffix</span></span> </td>
+<td> <a href="language/integer_literal.html" title="cpp/language/integer literal"><code>size_t</code> 与其有符号版本的字面量后缀</a> </td>
+<td> <span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">202011L</span></span></span> </td>
+<td> <span class="t-mark-rev t-since-cxx23">(C++23)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_sized_deallocation</span></span></td>
+<td><a href="memory/new/operator_delete.html" title="cpp/memory/new/operator delete">具大小解分配</a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201309L</span></span></span></td>
+<td><span class="t-mark-rev t-since-cxx14">(C++14)</span>
+</td></tr>
+<tr>
+<td rowspan="2"> <span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_static_assert</span></span></td>
+<td><a href="language/static_assert.html" title="cpp/language/static assert"><tt>static_assert</tt></a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">200410L</span></span></span></td>
+<td><span class="t-mark-rev t-since-cxx11">(C++11)</span>
+</td></tr>
+<tr>
+<td><a href="language/static_assert.html" title="cpp/language/static assert">单参数的 <code>static_assert</code></a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201411L</span></span></span></td>
+<td><span class="t-mark-rev t-since-cxx17">(C++17)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_structured_bindings</span></span></td>
+<td><a href="language/structured_binding.html" title="cpp/language/structured binding">结构化绑定</a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201606L</span></span></span></td>
+<td><span class="t-mark-rev t-since-cxx17">(C++17)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_template_template_args</span></span></td>
+<td><a href="language/template_parameters.html#.E6.A8.A1.E6.9D.BF.E6.A8.A1.E6.9D.BF.E5.AE.9E.E5.8F.82" title="cpp/language/template parameters">模板模板实参</a>的匹配</td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201611L</span></span></span></td>
+<td><span class="t-mark-rev t-since-cxx17">(C++17)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_threadsafe_static_init</span></span></td>
+<td><a href="language/storage_duration.html#.E9.9D.99.E6.80.81.E5.B1.80.E9.83.A8.E5.8F.98.E9.87.8F" title="cpp/language/storage duration">带并发的动态初始化和销毁</a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">200806L</span></span></span></td>
+<td><span class="t-mark-rev t-since-cxx11">(C++11)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_unicode_characters</span></span></td>
+<td><a href="language/types.html" title="cpp/language/types">新字符类型</a>（ <span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="kw4">char16_t</span></span></span> 与 <span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="kw4">char32_t</span></span></span> ）</td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">200704L</span></span></span></td>
+<td><span class="t-mark-rev t-since-cxx11">(C++11)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_unicode_literals</span></span></td>
+<td><a href="language/string_literal.html" title="cpp/language/string literal">Unicode 字符串字面量</a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">200710L</span></span></span></td>
+<td><span class="t-mark-rev t-since-cxx11">(C++11)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_user_defined_literals</span></span></td>
+<td><a href="language/user_literal.html" title="cpp/language/user literal">用户定义字面量</a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">200809L</span></span></span></td>
+<td><span class="t-mark-rev t-since-cxx11">(C++11)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_using_enum</span></span></td>
+<td>using enum</td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201907L</span></span></span></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_variable_templates</span></span></td>
+<td><a href="language/variable_template.html" title="cpp/language/variable template">变量模板</a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201304L</span></span></span></td>
+<td><span class="t-mark-rev t-since-cxx14">(C++14)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_variadic_templates</span></span></td>
+<td><a href="language/parameter_pack.html" title="cpp/language/parameter pack">变参模板</a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">200704L</span></span></span></td>
+<td><span class="t-mark-rev t-since-cxx11">(C++11)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_variadic_using</span></span></td>
+<td><a href="language/using_declaration.html" title="cpp/language/using declaration">using 声明</a>中的包展开</td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201611L</span></span></span></td>
+<td><span class="t-mark-rev t-since-cxx17">(C++17)</span>
+</td></tr></table>
+<h3><span class="mw-headline" id=".E6.A0.87.E5.87.86.E5.BA.93.E5.8A.9F.E8.83.BD.E7.89.B9.E6.80.A7">标准库功能特性</span></h3>
+<p>如果包含了头文件 <a href="header/version.html" title="cpp/header/version"><tt>&lt;version&gt;</tt></a> 或下表中的任意对应头文件，则下列各个宏有定义。每个宏都展开成其对应的功能特性被包含于工作草案时的年份与月份的相应整数字面量。
+</p><p>当功能特性发生了显著变更时，宏会相应地更新。
+</p>
+<div class="t-template-editlink" style="">
+</div>
+<table class="wikitable sortable">
+
+<tr>
+<th>宏名
+</th>
+<th>功能特性
+</th>
+<th>值
+</th>
+<th>头文件
+</th>
+<th><span title="引入该特性的标准">标准</span>
+</th></tr>
+<tr>
+<td> <span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_adaptor_iterator_</span></span><span class="t-c"><span class="mw-geshi cpp source-cpp">pair_constructor</span></span> </td>
+<td> <span class="t-lc"><a href="container/stack.html" title="cpp/container/stack">std::stack</a></span> 与 <span class="t-lc"><a href="container/queue.html" title="cpp/container/queue">std::queue</a></span> 的迭代器对构造函数 </td>
+<td> <span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">202106L</span></span></span> </td>
+<td> <a href="header/stack.html" title="cpp/header/stack"><tt>&lt;stack&gt;</tt></a> <a href="header/queue.html" title="cpp/header/queue"><tt>&lt;queue&gt;</tt></a> </td>
+<td> <span class="t-mark-rev t-since-cxx23">(C++23)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_addressof_constexpr</span></span></td>
+<td>constexpr <span class="t-lc"><a href="memory/addressof.html" title="cpp/memory/addressof">std::addressof</a></span></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201603L</span></span></span></td>
+<td><a href="header/memory.html" title="cpp/header/memory"><tt>&lt;memory&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx17">(C++17)</span>
+</td></tr>
+<tr>
+<td> <span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_allocate_at_least</span></span> </td>
+<td> <span class="t-lc">std::allocate_at_least</span> 等 </td>
+<td> <span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">202106L</span></span></span> </td>
+<td> <a href="header/memory.html" title="cpp/header/memory"><tt>&lt;memory&gt;</tt></a> </td>
+<td> <span class="t-mark-rev t-since-cxx23">(C++23)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_allocator_</span></span><span class="t-c"><span class="mw-geshi cpp source-cpp">traits_is_always_equal</span></span></td>
+<td><a href="memory/allocator_traits.html" title="cpp/memory/allocator traits"><tt>std::allocator_traits::is_always_equal</tt></a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201411L</span></span></span></td>
+<td><a href="header/memory.html" title="cpp/header/memory"><tt>&lt;memory&gt;</tt></a> <a href="header/scoped_allocator.html" title="cpp/header/scoped allocator"><tt>&lt;scoped_allocator&gt;</tt></a> <a href="header/string.html" title="cpp/header/string"><tt>&lt;string&gt;</tt></a> <a href="header/deque.html" title="cpp/header/deque"><tt>&lt;deque&gt;</tt></a> <a href="header/forward_list.html" title="cpp/header/forward list"><tt>&lt;forward_list&gt;</tt></a> <a href="header/list.html" title="cpp/header/list"><tt>&lt;list&gt;</tt></a> <a href="header/vector.html" title="cpp/header/vector"><tt>&lt;vector&gt;</tt></a> <a href="header/map.html" title="cpp/header/map"><tt>&lt;map&gt;</tt></a> <a href="header/set.html" title="cpp/header/set"><tt>&lt;set&gt;</tt></a> <a href="header/unordered_map.html" title="cpp/header/unordered map"><tt>&lt;unordered_map&gt;</tt></a> <a href="header/unordered_set.html" title="cpp/header/unordered set"><tt>&lt;unordered_set&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx17">(C++17)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_any</span></span></td>
+<td><span class="t-lc"><a href="utility/any.html" title="cpp/utility/any">std::any</a></span></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201606L</span></span></span></td>
+<td><a href="header/any.html" title="cpp/header/any"><tt>&lt;any&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx17">(C++17)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_apply</span></span></td>
+<td><span class="t-lc"><a href="utility/apply.html" title="cpp/utility/apply">std::apply</a></span></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201603L</span></span></span></td>
+<td><a href="header/tuple.html" title="cpp/header/tuple"><tt>&lt;tuple&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx17">(C++17)</span>
+</td></tr>
+<tr>
+<td rowspan="2"> <span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_array_constexpr</span></span></td>
+<td><span class="t-lc"><a href="iterator/reverse_iterator.html" title="cpp/iterator/reverse iterator">std::reverse_iterator</a></span> 、 <span class="t-lc"><a href="iterator/move_iterator.html" title="cpp/iterator/move iterator">std::move_iterator</a></span> 、 <span class="t-lc"><a href="container/array.html" title="cpp/container/array">std::array</a></span> 及<a href="iterator.html#.E8.8C.83.E5.9B.B4.E8.AE.BF.E9.97.AE" title="cpp/iterator">范围访问</a>的 constexpr</td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201603L</span></span></span></td>
+<td><a href="header/iterator.html" title="cpp/header/iterator"><tt>&lt;iterator&gt;</tt></a> <a href="header/array.html" title="cpp/header/array"><tt>&lt;array&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx17">(C++17)</span>
+</td></tr>
+<tr>
+<td><a href="named_req/ConstexprIterator.html" title="cpp/named req/ConstexprIterator"><span style="font-style:italic">常量表达式迭代器</span> <span style="font-family: Georgia, 'DejaVu Serif', serif; font-style:italic">(ConstexprIterator)</span> </a>； <span class="t-lc"><a href="container/array.html" title="cpp/container/array">std::array</a></span> 的 constexpr 比较；杂项 constexpr （ <span class="t-lc"><a href="container/array/fill.html" title="cpp/container/array/fill">std::array::fill</a></span> 等）</td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201811L</span></span></span></td>
+<td><a href="header/iterator.html" title="cpp/header/iterator"><tt>&lt;iterator&gt;</tt></a> <a href="header/array.html" title="cpp/header/array"><tt>&lt;array&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_as_const</span></span></td>
+<td><span class="t-lc"><a href="utility/as_const.html" title="cpp/utility/as const">std::as_const</a></span></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201510L</span></span></span></td>
+<td><a href="header/utility.html" title="cpp/header/utility"><tt>&lt;utility&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx17">(C++17)</span>
+</td></tr>
+<tr>
+<td> <span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_associative_</span></span><span class="t-c"><span class="mw-geshi cpp source-cpp">heterogeneous_erasure</span></span> </td>
+<td> <a href="container.html#.E5.85.B3.E8.81.94.E5.AE.B9.E5.99.A8" title="cpp/container">关联容器</a>与<a href="container.html#.E6.97.A0.E5.BA.8F.E5.85.B3.E8.81.94.E5.AE.B9.E5.99.A8" title="cpp/container">无序关联容器</a>中的异质擦除 </td>
+<td> <span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">202110L</span></span></span> </td>
+<td> <a href="header/map.html" title="cpp/header/map"><tt>&lt;map&gt;</tt></a> <a href="header/set.html" title="cpp/header/set"><tt>&lt;set&gt;</tt></a> <a href="header/unordered_map.html" title="cpp/header/unordered map"><tt>&lt;unordered_map&gt;</tt></a> <a href="header/unordered_set.html" title="cpp/header/unordered set"><tt>&lt;unordered_set&gt;</tt></a> </td>
+<td> <span class="t-mark-rev t-since-cxx23">(C++23)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_assume_aligned</span></span></td>
+<td><span class="t-lc">std::assume_aligned</span></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201811L</span></span></span></td>
+<td><a href="header/memory.html" title="cpp/header/memory"><tt>&lt;memory&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_atomic_flag_test</span></span></td>
+<td><span class="t-lc">std::atomic_flag::test</span></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201907L</span></span></span></td>
+<td><a href="header/atomic.html" title="cpp/header/atomic"><tt>&lt;atomic&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_atomic_float</span></span></td>
+<td><a href="atomic/atomic.html" title="cpp/atomic/atomic">浮点原子类型</a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201711L</span></span></span></td>
+<td><a href="header/atomic.html" title="cpp/header/atomic"><tt>&lt;atomic&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_atomic_</span></span><span class="t-c"><span class="mw-geshi cpp source-cpp">is_always_lock_free</span></span></td>
+<td><a href="atomic/atomic/is_always_lock_free.html" title="cpp/atomic/atomic/is always lock free"><tt>constexpr atomic&lt;T&gt;::is_always_lock_free</tt></a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201603L</span></span></span></td>
+<td><a href="header/atomic.html" title="cpp/header/atomic"><tt>&lt;atomic&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx17">(C++17)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_atomic_</span></span><span class="t-c"><span class="mw-geshi cpp source-cpp">lock_free_type_aliases</span></span></td>
+<td>原子免锁整数类型（ <span class="t-lc">std::atomic_signed_lock_free</span> 、 <span class="t-lc">std::atomic_unsigned_lock_free</span> ）</td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201907L</span></span></span></td>
+<td><a href="header/atomic.html" title="cpp/header/atomic"><tt>&lt;atomic&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_atomic_ref</span></span></td>
+<td><a href="atomic/atomic_ref.html" title="cpp/atomic/atomic ref"><tt>std::atomic_ref</tt></a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201806L</span></span></span></td>
+<td><a href="header/atomic.html" title="cpp/header/atomic"><tt>&lt;atomic&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_atomic_shared_ptr</span></span></td>
+<td><a href="memory/shared_ptr/atomic2.html" title="cpp/memory/shared ptr/atomic2"><tt>std::atomic&lt;std::shared_ptr&gt;</tt></a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201711L</span></span></span></td>
+<td><a href="header/memory.html" title="cpp/header/memory"><tt>&lt;memory&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_atomic_</span></span><span class="t-c"><span class="mw-geshi cpp source-cpp">value_initialization</span></span></td>
+<td>修正原子初始化（默认值初始化 <span class="t-lc"><a href="atomic/atomic.html" title="cpp/atomic/atomic">std::atomic</a></span> ）</td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201911L</span></span></span></td>
+<td><a href="header/atomic.html" title="cpp/header/atomic"><tt>&lt;atomic&gt;</tt></a> <a href="header/memory.html" title="cpp/header/memory"><tt>&lt;memory&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_atomic_wait</span></span></td>
+<td>高效的 <span class="t-lc"><a href="atomic/atomic.html" title="cpp/atomic/atomic">std::atomic</a></span> 等待</td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201907L</span></span></span></td>
+<td><a href="header/atomic.html" title="cpp/header/atomic"><tt>&lt;atomic&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_barrier</span></span></td>
+<td><a href="thread/barrier.html" title="cpp/thread/barrier"><tt>std::barrier</tt></a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201907L</span></span></span></td>
+<td><a href="header/barrier.html" title="cpp/header/barrier"><tt>&lt;barrier&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_bind_front</span></span></td>
+<td><a href="utility/functional/bind_front.html" title="cpp/utility/functional/bind front"><tt>std::bind_front</tt></a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201907L</span></span></span></td>
+<td><a href="header/functional.html" title="cpp/header/functional"><tt>&lt;functional&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_bit_cast</span></span></td>
+<td><a href="numeric/bit_cast.html" title="cpp/numeric/bit cast"><tt>std::bit_cast</tt></a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201806L</span></span></span></td>
+<td><a href="header/bit.html" title="cpp/header/bit"><tt>&lt;bit&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_bitops</span></span></td>
+<td><a href="numeric.html#.E4.BD.8D.E6.93.8D.E7.BA.B5_.28C.2B.2B20_.E8.B5.B7.29" title="cpp/numeric">位操作</a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201907L</span></span></span></td>
+<td><a href="header/bit.html" title="cpp/header/bit"><tt>&lt;bit&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_bool_constant</span></span></td>
+<td><span class="t-lc"><a href="types/integral_constant.html" title="cpp/types/integral constant">std::bool_constant</a></span></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201505L</span></span></span></td>
+<td><a href="header/type_traits.html" title="cpp/header/type traits"><tt>&lt;type_traits&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx17">(C++17)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_bounded_array_traits</span></span></td>
+<td><a href="types/is_bounded_array.html" title="cpp/types/is bounded array"><tt>std::is_bounded_array</tt></a> 、 <a href="types/is_unbounded_array.html" title="cpp/types/is unbounded array"><tt>std::is_unbounded_array</tt></a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201902L</span></span></span></td>
+<td><a href="header/type_traits.html" title="cpp/header/type traits"><tt>&lt;type_traits&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_boyer_moore_searcher</span></span></td>
+<td><a href="utility/functional/boyer_moore_searcher.html" title="cpp/utility/functional/boyer moore searcher">std::boyer_moore_searcher|搜索器</a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201603L</span></span></span></td>
+<td><a href="header/functional.html" title="cpp/header/functional"><tt>&lt;functional&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx17">(C++17)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_byte</span></span></td>
+<td><a href="types/byte.html" title="cpp/types/byte"><tt>std::byte</tt></a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201603L</span></span></span></td>
+<td><a href="header/cstddef.html" title="cpp/header/cstddef"><tt>&lt;cstddef&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx17">(C++17)</span>
+</td></tr>
+<tr>
+<td> <span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_byteswap</span></span> </td>
+<td> <a href="numeric/byteswap.html" title="cpp/numeric/byteswap"><tt>std::byteswap</tt></a> </td>
+<td> <span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">202110L</span></span></span> </td>
+<td> <a href="header/bit.html" title="cpp/header/bit"><tt>&lt;bit&gt;</tt></a> </td>
+<td> <span class="t-mark-rev t-since-cxx23">(C++23)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_char8_t</span></span></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">char8_t</span></span> 的库支持</td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201907L</span></span></span></td>
+<td><a href="header/atomic.html" title="cpp/header/atomic"><tt>&lt;atomic&gt;</tt></a> <a href="header/filesystem.html" title="cpp/header/filesystem"><tt>&lt;filesystem&gt;</tt></a> <a href="header/istream.html" title="cpp/header/istream"><tt>&lt;istream&gt;</tt></a> <a href="header/limits.html" title="cpp/header/limits"><tt>&lt;limits&gt;</tt></a> <a href="header/locale.html" title="cpp/header/locale"><tt>&lt;locale&gt;</tt></a> <a href="header/ostream.html" title="cpp/header/ostream"><tt>&lt;ostream&gt;</tt></a> <a href="header/string.html" title="cpp/header/string"><tt>&lt;string&gt;</tt></a> <a href="header/string_view.html" title="cpp/header/string view"><tt>&lt;string_view&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td rowspan="3"> <span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_chrono</span></span></td>
+<td><span class="t-lc"><a href="chrono/duration.html" title="cpp/chrono/duration">std::chrono::duration</a></span> 与 <span class="t-lc"><a href="chrono/time_point.html" title="cpp/chrono/time point">std::chrono::time_point</a></span> 的舍入函数</td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201510L</span></span></span></td>
+<td><a href="header/chrono.html" title="cpp/header/chrono"><tt>&lt;chrono&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx17">(C++17)</span>
+</td></tr>
+<tr>
+<td><span class="t-lc"><a href="chrono/duration.html" title="cpp/chrono/duration">std::chrono::duration</a></span> 与 <span class="t-lc"><a href="chrono/time_point.html" title="cpp/chrono/time point">std::chrono::time_point</a></span> 的所有成员函数的 constexpr</td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201611L</span></span></span></td>
+<td><a href="header/chrono.html" title="cpp/header/chrono"><tt>&lt;chrono&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx17">(C++17)</span>
+</td></tr>
+<tr>
+<td><a href="chrono.html#.E6.97.A5.E5.8E.86" title="cpp/chrono">日历</a>与<a href="chrono.html#.E6.97.B6.E5.8C.BA" title="cpp/chrono">时区</a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201907L</span></span></span></td>
+<td><a href="header/chrono.html" title="cpp/header/chrono"><tt>&lt;chrono&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_chrono_udls</span></span></td>
+<td><a href="chrono/duration.html#.E5.AD.97.E9.9D.A2.E9.87.8F" title="cpp/chrono/duration">时间类型的用户定义字面量</a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201304L</span></span></span></td>
+<td><a href="header/chrono.html" title="cpp/header/chrono"><tt>&lt;chrono&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx14">(C++14)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_clamp</span></span></td>
+<td><span class="t-lc"><a href="algorithm/clamp.html" title="cpp/algorithm/clamp">std::clamp</a></span></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201603L</span></span></span></td>
+<td><a href="header/algorithm.html" title="cpp/header/algorithm"><tt>&lt;algorithm&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx17">(C++17)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_complex_udls</span></span></td>
+<td><a href="numeric/complex/operator%2522%2522i.html" title='cpp/numeric/complex/operator""i'><code>std::complex</code> 的用户定义字面量</a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201309L</span></span></span></td>
+<td><a href="header/complex.html" title="cpp/header/complex"><tt>&lt;complex&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx14">(C++14)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_concepts</span></span></td>
+<td><a href="concepts.html" title="cpp/concepts">标准库概念</a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">202002L</span></span></span></td>
+<td><a href="header/concepts.html" title="cpp/header/concepts"><tt>&lt;concepts&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_constexpr_algorithms</span></span></td>
+<td><a href="algorithm.html" title="cpp/algorithm">算法</a>的 constexpr</td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201806L</span></span></span></td>
+<td><a href="header/algorithm.html" title="cpp/header/algorithm"><tt>&lt;algorithm&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_constexpr_complex</span></span></td>
+<td><span class="t-lc"><a href="numeric/complex.html" title="cpp/numeric/complex">std::complex</a></span> 的 constexpr</td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201711L</span></span></span></td>
+<td><a href="header/complex.html" title="cpp/header/complex"><tt>&lt;complex&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_constexpr_</span></span><span class="t-c"><span class="mw-geshi cpp source-cpp">dynamic_alloc</span></span></td>
+<td><span class="t-lc"><a href="memory/allocator.html" title="cpp/memory/allocator">std::allocator</a></span> 与相关工具的 </td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201907L</span></span></span></td>
+<td><a href="header/memory.html" title="cpp/header/memory"><tt>&lt;memory&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_constexpr_functional</span></span></td>
+<td>杂项 constexpr （ <span class="t-lc"><a href="utility/functional/default_searcher.html" title="cpp/utility/functional/default searcher">std::default_searcher</a></span> ）； constexpr INVOKE</td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201907L</span></span></span></td>
+<td><a href="header/functional.html" title="cpp/header/functional"><tt>&lt;functional&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_constexpr_iterator</span></span></td>
+<td>杂项 constexpr （ <span class="t-lc"><a href="iterator/insert_iterator.html" title="cpp/iterator/insert iterator">std::insert_iterator</a></span> 等）</td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201811L</span></span></span></td>
+<td><a href="header/iterator.html" title="cpp/header/iterator"><tt>&lt;iterator&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_constexpr_memory</span></span></td>
+<td><span class="t-lc"><a href="memory/pointer_traits.html" title="cpp/memory/pointer traits">std::pointer_traits</a></span> 中的 constexpr</td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201811L</span></span></span></td>
+<td><a href="header/memory.html" title="cpp/header/memory"><tt>&lt;memory&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_constexpr_numeric</span></span></td>
+<td><a href="algorithm.html#.E6.95.B0.E5.80.BC.E8.BF.90.E7.AE.97" title="cpp/algorithm">&lt;numeric&gt; 算法</a>的 constexpr</td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201911L</span></span></span></td>
+<td><a href="header/numeric.html" title="cpp/header/numeric"><tt>&lt;numeric&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_constexpr_string</span></span></td>
+<td><span class="t-lc"><a href="string/basic_string.html" title="cpp/string/basic string">std::string</a></span> 的 constexpr</td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201907L</span></span></span></td>
+<td><a href="header/string.html" title="cpp/header/string"><tt>&lt;string&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_constexpr_</span></span><span class="t-c"><span class="mw-geshi cpp source-cpp">string_view</span></span></td>
+<td>杂项 constexpr （ <span class="t-lc"><a href="string/basic_string_view/copy.html" title="cpp/string/basic string view/copy">std::string_view::copy</a></span> ）</td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201811L</span></span></span></td>
+<td><a href="header/string_view.html" title="cpp/header/string view"><tt>&lt;string_view&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_constexpr_tuple</span></span></td>
+<td>杂项 constexpr （ <span class="t-lc"><a href="utility/tuple/operator%3D.html" title="cpp/utility/tuple/operator=">std::tuple::operator=</a></span> 等）</td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201811L</span></span></span></td>
+<td><a href="header/tuple.html" title="cpp/header/tuple"><tt>&lt;tuple&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td> <span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_constexpr_typeinfo</span></span> </td>
+<td> <span class="t-lc"><a href="types/type_info/operator_cmp.html" title="cpp/types/type info/operator cmp">std::type_info::operator==</a></span> 的 constexpr </td>
+<td> <span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">202106L</span></span></span> </td>
+<td> <a href="header/typeinfo.html" title="cpp/header/typeinfo"><tt>&lt;typeinfo&gt;</tt></a> </td>
+<td> <span class="t-mark-rev t-since-cxx23">(C++23)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_constexpr_utility</span></span></td>
+<td>杂项 constexpr （ <span class="t-lc"><a href="utility/pair/operator%3D.html" title="cpp/utility/pair/operator=">std::pair::operator=</a></span> 等）</td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201811L</span></span></span></td>
+<td><a href="header/utility.html" title="cpp/header/utility"><tt>&lt;utility&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_constexpr_vector</span></span></td>
+<td><span class="t-lc"><a href="container/vector.html" title="cpp/container/vector">std::vector</a></span> 的 constexpr</td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201907L</span></span></span></td>
+<td><a href="header/vector.html" title="cpp/header/vector"><tt>&lt;vector&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_coroutine</span></span></td>
+<td><a href="language/coroutines.html" title="cpp/language/coroutines">协程</a>（库支持）</td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201902L</span></span></span></td>
+<td><a href="header/coroutine.html" title="cpp/header/coroutine"><tt>&lt;coroutine&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_destroying_delete</span></span></td>
+<td><a href="memory/new/operator_delete.html" title="cpp/memory/new/operator delete">销毁的 <code>operator delete</code></a> （库支持）</td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201806L</span></span></span></td>
+<td><a href="header/new.html" title="cpp/header/new"><tt>&lt;new&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_enable_</span></span><span class="t-c"><span class="mw-geshi cpp source-cpp">shared_from_this</span></span></td>
+<td><a href="memory/enable_shared_from_this.html" title="cpp/memory/enable shared from this">再次启用 shared_from_this</a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201603L</span></span></span></td>
+<td><a href="header/memory.html" title="cpp/header/memory"><tt>&lt;memory&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx17">(C++17)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_endian</span></span></td>
+<td><span class="t-lc">std::endian</span></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201907L</span></span></span></td>
+<td><a href="header/bit.html" title="cpp/header/bit"><tt>&lt;bit&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_erase_if</span></span></td>
+<td>统一容器擦除</td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">202002L</span></span></span></td>
+<td><a href="header/string.html" title="cpp/header/string"><tt>&lt;string&gt;</tt></a> <a href="header/deque.html" title="cpp/header/deque"><tt>&lt;deque&gt;</tt></a> <a href="header/forward_list.html" title="cpp/header/forward list"><tt>&lt;forward_list&gt;</tt></a> <a href="header/list.html" title="cpp/header/list"><tt>&lt;list&gt;</tt></a> <a href="header/vector.html" title="cpp/header/vector"><tt>&lt;vector&gt;</tt></a> <a href="header/map.html" title="cpp/header/map"><tt>&lt;map&gt;</tt></a> <a href="header/set.html" title="cpp/header/set"><tt>&lt;set&gt;</tt></a> <a href="header/unordered_map.html" title="cpp/header/unordered map"><tt>&lt;unordered_map&gt;</tt></a> <a href="header/unordered_set.html" title="cpp/header/unordered set"><tt>&lt;unordered_set&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_exchange_function</span></span></td>
+<td><span class="t-lc"><a href="utility/exchange.html" title="cpp/utility/exchange">std::exchange</a></span></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201304L</span></span></span></td>
+<td><a href="header/utility.html" title="cpp/header/utility"><tt>&lt;utility&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx14">(C++14)</span>
+</td></tr>
+<tr>
+<td rowspan="2"> <span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_execution</span></span></td>
+<td><a href="algorithm.html#.E6.89.A7.E8.A1.8C.E7.AD.96.E7.95.A5" title="cpp/algorithm">执行策略</a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201603L</span></span></span></td>
+<td><a href="header/execution.html" title="cpp/header/execution"><tt>&lt;execution&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx17">(C++17)</span>
+</td></tr>
+<tr>
+<td><a href="algorithm/execution_policy_tag_t.html" title="cpp/algorithm/execution policy tag t"><tt>std::execution::unsequenced_policy</tt></a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201902L</span></span></span></td>
+<td><a href="header/execution.html" title="cpp/header/execution"><tt>&lt;execution&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_filesystem</span></span></td>
+<td><a href="filesystem.html" title="cpp/filesystem">文件系统库</a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201703L</span></span></span></td>
+<td><a href="header/filesystem.html" title="cpp/header/filesystem"><tt>&lt;filesystem&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx17">(C++17)</span>
+</td></tr>
+<tr>
+<td rowspan="3"> <span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_format</span></span> </td>
+<td> <a href="utility/format.html" title="cpp/utility/format">文本格式化</a> </td>
+<td> <span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201907L</span></span></span> </td>
+<td> <a href="header/format.html" title="cpp/header/format"><tt>&lt;format&gt;</tt></a> </td>
+<td> <span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td> 编译时格式字符串检查；减少 <span class="t-lc">std::vformat_to</span> 的参数化 </td>
+<td> <span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">202106L</span></span></span> </td>
+<td> <a href="header/format.html" title="cpp/header/format"><tt>&lt;format&gt;</tt></a> </td>
+<td> <span class="t-mark-rev t-since-cxx23">(C++23)</span>
+</td></tr>
+<tr>
+<td> 修复 <code>chrono</code> 格式化器中的本地环境处理；格式化参数中使用转发引用 </td>
+<td> <span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">202110L</span></span></span> </td>
+<td> <a href="header/format.html" title="cpp/header/format"><tt>&lt;format&gt;</tt></a> </td>
+<td> <span class="t-mark-rev t-since-cxx23">(C++23)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_gcd_lcm</span></span></td>
+<td><span class="t-lc"><a href="numeric/gcd.html" title="cpp/numeric/gcd">std::gcd</a></span>、 <span class="t-lc"><a href="numeric/lcm.html" title="cpp/numeric/lcm">std::lcm</a></span></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201606L</span></span></span></td>
+<td><a href="header/numeric.html" title="cpp/header/numeric"><tt>&lt;numeric&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx17">(C++17)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_generic_</span></span><span class="t-c"><span class="mw-geshi cpp source-cpp">associative_lookup</span></span></td>
+<td>关联容器中的异质比较查找</td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201304L</span></span></span></td>
+<td><a href="header/map.html" title="cpp/header/map"><tt>&lt;map&gt;</tt></a> <a href="header/set.html" title="cpp/header/set"><tt>&lt;set&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx14">(C++14)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_generic_</span></span><span class="t-c"><span class="mw-geshi cpp source-cpp">unordered_lookup</span></span></td>
+<td>无序关联容器中的异质比较查找</td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201811L</span></span></span></td>
+<td><a href="header/unordered_map.html" title="cpp/header/unordered map"><tt>&lt;unordered_map&gt;</tt></a> <a href="header/unordered_set.html" title="cpp/header/unordered set"><tt>&lt;unordered_set&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_hardware_</span></span><span class="t-c"><span class="mw-geshi cpp source-cpp">interference_size</span></span></td>
+<td><a href="thread/hardware_destructive_interference_size.html" title="cpp/thread/hardware destructive interference size">constexpr std::hardware_{constructive, destructive}_interference_size</a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201703L</span></span></span></td>
+<td><a href="header/new.html" title="cpp/header/new"><tt>&lt;new&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx17">(C++17)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_has_unique_</span></span><span class="t-c"><span class="mw-geshi cpp source-cpp">object_representations</span></span></td>
+<td><span class="t-lc"><a href="types/has_unique_object_representations.html" title="cpp/types/has unique object representations">std::has_unique_object_representations</a></span></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201606L</span></span></span></td>
+<td><a href="header/type_traits.html" title="cpp/header/type traits"><tt>&lt;type_traits&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx17">(C++17)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_hypot</span></span></td>
+<td><span class="t-lc"><a href="numeric/math/hypot.html" title="cpp/numeric/math/hypot">std::hypot</a></span> 的 3 参数重载</td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201603L</span></span></span></td>
+<td><a href="header/cmath.html" title="cpp/header/cmath"><tt>&lt;cmath&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx17">(C++17)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_incomplete_</span></span><span class="t-c"><span class="mw-geshi cpp source-cpp">container_elements</span></span></td>
+<td>标准容器的最小不完整类型支持</td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201505L</span></span></span></td>
+<td><a href="header/forward_list.html" title="cpp/header/forward list"><tt>&lt;forward_list&gt;</tt></a> <a href="header/list.html" title="cpp/header/list"><tt>&lt;list&gt;</tt></a> <a href="header/vector.html" title="cpp/header/vector"><tt>&lt;vector&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx17">(C++17)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_int_pow2</span></span></td>
+<td><a href="numeric.html#.E4.BD.8D.E6.93.8D.E7.BA.B5_.28C.2B.2B20_.E8.B5.B7.29" title="cpp/numeric">整数的 2 的幂运算</a>（ <span class="t-lc">std::has_single_bit</span> 、 <span class="t-lc">std::bit_ceil</span> 、 <span class="t-lc">std::bit_floor</span> 、 <span class="t-lc">std::bit_length</span> ）</td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">202002L</span></span></span></td>
+<td><a href="header/bit.html" title="cpp/header/bit"><tt>&lt;bit&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_integer_</span></span><span class="t-c"><span class="mw-geshi cpp source-cpp">comparison_functions</span></span></td>
+<td><a href="utility.html#.E6.95.B4.E6.95.B0.E6.AF.94.E8.BE.83.E5.87.BD.E6.95.B0" title="cpp/utility">整数比较函数</a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">202002L</span></span></span></td>
+<td><a href="header/utility.html" title="cpp/header/utility"><tt>&lt;utility&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_integer_sequence</span></span></td>
+<td><a href="utility/integer_sequence.html" title="cpp/utility/integer sequence">编译时整数序列</a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201304L</span></span></span></td>
+<td><a href="header/utility.html" title="cpp/header/utility"><tt>&lt;utility&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx14">(C++14)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_integral_</span></span><span class="t-c"><span class="mw-geshi cpp source-cpp">constant_callable</span></span></td>
+<td><span class="t-lc"><a href="types/integral_constant.html" title="cpp/types/integral constant">std::integral_constant::operator()</a></span></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201304L</span></span></span></td>
+<td><a href="header/type_traits.html" title="cpp/header/type traits"><tt>&lt;type_traits&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx14">(C++14)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_interpolate</span></span></td>
+<td><a href="numeric/lerp.html" title="cpp/numeric/lerp"><tt>std::lerp</tt></a> 与 <a href="numeric/midpoint.html" title="cpp/numeric/midpoint"><tt>std::midpoint</tt></a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201902L</span></span></span></td>
+<td><a href="header/cmath.html" title="cpp/header/cmath"><tt>&lt;cmath&gt;</tt></a> <a href="header/numeric.html" title="cpp/header/numeric"><tt>&lt;numeric&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_invoke</span></span></td>
+<td><span class="t-lc"><a href="utility/functional/invoke.html" title="cpp/utility/functional/invoke">std::invoke()</a></span></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201411L</span></span></span></td>
+<td><a href="header/functional.html" title="cpp/header/functional"><tt>&lt;functional&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx17">(C++17)</span>
+</td></tr>
+<tr>
+<td> <span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_invoke_r</span></span> </td>
+<td> <a href="utility/functional/invoke.html" title="cpp/utility/functional/invoke"><tt>std::invoke_r</tt></a> </td>
+<td> <span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">202106L</span></span></span> </td>
+<td> <a href="header/functional.html" title="cpp/header/functional"><tt>&lt;functional&gt;</tt></a> </td>
+<td> <span class="t-mark-rev t-since-cxx23">(C++23)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_is_aggregate</span></span></td>
+<td><a href="types/is_aggregate.html" title="cpp/types/is aggregate"><tt>std::is_aggregate</tt></a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201703L</span></span></span></td>
+<td><a href="header/type_traits.html" title="cpp/header/type traits"><tt>&lt;type_traits&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx17">(C++17)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_is_constant_</span></span><span class="t-c"><span class="mw-geshi cpp source-cpp">evaluated</span></span></td>
+<td><a href="types/is_constant_evaluated.html" title="cpp/types/is constant evaluated"><tt>std::is_constant_evaluated</tt></a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201811L</span></span></span></td>
+<td><a href="header/type_traits.html" title="cpp/header/type traits"><tt>&lt;type_traits&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_is_final</span></span></td>
+<td><span class="t-lc"><a href="types/is_final.html" title="cpp/types/is final">std::is_final</a></span></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201402L</span></span></span></td>
+<td><a href="header/type_traits.html" title="cpp/header/type traits"><tt>&lt;type_traits&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx14">(C++14)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_is_invocable</span></span></td>
+<td><span class="t-lc">std::is_invocable</span> 、 <span class="t-lc">std::invoke_result</span></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201703L</span></span></span></td>
+<td><a href="header/type_traits.html" title="cpp/header/type traits"><tt>&lt;type_traits&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx17">(C++17)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_is_layout_compatible</span></span></td>
+<td><a href="types/is_layout_compatible.html" title="cpp/types/is layout compatible"><tt>std::is_layout_compatible</tt></a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201907L</span></span></span></td>
+<td><a href="header/type_traits.html" title="cpp/header/type traits"><tt>&lt;type_traits&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_is_nothrow_</span></span><span class="t-c"><span class="mw-geshi cpp source-cpp">convertible</span></span></td>
+<td><a href="types/is_convertible.html" title="cpp/types/is convertible"><tt>std::is_nothrow_convertible</tt></a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201806L</span></span></span></td>
+<td><a href="header/type_traits.html" title="cpp/header/type traits"><tt>&lt;type_traits&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_is_null_pointer</span></span></td>
+<td><span class="t-lc"><a href="types/is_null_pointer.html" title="cpp/types/is null pointer">std::is_null_pointer</a></span></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201309L</span></span></span></td>
+<td><a href="header/type_traits.html" title="cpp/header/type traits"><tt>&lt;type_traits&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx14">(C++14)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_is_pointer_</span></span><span class="t-c"><span class="mw-geshi cpp source-cpp">interconvertible</span></span></td>
+<td>指针可互转换特征</td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201907L</span></span></span></td>
+<td><a href="header/type_traits.html" title="cpp/header/type traits"><tt>&lt;type_traits&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td> <span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_is_scoped_enum</span></span> </td>
+<td> <a href="types/is_scoped_enum.html" title="cpp/types/is scoped enum"><tt>std::is_scoped_enum</tt></a> </td>
+<td> <span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">202011L</span></span></span> </td>
+<td> <a href="header/type_traits.html" title="cpp/header/type traits"><tt>&lt;type_traits&gt;</tt></a> </td>
+<td> <span class="t-mark-rev t-since-cxx23">(C++23)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_is_swappable</span></span></td>
+<td><a href="types/is_swappable.html" title="cpp/types/is swappable">[nothrow-]swappable 特征</a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201603L</span></span></span></td>
+<td><a href="header/type_traits.html" title="cpp/header/type traits"><tt>&lt;type_traits&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx17">(C++17)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_jthread</span></span></td>
+<td><a href="thread/stop_token.html" title="cpp/thread/stop token">停止记号</a>与<a href="thread/jthread.html" title="cpp/thread/jthread">结合线程</a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201911L</span></span></span></td>
+<td><a href="header/stop_token.html" title="cpp/header/stop token"><tt>&lt;stop_token&gt;</tt></a> <a href="header/thread.html" title="cpp/header/thread"><tt>&lt;thread&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_latch</span></span></td>
+<td><a href="thread/latch.html" title="cpp/thread/latch"><tt>std::latch</tt></a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201907L</span></span></span></td>
+<td><a href="header/latch.html" title="cpp/header/latch"><tt>&lt;latch&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_launder</span></span></td>
+<td>核心问题 1776 ：替换含引用成员的类对象（ <span class="t-lc"><a href="utility/launder.html" title="cpp/utility/launder">std::launder</a></span> ）</td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201606L</span></span></span></td>
+<td><a href="header/new.html" title="cpp/header/new"><tt>&lt;new&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx17">(C++17)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_list_remove_</span></span><span class="t-c"><span class="mw-geshi cpp source-cpp">return_type</span></span></td>
+<td> 更改 <span class="t-lc"><a href="container/forward_list.html" title="cpp/container/forward list">std::forward_list</a></span> 与 <span class="t-lc"><a href="container/list.html" title="cpp/container/list">std::list</a></span> <span class="t-lc"><a href="container/list/remove.html" title="cpp/container/list/remove">remove()</a></span> 、 <span class="t-lc"><a href="container/list/remove.html" title="cpp/container/list/remove">remove_if()</a></span> 及 <span class="t-lc"><a href="container/list/unique.html" title="cpp/container/list/unique">unique()</a></span> 成员的返回类型</td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201806L</span></span></span></td>
+<td><a href="header/forward_list.html" title="cpp/header/forward list"><tt>&lt;forward_list&gt;</tt></a> <a href="header/list.html" title="cpp/header/list"><tt>&lt;list&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_logical_traits</span></span></td>
+<td><a href="types.html#.E7.89.B9.E5.BE.81.E4.B8.8A.E7.9A.84.E8.BF.90.E7.AE.97" title="cpp/types">逻辑运算符类型特征</a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201510L</span></span></span></td>
+<td><a href="header/type_traits.html" title="cpp/header/type traits"><tt>&lt;type_traits&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx17">(C++17)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_make_from_tuple</span></span></td>
+<td><span class="t-lc"><a href="utility/make_from_tuple.html" title="cpp/utility/make from tuple">std::make_from_tuple()</a></span></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201606L</span></span></span></td>
+<td><a href="header/tuple.html" title="cpp/header/tuple"><tt>&lt;tuple&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx17">(C++17)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_make_reverse_</span></span><span class="t-c"><span class="mw-geshi cpp source-cpp">iterator</span></span></td>
+<td><a href="iterator/make_reverse_iterator.html" title="cpp/iterator/make reverse iterator"><tt>std::make_reverse_iterator</tt></a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201402L</span></span></span></td>
+<td><a href="header/iterator.html" title="cpp/header/iterator"><tt>&lt;iterator&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx14">(C++14)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_make_unique</span></span></td>
+<td><span class="t-lc"><a href="memory/unique_ptr/make_unique.html" title="cpp/memory/unique ptr/make unique">std::make_unique</a></span></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201304L</span></span></span></td>
+<td><a href="header/memory.html" title="cpp/header/memory"><tt>&lt;memory&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx14">(C++14)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_map_try_emplace</span></span></td>
+<td><span class="t-lc"><a href="container/map/try_emplace.html" title="cpp/container/map/try emplace">std::map::try_emplace</a></span>, <span class="t-lc"><a href="container/map/insert_or_assign.html" title="cpp/container/map/insert or assign">std::map::insert_or_assign</a></span></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201411L</span></span></span></td>
+<td><a href="header/map.html" title="cpp/header/map"><tt>&lt;map&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx17">(C++17)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_math_constants</span></span></td>
+<td><a href="header/numbers.html" title="cpp/header/numbers">数学常数</a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201907L</span></span></span></td>
+<td><a href="header/numbers.html" title="cpp/header/numbers"><tt>&lt;numbers&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_math_special_</span></span><span class="t-c"><span class="mw-geshi cpp source-cpp">functions</span></span></td>
+<td><a href="numeric/special_functions.html" title="cpp/numeric/special functions">C++17 的数学特殊函数</a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201603L</span></span></span></td>
+<td><a href="header/cmath.html" title="cpp/header/cmath"><tt>&lt;cmath&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx17">(C++17)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_memory_resource</span></span></td>
+<td><span class="t-lc"><a href="memory/memory_resource.html" title="cpp/memory/memory resource">std::pmr::memory_resource</a></span></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201603L</span></span></span></td>
+<td><a href="header/memory_resource.html" title="cpp/header/memory resource"><tt>&lt;memory_resource&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx17">(C++17)</span>
+</td></tr>
+<tr>
+<td> <span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_monadic_optional</span></span> </td>
+<td> <span class="t-lc"><a href="utility/optional.html" title="cpp/utility/optional">std::optional</a></span> 中的单子操作</td>
+<td> <span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">202110L</span></span></span> </td>
+<td> <a href="header/optional.html" title="cpp/header/optional"><tt>&lt;optional&gt;</tt></a> </td>
+<td> <span class="t-mark-rev t-since-cxx23">(C++23)</span>
+</td></tr>
+<tr>
+<td> <span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_move_only_function</span></span> </td>
+<td> <span class="t-lc">std::move_only_function</span> </td>
+<td> <span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">202110L</span></span></span> </td>
+<td> <a href="header/functional.html" title="cpp/header/functional"><tt>&lt;functional&gt;</tt></a> </td>
+<td> <span class="t-mark-rev t-since-cxx23">(C++23)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_node_extract</span></span></td>
+<td>拼接 map 与 set （ <span class="t-lc"><a href="container/map/extract.html" title="cpp/container/map/extract">std::map::extract</a></span> 、 <span class="t-lc"><a href="container/map/merge.html" title="cpp/container/map/merge">std::map::merge</a></span> 、 <a href="container/map/insert.html" title="cpp/container/map/insert"><tt>std::map::insert(node_type)</tt></a> 等）</td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201606L</span></span></span></td>
+<td><a href="header/map.html" title="cpp/header/map"><tt>&lt;map&gt;</tt></a> <a href="header/set.html" title="cpp/header/set"><tt>&lt;set&gt;</tt></a> <a href="header/unordered_map.html" title="cpp/header/unordered map"><tt>&lt;unordered_map&gt;</tt></a> <a href="header/unordered_set.html" title="cpp/header/unordered set"><tt>&lt;unordered_set&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx17">(C++17)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_nonmember_</span></span><span class="t-c"><span class="mw-geshi cpp source-cpp">container_access</span></span></td>
+<td><span class="t-lc"><a href="iterator/size.html" title="cpp/iterator/size">std::size()</a></span> 、 <span class="t-lc"><a href="iterator/data.html" title="cpp/iterator/data">std::data()</a></span> 及 <span class="t-lc"><a href="iterator/empty.html" title="cpp/iterator/empty">std::empty()</a></span></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201411L</span></span></span></td>
+<td><a href="header/iterator.html" title="cpp/header/iterator"><tt>&lt;iterator&gt;</tt></a> <a href="header/array.html" title="cpp/header/array"><tt>&lt;array&gt;</tt></a> <a href="header/deque.html" title="cpp/header/deque"><tt>&lt;deque&gt;</tt></a> <a href="header/forward_list.html" title="cpp/header/forward list"><tt>&lt;forward_list&gt;</tt></a> <a href="header/list.html" title="cpp/header/list"><tt>&lt;list&gt;</tt></a> <a href="header/map.html" title="cpp/header/map"><tt>&lt;map&gt;</tt></a> <a href="header/regex.html" title="cpp/header/regex"><tt>&lt;regex&gt;</tt></a> <a href="header/set.html" title="cpp/header/set"><tt>&lt;set&gt;</tt></a> <a href="header/string.html" title="cpp/header/string"><tt>&lt;string&gt;</tt></a> <a href="header/unordered_map.html" title="cpp/header/unordered map"><tt>&lt;unordered_map&gt;</tt></a> <a href="header/unordered_set.html" title="cpp/header/unordered set"><tt>&lt;unordered_set&gt;</tt></a> <a href="header/vector.html" title="cpp/header/vector"><tt>&lt;vector&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx17">(C++17)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_not_fn</span></span></td>
+<td><span class="t-lc"><a href="utility/functional/not_fn.html" title="cpp/utility/functional/not fn">std::not_fn()</a></span></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201603L</span></span></span></td>
+<td><a href="header/functional.html" title="cpp/header/functional"><tt>&lt;functional&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx17">(C++17)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_null_iterators</span></span></td>
+<td>空<a href="named_req/ForwardIterator.html" title="cpp/named req/ForwardIterator"><span style="font-style:italic">老式向前迭代器</span> <span style="font-family: Georgia, 'DejaVu Serif', serif; font-style:italic">(LegacyForwardIterator)</span> </a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201304L</span></span></span></td>
+<td><a href="header/iterator.html" title="cpp/header/iterator"><tt>&lt;iterator&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx14">(C++14)</span>
+</td></tr>
+<tr>
+<td rowspan="2"><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_optional</span></span></td>
+<td><span class="t-lc"><a href="utility/optional.html" title="cpp/utility/optional">std::optional</a></span></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201606L</span></span></span></td>
+<td><a href="header/optional.html" title="cpp/header/optional"><tt>&lt;optional&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx17">(C++17)</span>
+</td></tr>
+<tr>
+<td>完全 <code>constexpr</code> <span class="t-lc"><a href="utility/optional.html" title="cpp/utility/optional">std::optional</a></span></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">202106L</span></span></span></td>
+<td><a href="header/optional.html" title="cpp/header/optional"><tt>&lt;optional&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx23">(C++23)</span>
+</td></tr>
+<tr>
+<td> <span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_out_ptr</span></span> </td>
+<td> <span class="t-lc">std::out_ptr</span>、 <span class="t-lc">std::inout_ptr</span> </td>
+<td> <span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">202106L</span></span></span> </td>
+<td> <a href="header/memory.html" title="cpp/header/memory"><tt>&lt;memory&gt;</tt></a> </td>
+<td> <span class="t-mark-rev t-since-cxx23">(C++23)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_parallel_algorithm</span></span></td>
+<td><a href="algorithm.html#.E6.89.A7.E8.A1.8C.E7.AD.96.E7.95.A5" title="cpp/algorithm">并行算法</a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201603L</span></span></span></td>
+<td><a href="header/algorithm.html" title="cpp/header/algorithm"><tt>&lt;algorithm&gt;</tt></a> <a href="header/numeric.html" title="cpp/header/numeric"><tt>&lt;numeric&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx17">(C++17)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_polymorphic_</span></span><span class="t-c"><span class="mw-geshi cpp source-cpp">allocator</span></span></td>
+<td><span class="t-lc"><a href="memory/polymorphic_allocator.html" title="cpp/memory/polymorphic allocator">std::pmr::polymorphic_allocator&lt;&gt;</a></span> 作为词汇类型</td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201902L</span></span></span></td>
+<td><a href="header/memory_resource.html" title="cpp/header/memory resource"><tt>&lt;memory_resource&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_quoted_string_io</span></span></td>
+<td><span class="t-lc"><a href="io/manip/quoted.html" title="cpp/io/manip/quoted">std::quoted</a></span></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201304L</span></span></span></td>
+<td><a href="header/iomanip.html" title="cpp/header/iomanip"><tt>&lt;iomanip&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx14">(C++14)</span>
+</td></tr>
+<tr>
+<td rowspan="3"> <span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_ranges</span></span> </td>
+<td> <a href="ranges.html" title="cpp/ranges">范围库</a>与<a href="algorithm/ranges.html" title="cpp/algorithm/ranges">受约束算法</a> </td>
+<td> <span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201911L</span></span></span> </td>
+<td rowspan="3"> <a href="header/algorithm.html" title="cpp/header/algorithm"><tt>&lt;algorithm&gt;</tt></a> <a href="header/functional.html" title="cpp/header/functional"><tt>&lt;functional&gt;</tt></a> <a href="header/iterator.html" title="cpp/header/iterator"><tt>&lt;iterator&gt;</tt></a> <a href="header/memory.html" title="cpp/header/memory"><tt>&lt;memory&gt;</tt></a> <a href="header/ranges.html" title="cpp/header/ranges"><tt>&lt;ranges&gt;</tt></a> </td>
+<td> <span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td> 不<a href="concepts/default_initializable.html" title="cpp/concepts/default initializable">可默认初始化</a>的<a href="ranges/view.html" title="cpp/ranges/view">视图</a> </td>
+<td> <span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">202106L</span></span></span> </td>
+<td> <span class="t-mark-rev t-since-cxx23">(C++23)</span>
+</td></tr>
+<tr>
+<td> 带<a href="ranges/owning_view.html" title="cpp/ranges/owning view">所有权</a>的<a href="ranges/view.html" title="cpp/ranges/view">视图</a> </td>
+<td> <span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">202110L</span></span></span> </td>
+<td> <span class="t-mark-rev t-since-cxx23">(C++23)</span>
+</td></tr>
+<tr>
+<td> <span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_ranges_</span></span><span class="t-c"><span class="mw-geshi cpp source-cpp">starts_ends_with</span></span> </td>
+<td> <span class="t-lc">std::ranges::starts_with</span>、 <span class="t-lc">std::ranges::ends_with</span> </td>
+<td> <span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">202106L</span></span></span> </td>
+<td> <a href="header/algorithm.html" title="cpp/header/algorithm"><tt>&lt;algorithm&gt;</tt></a> </td>
+<td> <span class="t-mark-rev t-since-cxx23">(C++23)</span>
+</td></tr>
+<tr>
+<td> <span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_ranges_zip</span></span> </td>
+<td> <span class="t-lc">std::ranges::zip_view</span>、 <span class="t-lc">std::ranges::zip_transform_view</span>、 <span class="t-lc">std::ranges::adjacent_view</span>、 <span class="t-lc">std::ranges::adjacent_transform_view</span> </td>
+<td> <span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">202110L</span></span></span> </td>
+<td> <a href="header/ranges.html" title="cpp/header/ranges"><tt>&lt;ranges&gt;</tt></a> <a href="header/tuple.html" title="cpp/header/tuple"><tt>&lt;tuple&gt;</tt></a> <a href="header/utility.html" title="cpp/header/utility"><tt>&lt;utility&gt;</tt></a> </td>
+<td> <span class="t-mark-rev t-since-cxx23">(C++23)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_raw_memory_</span></span><span class="t-c"><span class="mw-geshi cpp source-cpp">algorithms</span></span></td>
+<td><a href="memory.html#.E6.9C.AA.E5.88.9D.E5.A7.8B.E5.8C.96.E5.AD.98.E5.82.A8" title="cpp/memory">扩展内存管理工具</a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201606L</span></span></span></td>
+<td><a href="header/memory.html" title="cpp/header/memory"><tt>&lt;memory&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx17">(C++17)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_remove_cvref</span></span></td>
+<td><a href="types/remove_cvref.html" title="cpp/types/remove cvref"><tt>std::remove_cvref</tt></a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201711L</span></span></span></td>
+<td><a href="header/type_traits.html" title="cpp/header/type traits"><tt>&lt;type_traits&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_result_of_sfinae</span></span></td>
+<td><span class="t-lc"><a href="types/result_of.html" title="cpp/types/result of">std::result_of</a></span> 与 SFINAE</td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201210L</span></span></span></td>
+<td><a href="header/type_traits.html" title="cpp/header/type traits"><tt>&lt;type_traits&gt;</tt></a> <a href="header/functional.html" title="cpp/header/functional"><tt>&lt;functional&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx14">(C++14)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_robust_</span></span><span class="t-c"><span class="mw-geshi cpp source-cpp">nonmodifying_seq_ops</span></span></td>
+<td>使不修改序列的操作更稳健（ <span class="t-lc"><a href="algorithm/mismatch.html" title="cpp/algorithm/mismatch">std::mismatch</a></span> 、 <span class="t-lc"><a href="algorithm/equal.html" title="cpp/algorithm/equal">std::equal</a></span> 及 <span class="t-lc"><a href="algorithm/is_permutation.html" title="cpp/algorithm/is permutation">std::is_permutation</a></span> 的双范围重载）</td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201304L</span></span></span></td>
+<td><a href="header/algorithm.html" title="cpp/header/algorithm"><tt>&lt;algorithm&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx14">(C++14)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_sample</span></span></td>
+<td><span class="t-lc"><a href="algorithm/sample.html" title="cpp/algorithm/sample">std::sample</a></span></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201603L</span></span></span></td>
+<td><a href="header/algorithm.html" title="cpp/header/algorithm"><tt>&lt;algorithm&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx17">(C++17)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_scoped_lock</span></span></td>
+<td><a href="thread/scoped_lock.html" title="cpp/thread/scoped lock"><tt>std::scoped_lock</tt></a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201703L</span></span></span></td>
+<td><a href="header/mutex.html" title="cpp/header/mutex"><tt>&lt;mutex&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx17">(C++17)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_semaphore</span></span></td>
+<td><a href="thread/counting_semaphore.html" title="cpp/thread/counting semaphore"><code>std::counting_semaphore</code> 、 <code>std::binary_semaphore</code></a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201907L</span></span></span></td>
+<td><a href="header/semaphore.html" title="cpp/header/semaphore"><tt>&lt;semaphore&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_shared_mutex</span></span></td>
+<td><span class="t-lc"><a href="thread/shared_mutex.html" title="cpp/thread/shared mutex">std::shared_mutex</a></span> （无时限）</td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201505L</span></span></span></td>
+<td><a href="header/shared_mutex.html" title="cpp/header/shared mutex"><tt>&lt;shared_mutex&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx17">(C++17)</span>
+</td></tr>
+<tr>
+<td rowspan="2"> <span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_shared_ptr_arrays</span></span></td>
+<td><span class="t-lc"><a href="memory/shared_ptr.html" title="cpp/memory/shared ptr">std::shared_ptr&lt;T[]&gt;</a></span></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201611L</span></span></span></td>
+<td><a href="header/memory.html" title="cpp/header/memory"><tt>&lt;memory&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx17">(C++17)</span>
+</td></tr>
+<tr>
+<td><span class="t-lc"><a href="memory/shared_ptr/make_shared.html" title="cpp/memory/shared ptr/make shared">std::make_shared</a></span> 的数组支持</td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201707L</span></span></span></td>
+<td><a href="header/memory.html" title="cpp/header/memory"><tt>&lt;memory&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_shared_ptr_weak_type</span></span></td>
+<td><a href="memory/shared_ptr.html" title="cpp/memory/shared ptr"><tt>shared_ptr::weak_type</tt></a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201606L</span></span></span></td>
+<td><a href="header/memory.html" title="cpp/header/memory"><tt>&lt;memory&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx17">(C++17)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_shared_timed_mutex</span></span></td>
+<td><span class="t-lc"><a href="thread/shared_timed_mutex.html" title="cpp/thread/shared timed mutex">std::shared_timed_mutex</a></span></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201402L</span></span></span></td>
+<td><a href="header/shared_mutex.html" title="cpp/header/shared mutex"><tt>&lt;shared_mutex&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx14">(C++14)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_shift</span></span></td>
+<td><a href="algorithm/shift.html" title="cpp/algorithm/shift"><tt>std::shift_left</tt></a> 与 <a href="algorithm/shift.html" title="cpp/algorithm/shift"><tt>std::shift_right</tt></a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201806L</span></span></span></td>
+<td><a href="header/algorithm.html" title="cpp/header/algorithm"><tt>&lt;algorithm&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_smart_</span></span><span class="t-c"><span class="mw-geshi cpp source-cpp">ptr_for_overwrite</span></span></td>
+<td>用默认初始化创建智能指针（ <span class="t-lc">std::allocate_shared_for_overwrite</span> 、 <span class="t-lc">std::make_shared_for_overwrite</span> 、 <span class="t-lc">std::make_unique_for_overwrite</span> ）</td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201811L</span></span></span></td>
+<td><a href="header/memory.html" title="cpp/header/memory"><tt>&lt;memory&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_source_location</span></span></td>
+<td>源码信息捕获（ <span class="t-lc">std::source_location</span> ）</td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201907L</span></span></span></td>
+<td><a href="header/source_location.html" title="cpp/header/source location"><tt>&lt;source_location&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_span</span></span></td>
+<td><a href="container/span.html" title="cpp/container/span"><tt>std::span</tt></a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">202002L</span></span></span></td>
+<td><a href="header/span.html" title="cpp/header/span"><tt>&lt;span&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td> <span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_spanstream</span></span> </td>
+<td> <a href="io/basic_spanbuf.html" title="cpp/io/basic spanbuf"><tt>std::spanbuf</tt></a>、 <a href="io/basic_spanstream.html" title="cpp/io/basic spanstream"><tt>std::spanstream</tt></a> </td>
+<td> <span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">202106L</span></span></span> </td>
+<td> <a href="header/spanstream.html" title="cpp/header/spanstream"><tt>&lt;spanstream&gt;</tt></a> </td>
+<td> <span class="t-mark-rev t-since-cxx23">(C++23)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_ssize</span></span></td>
+<td><a href="iterator/size.html" title="cpp/iterator/size"><tt>std::ssize</tt></a> 与无符号的 <a href="container/span/size.html" title="cpp/container/span/size"><tt>std::span::size</tt></a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201902L</span></span></span></td>
+<td><a href="header/iterator.html" title="cpp/header/iterator"><tt>&lt;iterator&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td> <span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_stacktrace</span></span> </td>
+<td><a href="utility.html#.E6.A0.88.E8.B8.AA" title="cpp/utility">栈踪库</a></td>
+<td> <span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">202011L</span></span></span> </td>
+<td> <a href="header/stacktrace.html" title="cpp/header/stacktrace"><tt>&lt;stacktrace&gt;</tt></a> </td>
+<td> <span class="t-mark-rev t-since-cxx23">(C++23)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_starts_ends_with</span></span></td>
+<td>字符串前缀与后缀检查（ <span class="t-lc"><a href="string/basic_string.html" title="cpp/string/basic string">std::string</a></span> 与 <span class="t-lc"><a href="string/basic_string_view.html" title="cpp/string/basic string view">std::string_view</a></span> 的 <span class="t-lc">starts_with()</span> 与 <span class="t-lc">ends_with()</span> ）</td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201711L</span></span></span></td>
+<td><a href="header/string.html" title="cpp/header/string"><tt>&lt;string&gt;</tt></a> <a href="header/string_view.html" title="cpp/header/string view"><tt>&lt;string_view&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td> <span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_stdatomic_h</span></span> </td>
+<td>C 原子操作的兼容头文件</td>
+<td> <span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">202011L</span></span></span> </td>
+<td> <a href="header/stdatomic.h.html" title="cpp/header/stdatomic.h"><tt>&lt;stdatomic.h&gt;</tt></a> </td>
+<td> <span class="t-mark-rev t-since-cxx23">(C++23)</span>
+</td></tr>
+<tr>
+<td> <span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_string_contains</span></span> </td>
+<td><a href="string/basic_string/contains.html" title="cpp/string/basic string/contains"><tt>std::basic_string</tt></a> 与 <a href="string/basic_string_view/contains.html" title="cpp/string/basic string view/contains"><tt>std::basic_string_view</tt></a> 的 <code>contains</code> 函数</td>
+<td> <span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">202011L</span></span></span> </td>
+<td> <a href="header/string.html" title="cpp/header/string"><tt>&lt;string&gt;</tt></a> <a href="header/string_view.html" title="cpp/header/string view"><tt>&lt;string_view&gt;</tt></a> </td>
+<td> <span class="t-mark-rev t-since-cxx23">(C++23)</span>
+</td></tr>
+<tr>
+<td> <span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_string_</span></span><span class="t-c"><span class="mw-geshi cpp source-cpp">resize_and_overwrite</span></span> </td>
+<td> <span class="t-lc">std::basic_string::resize_and_overwrite</span> </td>
+<td> <span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">202110L</span></span></span> </td>
+<td> <a href="header/string.html" title="cpp/header/string"><tt>&lt;string&gt;</tt></a> </td>
+<td> <span class="t-mark-rev t-since-cxx23">(C++23)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_string_udls</span></span></td>
+<td><a href="string/basic_string/operator%2522%2522s.html" title='cpp/string/basic string/operator""s'>字符串类型的用户定义字面量</a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201304L</span></span></span></td>
+<td><a href="header/string.html" title="cpp/header/string"><tt>&lt;string&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx14">(C++14)</span>
+</td></tr>
+<tr>
+<td rowspan="2"> <span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_string_view</span></span></td>
+<td><span class="t-lc"><a href="string/basic_string_view.html" title="cpp/string/basic string view">std::string_view</a></span></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201606L</span></span></span></td>
+<td><a href="header/string.html" title="cpp/header/string"><tt>&lt;string&gt;</tt></a> <a href="header/string_view.html" title="cpp/header/string view"><tt>&lt;string_view&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx17">(C++17)</span>
+</td></tr>
+<tr>
+<td><a href="named_req/ConstexprIterator.html" title="cpp/named req/ConstexprIterator"><span style="font-style:italic">常量表达式迭代器</span> <span style="font-family: Georgia, 'DejaVu Serif', serif; font-style:italic">(ConstexprIterator)</span> </a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201803L</span></span></span></td>
+<td><a href="header/string.html" title="cpp/header/string"><tt>&lt;string&gt;</tt></a> <a href="header/string_view.html" title="cpp/header/string view"><tt>&lt;string_view&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_syncbuf</span></span></td>
+<td>同步缓冲的输出流（ <span class="t-lc">std::syncbuf</span> 、 <span class="t-lc">std::osyncstream</span> ）与操纵符</td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201803L</span></span></span></td>
+<td><a href="header/syncstream.html" title="cpp/header/syncstream"><tt>&lt;syncstream&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_three_way_comparison</span></span></td>
+<td><a href="language/operator_comparison.html#.E4.B8.89.E8.B7.AF.E6.AF.94.E8.BE.83" title="cpp/language/operator comparison">三路比较</a>（库支持）；添加三路比较到标准库</td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201907L</span></span></span></td>
+<td><a href="header/compare.html" title="cpp/header/compare"><tt>&lt;compare&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_to_address</span></span></td>
+<td>转换指针为裸指针（ <span class="t-lc">std::to_address</span> ）</td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201711L</span></span></span></td>
+<td><a href="header/memory.html" title="cpp/header/memory"><tt>&lt;memory&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_to_array</span></span></td>
+<td><a href="container/array/to_array.html" title="cpp/container/array/to array"><tt>std::to_array</tt></a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201907L</span></span></span></td>
+<td><a href="header/array.html" title="cpp/header/array"><tt>&lt;array&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_to_chars</span></span></td>
+<td>初等字符串转换（ <span class="t-lc">std::to_chars</span> 、 <span class="t-lc">std::from_chars</span> ）</td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201611L</span></span></span></td>
+<td><a href="header/charconv.html" title="cpp/header/charconv"><tt>&lt;charconv&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx17">(C++17)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_to_underlying</span></span></td>
+<td> <a href="utility/to_underlying.html" title="cpp/utility/to underlying"><tt>std::to_underlying</tt></a>  </td>
+<td> <span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">202102L</span></span></span> </td>
+<td> <a href="header/utility.html" title="cpp/header/utility"><tt>&lt;utility&gt;</tt></a> </td>
+<td> <span class="t-mark-rev t-since-cxx23">(C++23)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_transformation_</span></span><span class="t-c"><span class="mw-geshi cpp source-cpp">trait_aliases</span></span></td>
+<td>变换特征的别名模板</td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201304L</span></span></span></td>
+<td><a href="header/type_traits.html" title="cpp/header/type traits"><tt>&lt;type_traits&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx14">(C++14)</span>
+</td></tr>
+<tr>
+<td rowspan="2"> <span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_transparent_</span></span><span class="t-c"><span class="mw-geshi cpp source-cpp">operators</span></span></td>
+<td>通透运算符函数对象（ <span class="t-lc">std::less&lt;&gt;</span> 等）</td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201210L</span></span></span></td>
+<td><a href="header/functional.html" title="cpp/header/functional"><tt>&lt;functional&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx14">(C++14)</span>
+</td></tr>
+<tr>
+<td>通透的 <span class="t-lc"><a href="memory/owner_less.html" title="cpp/memory/owner less">std::owner_less</a></span> （ <a href="memory/owner_less_void.html" title="cpp/memory/owner less void"><tt>std::owner_less&lt;void&gt;</tt></a> ）</td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201510L</span></span></span></td>
+<td><a href="header/memory.html" title="cpp/header/memory"><tt>&lt;memory&gt;</tt></a> <a href="header/functional.html" title="cpp/header/functional"><tt>&lt;functional&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx17">(C++17)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_tuple_element_t</span></span></td>
+<td><a href="utility/tuple/tuple_element.html" title="cpp/utility/tuple/tuple element"><tt>std::tuple_element_t</tt></a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201402L</span></span></span></td>
+<td><a href="header/tuple.html" title="cpp/header/tuple"><tt>&lt;tuple&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx14">(C++14)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_tuples_by_type</span></span></td>
+<td><a href="utility/tuple/get.html" title="cpp/utility/tuple/get">按类型寻址 tuple</a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201304L</span></span></span></td>
+<td><a href="header/tuple.html" title="cpp/header/tuple"><tt>&lt;tuple&gt;</tt></a> <a href="header/utility.html" title="cpp/header/utility"><tt>&lt;utility&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx14">(C++14)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_type_identity</span></span></td>
+<td><span class="t-lc">std::type_identity</span></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201806L</span></span></span></td>
+<td><a href="header/type_traits.html" title="cpp/header/type traits"><tt>&lt;type_traits&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_type_trait_</span></span><span class="t-c"><span class="mw-geshi cpp source-cpp">variable_templates</span></span></td>
+<td>类型特征变量模板（ <span class="t-lc"><a href="types/is_void.html" title="cpp/types/is void">std::is_void_v</a></span> 等）</td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201510L</span></span></span></td>
+<td><a href="header/type_traits.html" title="cpp/header/type traits"><tt>&lt;type_traits&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx17">(C++17)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_uncaught_exceptions</span></span></td>
+<td><a href="error/exception/uncaught_exception.html" title="cpp/error/uncaught exception"><tt>std::uncaught_exceptions</tt></a></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201411L</span></span></span></td>
+<td><a href="header/exception.html" title="cpp/header/exception"><tt>&lt;exception&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx17">(C++17)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_unordered_</span></span><span class="t-c"><span class="mw-geshi cpp source-cpp">map_try_emplace</span></span></td>
+<td><span class="t-lc"><a href="container/unordered_map/try_emplace.html" title="cpp/container/unordered map/try emplace">std::unordered_map::try_emplace</a></span> 、 <span class="t-lc"><a href="container/unordered_map/insert_or_assign.html" title="cpp/container/unordered map/insert or assign">std::unordered_map::insert_or_assign</a></span></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201411L</span></span></span></td>
+<td><a href="header/unordered_map.html" title="cpp/header/unordered map"><tt>&lt;unordered_map&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx17">(C++17)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_unwrap_ref</span></span></td>
+<td><span class="t-lc">std::unwrap_ref_decay</span> 与 <span class="t-lc">std::unwrap_reference</span></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201811L</span></span></span></td>
+<td><a href="header/type_traits.html" title="cpp/header/type traits"><tt>&lt;type_traits&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx20">(C++20)</span>
+</td></tr>
+<tr>
+<td rowspan="3"><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_variant</span></span></td>
+<td><span class="t-lc"><a href="utility/variant.html" title="cpp/utility/variant">std::variant</a></span> ： C++17 的类型安全联合体</td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201606L</span></span></span></td>
+<td><a href="header/variant.html" title="cpp/header/variant"><tt>&lt;variant&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx17">(C++17)</span>
+</td></tr>
+<tr>
+<td><span class="t-lc"><a href="utility/variant.html" title="cpp/utility/variant">std::variant</a></span> 的派生类的 <span class="t-lc"><a href="utility/variant/visit.html" title="cpp/utility/variant/visit">std::visit</a></span></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">202102L</span></span></span></td>
+<td><a href="header/variant.html" title="cpp/header/variant"><tt>&lt;variant&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx23">(C++23)</span>
+</td></tr>
+<tr>
+<td>完全 <code>constexpr</code> <span class="t-lc"><a href="utility/variant.html" title="cpp/utility/variant">std::variant</a></span></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">202106L</span></span></span></td>
+<td><a href="header/variant.html" title="cpp/header/variant"><tt>&lt;variant&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx23">(C++23)</span>
+</td></tr>
+<tr>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp">__cpp_lib_void_t</span></span></td>
+<td><span class="t-lc"><a href="types/void_t.html" title="cpp/types/void t">std::void_t</a></span></td>
+<td><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="nu0">201411L</span></span></span></td>
+<td><a href="header/type_traits.html" title="cpp/header/type traits"><tt>&lt;type_traits&gt;</tt></a></td>
+<td><span class="t-mark-rev t-since-cxx17">(C++17)</span>
+</td></tr></table>
+<h3><span class="mw-headline" id=".E7.A4.BA.E4.BE.8B">示例</span></h3>
+<h4><span class="mw-headline" id=".E6.AD.A3.E5.B8.B8.E4.BD.BF.E7.94.A8">正常使用</span></h4>
+<div class="t-example"><div class="t-example-live-link"><div class="coliru-btn coliru-btn-run-init">运行此代码</div></div>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="cpp source-cpp"><pre class="de1"><span class="co2">#ifdef __has_include                           // 检查 __has_include 是否存在</span>
+<span class="co2">#  if __has_include(&lt;optional&gt;)                // 检查标准库</span>
+<span class="co2">#    include &lt;optional&gt;</span>
+<span class="co2">#  elif __has_include(&lt;experimental/optional&gt;) // 检查实验版本</span>
+<span class="co2">#    include &lt;experimental/optional&gt;</span>
+<span class="co2">#  elif __has_include(&lt;boost/optional.hpp&gt;)    // 尝试外部库</span>
+<span class="co2">#    include &lt;boost/optional.hpp&gt;</span>
+<span class="co2">#  else                                        // 完全找不到</span>
+<span class="co2">#     error "Missing &lt;optional&gt;"</span>
+<span class="co2">#  endif</span>
+<span class="co2">#endif</span>
+ 
+<span class="co2">#ifdef __has_cpp_attribute                      // 检查 __has_cpp_attribute 是否存在</span>
+<span class="co2">#  if __has_cpp_attribute(deprecated)           // 检查一个属性</span>
+<span class="co2">#    define DEPRECATED(msg) [[deprecated(msg)]]</span>
+<span class="co2">#  endif</span>
+<span class="co2">#endif</span>
+<span class="co2">#ifndef DEPRECATED</span>
+<span class="co2">#    define DEPRECATED(msg)</span>
+<span class="co2">#endif</span>
+ 
+DEPRECATED<span class="br0">(</span><span class="st0">"foo() has been deprecated"</span><span class="br0">)</span> <span class="kw4">void</span> foo<span class="br0">(</span><span class="br0">)</span><span class="sy4">;</span>
+ 
+<span class="co2">#if __cpp_constexpr &gt;= 201304                   // 检查功能特性的指定版本</span>
+<span class="co2">#  define CONSTEXPR constexpr</span>
+<span class="co2">#else</span>
+<span class="co2">#  define CONSTEXPR inline</span>
+<span class="co2">#endif</span>
+ 
+CONSTEXPR <span class="kw4">int</span> bar<span class="br0">(</span><span class="kw4">unsigned</span> i<span class="br0">)</span>
+<span class="br0">{</span>
+<span class="co2">#ifdef __cpp_binary_literals                    // 检查功能特性是否存在</span>
+    <span class="kw4">unsigned</span> mask1 <span class="sy1">=</span> <span class="nu6">0b11000000</span><span class="sy4">;</span>
+    <span class="kw4">unsigned</span> mask2 <span class="sy1">=</span> <span class="nu6">0b00000111</span><span class="sy4">;</span>
+<span class="co2">#else</span>
+    <span class="kw4">unsigned</span> mask1 <span class="sy1">=</span> <span class="nu12">0xA0</span><span class="sy4">;</span>
+    <span class="kw4">unsigned</span> mask2 <span class="sy1">=</span> <span class="nu12">0x07</span><span class="sy4">;</span>
+<span class="co2">#endif</span>
+    <span class="kw1">if</span> <span class="br0">(</span> i <span class="sy3">&amp;</span> mask1 <span class="br0">)</span>
+        <span class="kw1">return</span> <span class="nu0">1</span><span class="sy4">;</span>
+    <span class="kw1">if</span> <span class="br0">(</span> i <span class="sy3">&amp;</span> mask2 <span class="br0">)</span>
+        <span class="kw1">return</span> <span class="nu0">2</span><span class="sy4">;</span>
+    <span class="kw1">return</span> <span class="nu0">0</span><span class="sy4">;</span>
+<span class="br0">}</span>
+ 
+<span class="kw4">int</span> main<span class="br0">(</span><span class="br0">)</span>
+<span class="br0">{</span>
+<span class="br0">}</span></pre></div></div>
+</div>
+<h4><span class="mw-headline" id=".E7.BC.96.E8.AF.91.E5.99.A8.E5.8A.9F.E8.83.BD.E7.89.B9.E6.80.A7.E6.94.BE.E5.87.BA">编译器功能特性放出</span></h4>
+<div class="t-template-editlink" style="">
+</div>
+<div class="t-example"><p>以下示例放出 C++ 编译器功能特性与属性。</p><div class="t-example-live-link"><div class="coliru-btn coliru-btn-run-init">运行此代码</div></div>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="cpp source-cpp"><pre class="de1"><span class="co2">#if __cplusplus &lt; 201100</span>
+<span class="co2">#  error "C++11 or better is required"</span>
+<span class="co2">#endif</span>
+ 
+<span class="co2">#include &lt;algorithm&gt;</span>
+<span class="co2">#include &lt;cstring&gt;</span>
+<span class="co2">#include &lt;iomanip&gt;</span>
+<span class="co2">#include &lt;iostream&gt;</span>
+<span class="co2">#include &lt;string&gt;</span>
+ 
+<span class="co2">#ifdef __has_include</span>
+<span class="co2"># if __has_include(&lt;version&gt;)</span>
+<span class="co2">#   include &lt;version&gt;</span>
+<span class="co2"># endif</span>
+<span class="co2">#endif</span>
+ 
+<span class="co2">#define COMPILER_FEATURE_VALUE(value) #value</span>
+<span class="co2">#define COMPILER_FEATURE_ENTRY(name) { #name, COMPILER_FEATURE_VALUE(name) },</span>
+ 
+<span class="co2">#ifdef __has_cpp_attribute</span>
+<span class="co2"># define COMPILER_ATTRIBUTE_VALUE_AS_STRING(s) #s</span>
+<span class="co2"># define COMPILER_ATTRIBUTE_AS_NUMBER(x) COMPILER_ATTRIBUTE_VALUE_AS_STRING(x)</span>
+<span class="co2"># define COMPILER_ATTRIBUTE_ENTRY(attr) \
+  { #attr, COMPILER_ATTRIBUTE_AS_NUMBER(__has_cpp_attribute(attr)) },</span>
+<span class="co2">#else</span>
+<span class="co2"># define COMPILER_ATTRIBUTE_ENTRY(attr) { #attr, "_" },</span>
+<span class="co2">#endif</span>
+ 
+<span class="co1">// 更改这些选项以仅打印所需的信息。</span>
+<span class="kw4">static</span> <span class="kw1">struct</span> PrintOptions <span class="br0">{</span>
+    <span class="kw4">constexpr</span> <span class="kw4">static</span> <span class="kw4">bool</span> titles               <span class="sy1">=</span> <span class="nu0">1</span><span class="sy4">;</span>
+    <span class="kw4">constexpr</span> <span class="kw4">static</span> <span class="kw4">bool</span> attributes           <span class="sy1">=</span> <span class="nu0">1</span><span class="sy4">;</span>
+    <span class="kw4">constexpr</span> <span class="kw4">static</span> <span class="kw4">bool</span> general_features     <span class="sy1">=</span> <span class="nu0">1</span><span class="sy4">;</span>
+    <span class="kw4">constexpr</span> <span class="kw4">static</span> <span class="kw4">bool</span> core_features        <span class="sy1">=</span> <span class="nu0">1</span><span class="sy4">;</span>
+    <span class="kw4">constexpr</span> <span class="kw4">static</span> <span class="kw4">bool</span> lib_features         <span class="sy1">=</span> <span class="nu0">1</span><span class="sy4">;</span>
+    <span class="kw4">constexpr</span> <span class="kw4">static</span> <span class="kw4">bool</span> supported_features   <span class="sy1">=</span> <span class="nu0">1</span><span class="sy4">;</span>
+    <span class="kw4">constexpr</span> <span class="kw4">static</span> <span class="kw4">bool</span> unsupported_features <span class="sy1">=</span> <span class="nu0">1</span><span class="sy4">;</span>
+    <span class="kw4">constexpr</span> <span class="kw4">static</span> <span class="kw4">bool</span> sorted_by_value      <span class="sy1">=</span> <span class="nu0">0</span><span class="sy4">;</span>
+    <span class="kw4">constexpr</span> <span class="kw4">static</span> <span class="kw4">bool</span> cxx11                <span class="sy1">=</span> <span class="nu0">1</span><span class="sy4">;</span>
+    <span class="kw4">constexpr</span> <span class="kw4">static</span> <span class="kw4">bool</span> cxx14                <span class="sy1">=</span> <span class="nu0">1</span><span class="sy4">;</span>
+    <span class="kw4">constexpr</span> <span class="kw4">static</span> <span class="kw4">bool</span> cxx17                <span class="sy1">=</span> <span class="nu0">1</span><span class="sy4">;</span>
+    <span class="kw4">constexpr</span> <span class="kw4">static</span> <span class="kw4">bool</span> cxx20                <span class="sy1">=</span> <span class="nu0">1</span><span class="sy4">;</span>
+    <span class="kw4">constexpr</span> <span class="kw4">static</span> <span class="kw4">bool</span> cxx23                <span class="sy1">=</span> <span class="nu0">1</span><span class="sy4">;</span>
+<span class="br0">}</span>   print<span class="sy4">;</span>
+ 
+<span class="kw1">struct</span> CompilerFeature <span class="br0">{</span>
+    CompilerFeature<span class="br0">(</span><span class="kw4">const</span> <span class="kw4">char</span><span class="sy2">*</span> name <span class="sy1">=</span> nullptr, <span class="kw4">const</span> <span class="kw4">char</span><span class="sy2">*</span> value <span class="sy1">=</span> nullptr<span class="br0">)</span>
+        <span class="sy4">:</span> name<span class="br0">(</span>name<span class="br0">)</span>, value<span class="br0">(</span>value<span class="br0">)</span> <span class="br0">{</span><span class="br0">}</span>
+    <span class="kw4">const</span> <span class="kw4">char</span><span class="sy2">*</span> name<span class="sy4">;</span> <span class="kw4">const</span> <span class="kw4">char</span><span class="sy2">*</span> value<span class="sy4">;</span>
+<span class="br0">}</span><span class="sy4">;</span>
+ 
+<span class="kw4">static</span> CompilerFeature cxx<span class="br0">[</span><span class="br0">]</span> <span class="sy1">=</span> <span class="br0">{</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cplusplus<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_exceptions<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_rtti<span class="br0">)</span>
+<span class="co2">#if 0</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__GNUC__<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__GNUC_MINOR__<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__GNUC_PATCHLEVEL__<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__GNUG__<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__clang__<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__clang_major__<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__clang_minor__<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__clang_patchlevel__<span class="br0">)</span>
+<span class="co2">#endif</span>
+<span class="br0">}</span><span class="sy4">;</span>
+<span class="kw4">static</span> CompilerFeature cxx11<span class="br0">[</span><span class="br0">]</span> <span class="sy1">=</span> <span class="br0">{</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_alias_templates<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_attributes<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_constexpr<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_decltype<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_delegating_constructors<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_inheriting_constructors<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_initializer_lists<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lambdas<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_nsdmi<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_range_based_for<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_raw_strings<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_ref_qualifiers<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_rvalue_references<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_static_assert<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_threadsafe_static_init<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_unicode_characters<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_unicode_literals<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_user_defined_literals<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_variadic_templates<span class="br0">)</span>
+<span class="br0">}</span><span class="sy4">;</span>
+<span class="kw4">static</span> CompilerFeature cxx14<span class="br0">[</span><span class="br0">]</span> <span class="sy1">=</span> <span class="br0">{</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_aggregate_nsdmi<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_binary_literals<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_constexpr<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_decltype_auto<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_generic_lambdas<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_init_captures<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_return_type_deduction<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_sized_deallocation<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_variable_templates<span class="br0">)</span>
+<span class="br0">}</span><span class="sy4">;</span>
+<span class="kw4">static</span> CompilerFeature cxx14lib<span class="br0">[</span><span class="br0">]</span> <span class="sy1">=</span> <span class="br0">{</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_chrono_udls<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_complex_udls<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_exchange_function<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_generic_associative_lookup<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_integer_sequence<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_integral_constant_callable<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_is_final<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_is_null_pointer<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_make_reverse_iterator<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_make_unique<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_null_iterators<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_quoted_string_io<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_result_of_sfinae<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_robust_nonmodifying_seq_ops<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_shared_timed_mutex<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_string_udls<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_transformation_trait_aliases<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_transparent_operators<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_tuple_element_t<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_tuples_by_type<span class="br0">)</span>
+<span class="br0">}</span><span class="sy4">;</span>
+ 
+<span class="kw4">static</span> CompilerFeature cxx17<span class="br0">[</span><span class="br0">]</span> <span class="sy1">=</span> <span class="br0">{</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_aggregate_bases<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_aligned_new<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_capture_star_this<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_constexpr<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_deduction_guides<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_enumerator_attributes<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_fold_expressions<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_guaranteed_copy_elision<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_hex_float<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_if_constexpr<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_inheriting_constructors<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_inline_variables<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_namespace_attributes<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_noexcept_function_type<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_nontype_template_args<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_nontype_template_parameter_auto<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_range_based_for<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_static_assert<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_structured_bindings<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_template_template_args<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_variadic_using<span class="br0">)</span>
+<span class="br0">}</span><span class="sy4">;</span>
+<span class="kw4">static</span> CompilerFeature cxx17lib<span class="br0">[</span><span class="br0">]</span> <span class="sy1">=</span> <span class="br0">{</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_addressof_constexpr<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_allocator_traits_is_always_equal<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_any<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_apply<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_array_constexpr<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_as_const<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_atomic_is_always_lock_free<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_bool_constant<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_boyer_moore_searcher<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_byte<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_chrono<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_clamp<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_enable_shared_from_this<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_execution<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_filesystem<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_gcd_lcm<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_hardware_interference_size<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_has_unique_object_representations<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_hypot<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_incomplete_container_elements<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_invoke<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_is_aggregate<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_is_invocable<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_is_swappable<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_launder<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_logical_traits<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_make_from_tuple<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_map_try_emplace<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_math_special_functions<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_memory_resource<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_node_extract<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_nonmember_container_access<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_not_fn<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_optional<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_parallel_algorithm<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_raw_memory_algorithms<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_sample<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_scoped_lock<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_shared_mutex<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_shared_ptr_arrays<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_shared_ptr_weak_type<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_string_view<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_to_chars<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_transparent_operators<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_type_trait_variable_templates<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_uncaught_exceptions<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_unordered_map_try_emplace<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_variant<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_void_t<span class="br0">)</span>
+<span class="br0">}</span><span class="sy4">;</span>
+ 
+<span class="kw4">static</span> CompilerFeature cxx20<span class="br0">[</span><span class="br0">]</span> <span class="sy1">=</span> <span class="br0">{</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_aggregate_paren_init<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_char8_t<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_concepts<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_conditional_explicit<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_consteval<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_constexpr<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_constexpr_dynamic_alloc<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_constexpr_in_decltype<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_constinit<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_deduction_guides<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_designated_initializers<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_generic_lambdas<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_impl_coroutine<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_impl_destroying_delete<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_impl_three_way_comparison<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_init_captures<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_modules<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_nontype_template_args<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_using_enum<span class="br0">)</span>
+<span class="br0">}</span><span class="sy4">;</span>
+<span class="kw4">static</span> CompilerFeature cxx20lib<span class="br0">[</span><span class="br0">]</span> <span class="sy1">=</span> <span class="br0">{</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_array_constexpr<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_assume_aligned<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_atomic_flag_test<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_atomic_float<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_atomic_lock_free_type_aliases<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_atomic_ref<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_atomic_shared_ptr<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_atomic_value_initialization<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_atomic_wait<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_barrier<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_bind_front<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_bit_cast<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_bitops<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_bounded_array_traits<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_char8_t<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_chrono<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_concepts<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_constexpr_algorithms<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_constexpr_complex<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_constexpr_dynamic_alloc<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_constexpr_functional<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_constexpr_iterator<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_constexpr_memory<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_constexpr_numeric<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_constexpr_string<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_constexpr_string_view<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_constexpr_tuple<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_constexpr_utility<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_constexpr_vector<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_coroutine<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_destroying_delete<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_endian<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_erase_if<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_execution<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_format<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_generic_unordered_lookup<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_int_pow2<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_integer_comparison_functions<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_interpolate<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_is_constant_evaluated<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_is_layout_compatible<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_is_nothrow_convertible<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_is_pointer_interconvertible<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_jthread<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_latch<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_list_remove_return_type<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_math_constants<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_polymorphic_allocator<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_ranges<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_remove_cvref<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_semaphore<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_shared_ptr_arrays<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_shift<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_smart_ptr_for_overwrite<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_source_location<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_span<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_ssize<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_starts_ends_with<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_string_view<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_syncbuf<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_three_way_comparison<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_to_address<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_to_array<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_type_identity<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_unwrap_ref<span class="br0">)</span>
+<span class="br0">}</span><span class="sy4">;</span>
+ 
+<span class="kw4">static</span> CompilerFeature cxx23<span class="br0">[</span><span class="br0">]</span> <span class="sy1">=</span> <span class="br0">{</span>
+<span class="co1">//&lt; 继续填充</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_if_consteval<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_size_t_suffix<span class="br0">)</span>
+<span class="br0">}</span><span class="sy4">;</span>
+<span class="kw4">static</span> CompilerFeature cxx23lib<span class="br0">[</span><span class="br0">]</span> <span class="sy1">=</span> <span class="br0">{</span>
+<span class="co1">//&lt; 继续填充</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_constexpr_typeinfo<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_invoke_r<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_is_scoped_enum<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_stacktrace<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_stdatomic_h<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_string_contains<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_to_underlying<span class="br0">)</span>
+COMPILER_FEATURE_ENTRY<span class="br0">(</span>__cpp_lib_variant<span class="br0">)</span>
+<span class="br0">}</span><span class="sy4">;</span>
+ 
+<span class="kw4">static</span> CompilerFeature attributes<span class="br0">[</span><span class="br0">]</span> <span class="sy1">=</span> <span class="br0">{</span>
+COMPILER_ATTRIBUTE_ENTRY<span class="br0">(</span>carries_dependency<span class="br0">)</span>
+COMPILER_ATTRIBUTE_ENTRY<span class="br0">(</span>deprecated<span class="br0">)</span>
+COMPILER_ATTRIBUTE_ENTRY<span class="br0">(</span>fallthrough<span class="br0">)</span>
+COMPILER_ATTRIBUTE_ENTRY<span class="br0">(</span>likely<span class="br0">)</span>
+COMPILER_ATTRIBUTE_ENTRY<span class="br0">(</span>maybe_unused<span class="br0">)</span>
+COMPILER_ATTRIBUTE_ENTRY<span class="br0">(</span>nodiscard<span class="br0">)</span>
+COMPILER_ATTRIBUTE_ENTRY<span class="br0">(</span>noreturn<span class="br0">)</span>
+COMPILER_ATTRIBUTE_ENTRY<span class="br0">(</span>no_unique_address<span class="br0">)</span>
+COMPILER_ATTRIBUTE_ENTRY<span class="br0">(</span>unlikely<span class="br0">)</span>
+<span class="br0">}</span><span class="sy4">;</span>
+ 
+<span class="kw4">constexpr</span> <span class="kw4">bool</span> is_feature_supported<span class="br0">(</span><span class="kw4">const</span> CompilerFeature<span class="sy3">&amp;</span> x<span class="br0">)</span> <span class="br0">{</span>
+    <span class="kw1">return</span> x.<span class="me1">value</span><span class="br0">[</span><span class="nu0">0</span><span class="br0">]</span> <span class="sy3">!</span><span class="sy1">=</span> <span class="st0">'_'</span> <span class="sy3">&amp;&amp;</span> x.<span class="me1">value</span><span class="br0">[</span><span class="nu0">0</span><span class="br0">]</span> <span class="sy3">!</span><span class="sy1">=</span> <span class="st0">'0'</span> <span class="sy4">;</span>
+<span class="br0">}</span>
+ 
+<span class="kw1">inline</span> <span class="kw4">void</span> print_compiler_feature<span class="br0">(</span><span class="kw4">const</span> CompilerFeature<span class="sy3">&amp;</span> x<span class="br0">)</span> <span class="br0">{</span>
+    <span class="kw4">constexpr</span> <span class="kw4">static</span> <span class="kw4">int</span> max_name_length <span class="sy1">=</span> <span class="nu0">44</span><span class="sy4">;</span> <span class="co1">//&lt; Update if necessary</span>
+    <a href="string/basic_string.html"><span class="kw1230">std::<span class="me2">string</span></span></a> value<span class="br0">{</span> is_feature_supported<span class="br0">(</span>x<span class="br0">)</span> <span class="sy4">?</span> x.<span class="me1">value</span> <span class="sy4">:</span> <span class="st0">"------"</span> <span class="br0">}</span><span class="sy4">;</span>
+    <span class="kw1">if</span> <span class="br0">(</span>value.<span class="me1">back</span><span class="br0">(</span><span class="br0">)</span> <span class="sy1">==</span> <span class="st0">'L'</span><span class="br0">)</span> value.<span class="me1">pop_back</span><span class="br0">(</span><span class="br0">)</span><span class="sy4">;</span> <span class="co1">//~ 201603L -&gt; 201603</span>
+    <span class="co1">// value.insert(4, 1, '-'); //~ 201603 -&gt; 2016-03</span>
+    <span class="kw1">if</span> <span class="br0">(</span> <span class="br0">(</span>print.<span class="me1">supported_features</span> <span class="sy3">&amp;&amp;</span> is_feature_supported<span class="br0">(</span>x<span class="br0">)</span><span class="br0">)</span>
+        or <span class="br0">(</span>print.<span class="me1">unsupported_features</span> <span class="sy3">&amp;&amp;</span> <span class="sy3">!</span>is_feature_supported<span class="br0">(</span>x<span class="br0">)</span><span class="br0">)</span><span class="br0">)</span> <span class="br0">{</span>
+            <a href="io/cout.html"><span class="kw1758">std::<span class="me2">cout</span></span></a> <span class="sy1">&lt;&lt;</span> <a href="io/manip/left.html"><span class="kw1779">std::<span class="me2">left</span></span></a> <span class="sy1">&lt;&lt;</span> <a href="io/manip/setw.html"><span class="kw1797">std::<span class="me2">setw</span></span></a><span class="br0">(</span>max_name_length<span class="br0">)</span>
+                      <span class="sy1">&lt;&lt;</span> x.<span class="me1">name</span> <span class="sy1">&lt;&lt;</span> <span class="st0">" "</span> <span class="sy1">&lt;&lt;</span> value <span class="sy1">&lt;&lt;</span> <span class="st0">'<span class="es1">\n</span>'</span><span class="sy4">;</span>
+    <span class="br0">}</span>
+<span class="br0">}</span>
+ 
+<span class="kw1">template</span><span class="sy1">&lt;</span><a href="types/size_t.html"><span class="kw100">std::<span class="me2">size_t</span></span></a> N<span class="sy1">&gt;</span>
+<span class="kw1">inline</span> <span class="kw4">void</span> show<span class="br0">(</span><span class="kw4">char</span> <span class="kw4">const</span><span class="sy2">*</span> title, CompilerFeature <span class="br0">(</span><span class="sy3">&amp;</span>features<span class="br0">)</span><span class="br0">[</span>N<span class="br0">]</span><span class="br0">)</span> <span class="br0">{</span>
+    <span class="kw1">if</span> <span class="br0">(</span>print.<span class="me1">titles</span><span class="br0">)</span> <span class="br0">{</span>
+        <a href="io/cout.html"><span class="kw1758">std::<span class="me2">cout</span></span></a> <span class="sy1">&lt;&lt;</span> <span class="st0">'<span class="es1">\n</span>'</span> <span class="sy1">&lt;&lt;</span> <a href="io/manip/left.html"><span class="kw1779">std::<span class="me2">left</span></span></a> <span class="sy1">&lt;&lt;</span> title <span class="sy1">&lt;&lt;</span> <span class="st0">'<span class="es1">\n</span>'</span><span class="sy4">;</span>
+    <span class="br0">}</span>
+    <span class="kw1">if</span> <span class="br0">(</span>print.<span class="me1">sorted_by_value</span><span class="br0">)</span> <span class="br0">{</span>
+        <a href="algorithm/sort.html"><span class="kw1618">std::<span class="me2">sort</span></span></a><span class="br0">(</span><a href="iterator/begin.html"><span class="kw676">std::<span class="me2">begin</span></span></a><span class="br0">(</span>features<span class="br0">)</span>, <a href="iterator/end.html"><span class="kw680">std::<span class="me2">end</span></span></a><span class="br0">(</span>features<span class="br0">)</span>,
+            <span class="br0">[</span><span class="br0">]</span><span class="br0">(</span>CompilerFeature <span class="kw4">const</span><span class="sy3">&amp;</span> lhs, CompilerFeature <span class="kw4">const</span><span class="sy3">&amp;</span> rhs<span class="br0">)</span> <span class="br0">{</span>
+                <span class="kw1">return</span> <a href="string/byte/strcmp.html"><span class="kw1146">std::<span class="me2">strcmp</span></span></a><span class="br0">(</span>lhs.<span class="me1">value</span>, rhs.<span class="me1">value</span><span class="br0">)</span> <span class="sy1">&lt;</span> <span class="nu0">0</span><span class="sy4">;</span>
+            <span class="br0">}</span><span class="br0">)</span><span class="sy4">;</span>
+    <span class="br0">}</span>
+    <span class="kw1">for</span> <span class="br0">(</span><span class="kw4">const</span> CompilerFeature<span class="sy3">&amp;</span> x <span class="sy4">:</span> features<span class="br0">)</span> <span class="br0">{</span>
+        print_compiler_feature<span class="br0">(</span>x<span class="br0">)</span><span class="sy4">;</span>
+    <span class="br0">}</span>
+<span class="br0">}</span>
+ 
+<span class="kw4">int</span> main<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+    <span class="kw1">if</span> <span class="br0">(</span>print.<span class="me1">general_features</span><span class="br0">)</span> show<span class="br0">(</span><span class="st0">"C++ GENERAL"</span>, cxx<span class="br0">)</span><span class="sy4">;</span>
+    <span class="kw1">if</span> <span class="br0">(</span>print.<span class="me1">cxx11</span> <span class="sy3">&amp;&amp;</span> print.<span class="me1">core_features</span><span class="br0">)</span> show<span class="br0">(</span><span class="st0">"C++11 CORE"</span>, cxx11<span class="br0">)</span><span class="sy4">;</span>
+    <span class="kw1">if</span> <span class="br0">(</span>print.<span class="me1">cxx14</span> <span class="sy3">&amp;&amp;</span> print.<span class="me1">core_features</span><span class="br0">)</span> show<span class="br0">(</span><span class="st0">"C++14 CORE"</span>, cxx14<span class="br0">)</span><span class="sy4">;</span>
+    <span class="kw1">if</span> <span class="br0">(</span>print.<span class="me1">cxx14</span> <span class="sy3">&amp;&amp;</span> print.<span class="me1">lib_features</span> <span class="br0">)</span> show<span class="br0">(</span><span class="st0">"C++14 LIB"</span> , cxx14lib<span class="br0">)</span><span class="sy4">;</span>
+    <span class="kw1">if</span> <span class="br0">(</span>print.<span class="me1">cxx17</span> <span class="sy3">&amp;&amp;</span> print.<span class="me1">core_features</span><span class="br0">)</span> show<span class="br0">(</span><span class="st0">"C++17 CORE"</span>, cxx17<span class="br0">)</span><span class="sy4">;</span>
+    <span class="kw1">if</span> <span class="br0">(</span>print.<span class="me1">cxx17</span> <span class="sy3">&amp;&amp;</span> print.<span class="me1">lib_features</span> <span class="br0">)</span> show<span class="br0">(</span><span class="st0">"C++17 LIB"</span> , cxx17lib<span class="br0">)</span><span class="sy4">;</span>
+    <span class="kw1">if</span> <span class="br0">(</span>print.<span class="me1">cxx20</span> <span class="sy3">&amp;&amp;</span> print.<span class="me1">core_features</span><span class="br0">)</span> show<span class="br0">(</span><span class="st0">"C++20 CORE"</span>, cxx20<span class="br0">)</span><span class="sy4">;</span>
+    <span class="kw1">if</span> <span class="br0">(</span>print.<span class="me1">cxx20</span> <span class="sy3">&amp;&amp;</span> print.<span class="me1">lib_features</span> <span class="br0">)</span> show<span class="br0">(</span><span class="st0">"C++20 LIB"</span> , cxx20lib<span class="br0">)</span><span class="sy4">;</span>
+    <span class="kw1">if</span> <span class="br0">(</span>print.<span class="me1">cxx23</span> <span class="sy3">&amp;&amp;</span> print.<span class="me1">core_features</span><span class="br0">)</span> show<span class="br0">(</span><span class="st0">"C++23 CORE"</span>, cxx23<span class="br0">)</span><span class="sy4">;</span>
+    <span class="kw1">if</span> <span class="br0">(</span>print.<span class="me1">cxx23</span> <span class="sy3">&amp;&amp;</span> print.<span class="me1">lib_features</span> <span class="br0">)</span> show<span class="br0">(</span><span class="st0">"C++23 LIB"</span> , cxx23lib<span class="br0">)</span><span class="sy4">;</span>
+    <span class="kw1">if</span> <span class="br0">(</span>print.<span class="me1">attributes</span><span class="br0">)</span> show<span class="br0">(</span><span class="st0">"ATTRIBUTES"</span>, attributes<span class="br0">)</span><span class="sy4">;</span>
+<span class="br0">}</span></pre></div></div>
+<p>可能的输出：
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="text source-text"><pre class="de1">C++ GENERAL
+__cplusplus                                  202002
+__cpp_exceptions                             199711
+__cpp_rtti                                   199711
+ 
+C++11 CORE
+__cpp_alias_templates                        200704
+__cpp_attributes                             200809
+__cpp_constexpr                              201907
+__cpp_decltype                               200707
+__cpp_delegating_constructors                200604
+__cpp_inheriting_constructors                201511
+__cpp_initializer_lists                      200806
+__cpp_lambdas                                200907
+__cpp_nsdmi                                  200809
+__cpp_range_based_for                        201603
+__cpp_raw_strings                            200710
+__cpp_ref_qualifiers                         200710
+__cpp_rvalue_references                      200610
+__cpp_static_assert                          201411
+__cpp_threadsafe_static_init                 200806
+__cpp_unicode_characters                     200704
+__cpp_unicode_literals                       200710
+__cpp_user_defined_literals                  200809
+__cpp_variadic_templates                     200704
+ 
+C++14 CORE
+__cpp_aggregate_nsdmi                        201304
+__cpp_binary_literals                        201304
+__cpp_constexpr                              201907
+__cpp_decltype_auto                          201304
+__cpp_generic_lambdas                        201707
+__cpp_init_captures                          201803
+__cpp_return_type_deduction                  201304
+__cpp_sized_deallocation                     ------
+__cpp_variable_templates                     201304
+ 
+... truncated ...</pre></div></div> 
+</div>
+<h3><span class="mw-headline" id=".E5.8F.82.E9.98.85">参阅</span></h3>
+<ul><li> <a href="utility/feature_test.html" title="cpp/utility/feature test">库功能特性测试宏</a> <span class="t-mark-rev t-since-cxx20">(C++20)</span> 定义于 <a href="header/version.html" title="cpp/header/version"><tt>&lt;version&gt;</tt></a>
+</li><li> <a rel="nofollow" class="external text" href="http://isocpp.org/std/standing-documents/sd-6-sg10-feature-test-recommendations">特性测试推荐的官方文档</a>
+</li><li> <a rel="nofollow" class="external text" href="https://github.com/makelinux/examples/blob/master/cpp/features.cpp">试出编译器特性的源码</a>
+</li></ul>
+
+<!-- 
+NewPP limit report
+Preprocessor visited node count: 24784/1000000
+Preprocessor generated node count: 15352/1000000
+Post‐expand include size: 266129/2097152 bytes
+Template argument size: 112032/2097152 bytes
+Highest expansion depth: 16/40
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key mwiki1-mwiki_zh_:pcache:idhash:9572-0!*!0!!zh!*!zh!* and timestamp 20211110193108 -->
+</div>                    <!-- /bodycontent -->
+                                        <!-- printfooter -->
+                    <div class="printfooter">
+                    来自“<a href="https://zh.cppreference.com/mwiki/index.php?title=cpp/feature_test&amp;oldid=70849">https://zh.cppreference.com/mwiki/index.php?title=cpp/feature_test&amp;oldid=70849</a>”                    </div>
+                    <!-- /printfooter -->
+                                                            <!-- catlinks -->
+                    <!-- /catlinks -->
+                                                            <div class="visualClear"></div>
+                    <!-- debughtml -->
+                                        <!-- /debughtml -->
+                </div>
+                <!-- /bodyContent -->
+            </div>
+        </div>
+        <!-- /content -->
+        <!-- footer -->
+        <div id="cpp-footer-base" class="noprint">
+            <div id="footer">
+                        <div id="cpp-navigation">
+            <h5>导航</h5>
+            <ul><li><a href="https://zh.cppreference.com/w/cpp/feature_test">Online version</a></li><li>Offline version retrieved 2022-01-01 00:37.</li></ul></div>
+                        <ul id="footer-info">
+                                    <li id="footer-info-lastmod"> 本页面最后修改于2021年6月13日 (星期日) 22:34。</li>
+                                    <li id="footer-info-viewcount">此页面已被浏览过18,794次。</li>
+                            </ul>
+                    </div>
+        </div>
+        <!-- /footer -->
+        <script>if(window.mw){
+mw.loader.state({"site":"loading","user":"missing","user.groups":"ready"});
+}</script>
+<script src="../../common/skin_scripts.js"></script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.action.view.postEdit","mediawiki.user","mediawiki.page.ready","mediawiki.searchSuggest","mediawiki.hidpi","ext.gadget.MathJax","ext.gadget.ColiruCompiler"], null, true);
+}</script>
+<script src="../../common/site_scripts.js"></script>
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-2828341-1']);
+_gaq.push(['_setDomainName', 'cppreference.com']);
+_gaq.push(['_trackPageview']);
+</script><!-- Served in 28.471 secs. -->
+	</body>
+<!-- Cached 20211110193108 -->
+</html>

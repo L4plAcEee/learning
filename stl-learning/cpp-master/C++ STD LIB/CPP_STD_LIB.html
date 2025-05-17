@@ -1,0 +1,3059 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>C++标准库</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+  @font-face {
+  font-family: octicons-link;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+.markdown-body .octicon {
+  display: inline-block;
+  fill: currentColor;
+  vertical-align: text-bottom;
+}
+
+.markdown-body .anchor {
+  float: left;
+  line-height: 1;
+  margin-left: -20px;
+  padding-right: 4px;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: #1b1f23;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+.markdown-body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #24292e;
+  line-height: 1.5;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.markdown-body .pl-c {
+  color: #6a737d;
+}
+
+.markdown-body .pl-c1,
+.markdown-body .pl-s .pl-v {
+  color: #005cc5;
+}
+
+.markdown-body .pl-e,
+.markdown-body .pl-en {
+  color: #6f42c1;
+}
+
+.markdown-body .pl-s .pl-s1,
+.markdown-body .pl-smi {
+  color: #24292e;
+}
+
+.markdown-body .pl-ent {
+  color: #22863a;
+}
+
+.markdown-body .pl-k {
+  color: #d73a49;
+}
+
+.markdown-body .pl-pds,
+.markdown-body .pl-s,
+.markdown-body .pl-s .pl-pse .pl-s1,
+.markdown-body .pl-sr,
+.markdown-body .pl-sr .pl-cce,
+.markdown-body .pl-sr .pl-sra,
+.markdown-body .pl-sr .pl-sre {
+  color: #032f62;
+}
+
+.markdown-body .pl-smw,
+.markdown-body .pl-v {
+  color: #e36209;
+}
+
+.markdown-body .pl-bu {
+  color: #b31d28;
+}
+
+.markdown-body .pl-ii {
+  background-color: #b31d28;
+  color: #fafbfc;
+}
+
+.markdown-body .pl-c2 {
+  background-color: #d73a49;
+  color: #fafbfc;
+}
+
+.markdown-body .pl-c2:before {
+  content: "^M";
+}
+
+.markdown-body .pl-sr .pl-cce {
+  color: #22863a;
+  font-weight: 700;
+}
+
+.markdown-body .pl-ml {
+  color: #735c0f;
+}
+
+.markdown-body .pl-mh,
+.markdown-body .pl-mh .pl-en,
+.markdown-body .pl-ms {
+  color: #005cc5;
+  font-weight: 700;
+}
+
+.markdown-body .pl-mi {
+  color: #24292e;
+  font-style: italic;
+}
+
+.markdown-body .pl-mb {
+  color: #24292e;
+  font-weight: 700;
+}
+
+.markdown-body .pl-md {
+  background-color: #ffeef0;
+  color: #b31d28;
+}
+
+.markdown-body .pl-mi1 {
+  background-color: #f0fff4;
+  color: #22863a;
+}
+
+.markdown-body .pl-mc {
+  background-color: #ffebda;
+  color: #e36209;
+}
+
+.markdown-body .pl-mi2 {
+  background-color: #005cc5;
+  color: #f6f8fa;
+}
+
+.markdown-body .pl-mdr {
+  color: #6f42c1;
+  font-weight: 700;
+}
+
+.markdown-body .pl-ba {
+  color: #586069;
+}
+
+.markdown-body .pl-sg {
+  color: #959da5;
+}
+
+.markdown-body .pl-corl {
+  color: #032f62;
+  text-decoration: underline;
+}
+
+.markdown-body details {
+  display: block;
+}
+
+.markdown-body summary {
+  display: list-item;
+}
+
+.markdown-body a {
+  background-color: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline-width: 0;
+}
+
+.markdown-body strong {
+  font-weight: inherit;
+  font-weight: bolder;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: .67em 0;
+}
+
+.markdown-body img {
+  border-style: none;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+  font-family: monospace,monospace;
+  font-size: 1em;
+}
+
+.markdown-body hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+.markdown-body input {
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body input {
+  overflow: visible;
+}
+
+.markdown-body [type=checkbox] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body * {
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.markdown-body a {
+  color: #0366d6;
+  text-decoration: none;
+}
+
+.markdown-body a:hover {
+  text-decoration: underline;
+}
+
+.markdown-body strong {
+  font-weight: 600;
+}
+
+.markdown-body hr {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #dfe2e5;
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+}
+
+.markdown-body hr:before {
+  content: "";
+  display: table;
+}
+
+.markdown-body hr:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body details summary {
+  cursor: pointer;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.markdown-body h1 {
+  font-size: 32px;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  font-weight: 600;
+}
+
+.markdown-body h2 {
+  font-size: 24px;
+}
+
+.markdown-body h3 {
+  font-size: 20px;
+}
+
+.markdown-body h3,
+.markdown-body h4 {
+  font-weight: 600;
+}
+
+.markdown-body h4 {
+  font-size: 16px;
+}
+
+.markdown-body h5 {
+  font-size: 14px;
+}
+
+.markdown-body h5,
+.markdown-body h6 {
+  font-weight: 600;
+}
+
+.markdown-body h6 {
+  font-size: 12px;
+}
+
+.markdown-body p {
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-left: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ol ol ol,
+.markdown-body ol ul ol,
+.markdown-body ul ol ol,
+.markdown-body ul ul ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre {
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.markdown-body input::-webkit-inner-spin-button,
+.markdown-body input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.markdown-body .border {
+  border: 1px solid #e1e4e8!important;
+}
+
+.markdown-body .border-0 {
+  border: 0!important;
+}
+
+.markdown-body .border-bottom {
+  border-bottom: 1px solid #e1e4e8!important;
+}
+
+.markdown-body .rounded-1 {
+  border-radius: 3px!important;
+}
+
+.markdown-body .bg-white {
+  background-color: #fff!important;
+}
+
+.markdown-body .bg-gray-light {
+  background-color: #fafbfc!important;
+}
+
+.markdown-body .text-gray-light {
+  color: #6a737d!important;
+}
+
+.markdown-body .mb-0 {
+  margin-bottom: 0!important;
+}
+
+.markdown-body .my-2 {
+  margin-bottom: 8px!important;
+  margin-top: 8px!important;
+}
+
+.markdown-body .pl-0 {
+  padding-left: 0!important;
+}
+
+.markdown-body .py-0 {
+  padding-bottom: 0!important;
+  padding-top: 0!important;
+}
+
+.markdown-body .pl-1 {
+  padding-left: 4px!important;
+}
+
+.markdown-body .pl-2 {
+  padding-left: 8px!important;
+}
+
+.markdown-body .py-2 {
+  padding-bottom: 8px!important;
+  padding-top: 8px!important;
+}
+
+.markdown-body .pl-3,
+.markdown-body .px-3 {
+  padding-left: 16px!important;
+}
+
+.markdown-body .px-3 {
+  padding-right: 16px!important;
+}
+
+.markdown-body .pl-4 {
+  padding-left: 24px!important;
+}
+
+.markdown-body .pl-5 {
+  padding-left: 32px!important;
+}
+
+.markdown-body .pl-6 {
+  padding-left: 40px!important;
+}
+
+.markdown-body .f6 {
+  font-size: 12px!important;
+}
+
+.markdown-body .lh-condensed {
+  line-height: 1.25!important;
+}
+
+.markdown-body .text-bold {
+  font-weight: 600!important;
+}
+
+.markdown-body:before {
+  content: "";
+  display: table;
+}
+
+.markdown-body:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.markdown-body>:first-child {
+  margin-top: 0!important;
+}
+
+.markdown-body>:last-child {
+  margin-bottom: 0!important;
+}
+
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.markdown-body blockquote,
+.markdown-body dl,
+.markdown-body ol,
+.markdown-body p,
+.markdown-body pre,
+.markdown-body table,
+.markdown-body ul {
+  margin-bottom: 16px;
+  margin-top: 0;
+}
+
+.markdown-body hr {
+  background-color: #e1e4e8;
+  border: 0;
+  height: .25em;
+  margin: 24px 0;
+  padding: 0;
+}
+
+.markdown-body blockquote {
+  border-left: .25em solid #dfe2e5;
+  color: #6a737d;
+  padding: 0 1em;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body kbd {
+  background-color: #fafbfc;
+  border: 1px solid #c6cbd1;
+  border-bottom-color: #959da5;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #959da5;
+  color: #444d56;
+  display: inline-block;
+  font-size: 11px;
+  line-height: 10px;
+  padding: 3px 5px;
+  vertical-align: middle;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  font-weight: 600;
+  line-height: 1.25;
+  margin-bottom: 16px;
+  margin-top: 24px;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  border-bottom: 1px solid #eaecef;
+  padding-bottom: .3em;
+}
+
+.markdown-body h2 {
+  font-size: 1.5em;
+}
+
+.markdown-body h3 {
+  font-size: 1.25em;
+}
+
+.markdown-body h4 {
+  font-size: 1em;
+}
+
+.markdown-body h5 {
+  font-size: .875em;
+}
+
+.markdown-body h6 {
+  color: #6a737d;
+  font-size: .85em;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  padding-left: 2em;
+}
+
+.markdown-body ol ol,
+.markdown-body ol ul,
+.markdown-body ul ol,
+.markdown-body ul ul {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.markdown-body li {
+  word-wrap: break-all;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body li+li {
+  margin-top: .25em;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  font-size: 1em;
+  font-style: italic;
+  font-weight: 600;
+  margin-top: 16px;
+  padding: 0;
+}
+
+.markdown-body dl dd {
+  margin-bottom: 16px;
+  padding: 0 16px;
+}
+
+.markdown-body table {
+  display: block;
+  overflow: auto;
+  width: 100%;
+}
+
+.markdown-body table th {
+  font-weight: 600;
+}
+
+.markdown-body table td,
+.markdown-body table th {
+  border: 1px solid #dfe2e5;
+  padding: 6px 13px;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #c6cbd1;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f6f8fa;
+}
+
+.markdown-body img {
+  background-color: #fff;
+  box-sizing: content-box;
+  max-width: 100%;
+}
+
+.markdown-body img[align=right] {
+  padding-left: 20px;
+}
+
+.markdown-body img[align=left] {
+  padding-right: 20px;
+}
+
+.markdown-body code {
+  background-color: rgba(27,31,35,.05);
+  border-radius: 3px;
+  font-size: 85%;
+  margin: 0;
+  padding: .2em .4em;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre>code {
+  background: transparent;
+  border: 0;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  word-break: normal;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  background-color: #f6f8fa;
+  border-radius: 3px;
+  font-size: 85%;
+  line-height: 1.45;
+  overflow: auto;
+  padding: 16px;
+}
+
+.markdown-body pre code {
+  background-color: transparent;
+  border: 0;
+  display: inline;
+  line-height: inherit;
+  margin: 0;
+  max-width: auto;
+  overflow: visible;
+  padding: 0;
+  word-wrap: normal;
+}
+
+.markdown-body .commit-tease-sha {
+  color: #444d56;
+  display: inline-block;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+  font-size: 90%;
+}
+
+.markdown-body .blob-wrapper {
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.markdown-body .blob-wrapper-embedded {
+  max-height: 240px;
+  overflow-y: auto;
+}
+
+.markdown-body .blob-num {
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  color: rgba(27,31,35,.3);
+  cursor: pointer;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+  font-size: 12px;
+  line-height: 20px;
+  min-width: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: right;
+  user-select: none;
+  vertical-align: top;
+  white-space: nowrap;
+  width: 1%;
+}
+
+.markdown-body .blob-num:hover {
+  color: rgba(27,31,35,.6);
+}
+
+.markdown-body .blob-num:before {
+  content: attr(data-line-number);
+}
+
+.markdown-body .blob-code {
+  line-height: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: relative;
+  vertical-align: top;
+}
+
+.markdown-body .blob-code-inner {
+  color: #24292e;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+  font-size: 12px;
+  overflow: visible;
+  white-space: pre;
+  word-wrap: normal;
+}
+
+.markdown-body .pl-token.active,
+.markdown-body .pl-token:hover {
+  background: #ffea7f;
+  cursor: pointer;
+}
+
+.markdown-body kbd {
+  background-color: #fafbfc;
+  border: 1px solid #d1d5da;
+  border-bottom-color: #c6cbd1;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #c6cbd1;
+  color: #444d56;
+  display: inline-block;
+  font: 11px SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+  line-height: 10px;
+  padding: 3px 5px;
+  vertical-align: middle;
+}
+
+.markdown-body :checked+.radio-label {
+  border-color: #0366d6;
+  position: relative;
+  z-index: 1;
+}
+
+.markdown-body .tab-size[data-tab-size="1"] {
+  -moz-tab-size: 1;
+  tab-size: 1;
+}
+
+.markdown-body .tab-size[data-tab-size="2"] {
+  -moz-tab-size: 2;
+  tab-size: 2;
+}
+
+.markdown-body .tab-size[data-tab-size="3"] {
+  -moz-tab-size: 3;
+  tab-size: 3;
+}
+
+.markdown-body .tab-size[data-tab-size="4"] {
+  -moz-tab-size: 4;
+  tab-size: 4;
+}
+
+.markdown-body .tab-size[data-tab-size="5"] {
+  -moz-tab-size: 5;
+  tab-size: 5;
+}
+
+.markdown-body .tab-size[data-tab-size="6"] {
+  -moz-tab-size: 6;
+  tab-size: 6;
+}
+
+.markdown-body .tab-size[data-tab-size="7"] {
+  -moz-tab-size: 7;
+  tab-size: 7;
+}
+
+.markdown-body .tab-size[data-tab-size="8"] {
+  -moz-tab-size: 8;
+  tab-size: 8;
+}
+
+.markdown-body .tab-size[data-tab-size="9"] {
+  -moz-tab-size: 9;
+  tab-size: 9;
+}
+
+.markdown-body .tab-size[data-tab-size="10"] {
+  -moz-tab-size: 10;
+  tab-size: 10;
+}
+
+.markdown-body .tab-size[data-tab-size="11"] {
+  -moz-tab-size: 11;
+  tab-size: 11;
+}
+
+.markdown-body .tab-size[data-tab-size="12"] {
+  -moz-tab-size: 12;
+  tab-size: 12;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 .2em .25em -1.6em;
+  vertical-align: middle;
+}
+
+.markdown-body hr {
+  border-bottom-color: #eee;
+}
+
+.markdown-body .pl-0 {
+  padding-left: 0!important;
+}
+
+.markdown-body .pl-1 {
+  padding-left: 4px!important;
+}
+
+.markdown-body .pl-2 {
+  padding-left: 8px!important;
+}
+
+.markdown-body .pl-3 {
+  padding-left: 16px!important;
+}
+
+.markdown-body .pl-4 {
+  padding-left: 24px!important;
+}
+
+.markdown-body .pl-5 {
+  padding-left: 32px!important;
+}
+
+.markdown-body .pl-6 {
+  padding-left: 40px!important;
+}
+
+.markdown-body .pl-7 {
+  padding-left: 48px!important;
+}
+
+.markdown-body .pl-8 {
+  padding-left: 64px!important;
+}
+
+.markdown-body .pl-9 {
+  padding-left: 80px!important;
+}
+
+.markdown-body .pl-10 {
+  padding-left: 96px!important;
+}
+
+.markdown-body .pl-11 {
+  padding-left: 112px!important;
+}
+
+.markdown-body .pl-12 {
+  padding-left: 128px!important;
+}
+
+/*# sourceURL=webpack://./node_modules/github-markdown-css/github-markdown.css */
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL25vZGVfbW9kdWxlcy9naXRodWItbWFya2Rvd24tY3NzL2dpdGh1Yi1tYXJrZG93bi5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSwwQkFBMEI7RUFDMUIsMkRBQXF0RTtBQUN2dEU7O0FBRUE7RUFDRSxxQkFBcUI7RUFDckIsa0JBQWtCO0VBQ2xCLDJCQUEyQjtBQUM3Qjs7QUFFQTtFQUNFLFdBQVc7RUFDWCxjQUFjO0VBQ2Qsa0JBQWtCO0VBQ2xCLGtCQUFrQjtBQUNwQjs7QUFFQTtFQUNFLGFBQWE7QUFDZjs7QUFFQTs7Ozs7O0VBTUUsY0FBYztFQUNkLHNCQUFzQjtFQUN0QixrQkFBa0I7QUFDcEI7O0FBRUE7Ozs7OztFQU1FLHFCQUFxQjtBQUN2Qjs7QUFFQTs7Ozs7O0VBTUUsbUJBQW1CO0FBQ3JCOztBQUVBO0VBQ0UsMEJBQTBCO0VBQzFCLDhCQUE4QjtFQUM5QixjQUFjO0VBQ2QsZ0JBQWdCO0VBQ2hCLGtJQUFrSTtFQUNsSSxlQUFlO0VBQ2YsZ0JBQWdCO0VBQ2hCLHFCQUFxQjtBQUN2Qjs7QUFFQTtFQUNFLGNBQWM7QUFDaEI7O0FBRUE7O0VBRUUsY0FBYztBQUNoQjs7QUFFQTs7RUFFRSxjQUFjO0FBQ2hCOztBQUVBOztFQUVFLGNBQWM7QUFDaEI7O0FBRUE7RUFDRSxjQUFjO0FBQ2hCOztBQUVBO0VBQ0UsY0FBYztBQUNoQjs7QUFFQTs7Ozs7OztFQU9FLGNBQWM7QUFDaEI7O0FBRUE7O0VBRUUsY0FBYztBQUNoQjs7QUFFQTtFQUNFLGNBQWM7QUFDaEI7O0FBRUE7RUFDRSx5QkFBeUI7RUFDekIsY0FBYztBQUNoQjs7QUFFQTtFQUNFLHlCQUF5QjtFQUN6QixjQUFjO0FBQ2hCOztBQUVBO0VBQ0UsYUFBYTtBQUNmOztBQUVBO0VBQ0UsY0FBYztFQUNkLGdCQUFnQjtBQUNsQjs7QUFFQTtFQUNFLGNBQWM7QUFDaEI7O0FBRUE7OztFQUdFLGNBQWM7RUFDZCxnQkFBZ0I7QUFDbEI7O0FBRUE7RUFD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 */
+  </style>
+  <style>
+  /**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: black;
+	background: none;
+	text-shadow: 0 1px white;
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+	text-shadow: none;
+	background: #b3d4fc;
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+	text-shadow: none;
+	background: #b3d4fc;
+}
+
+@media print {
+	code[class*="language-"],
+	pre[class*="language-"] {
+		text-shadow: none;
+	}
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #f5f2f0;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: slategray;
+}
+
+.token.punctuation {
+	color: #999;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #905;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #690;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+	color: #9a6e3a;
+	/* This background color was intended by the author of this theme. */
+	background: hsla(0, 0%, 100%, .5);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+	color: #07a;
+}
+
+.token.function,
+.token.class-name {
+	color: #DD4A68;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+	color: #e90;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+
+/*# sourceURL=webpack://./node_modules/prismjs/themes/prism.css */
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL25vZGVfbW9kdWxlcy9wcmlzbWpzL3RoZW1lcy9wcmlzbS5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7RUFJRTs7QUFFRjs7Q0FFQyxZQUFZO0NBQ1osZ0JBQWdCO0NBQ2hCLHdCQUF3QjtDQUN4QixzRUFBc0U7Q0FDdEUsY0FBYztDQUNkLGdCQUFnQjtDQUNoQixnQkFBZ0I7Q0FDaEIsb0JBQW9CO0NBQ3BCLGtCQUFrQjtDQUNsQixpQkFBaUI7Q0FDakIsZ0JBQWdCOztDQUVoQixnQkFBZ0I7Q0FDaEIsY0FBYztDQUNkLFdBQVc7O0NBRVgscUJBQXFCO0NBQ3JCLGtCQUFrQjtDQUNsQixpQkFBaUI7Q0FDakIsYUFBYTtBQUNkOztBQUVBOztDQUVDLGlCQUFpQjtDQUNqQixtQkFBbUI7QUFDcEI7O0FBRUE7O0NBRUMsaUJBQWlCO0NBQ2pCLG1CQUFtQjtBQUNwQjs7QUFFQTtDQUNDOztFQUVDLGlCQUFpQjtDQUNsQjtBQUNEOztBQUVBLGdCQUFnQjtBQUNoQjtDQUNDLFlBQVk7Q0FDWixjQUFjO0NBQ2QsY0FBYztBQUNmOztBQUVBOztDQUVDLG1CQUFtQjtBQUNwQjs7QUFFQSxnQkFBZ0I7QUFDaEI7Q0FDQyxhQUFhO0NBQ2IsbUJBQW1CO0NBQ25CLG1CQUFtQjtBQUNwQjs7QUFFQTs7OztDQUlDLGdCQUFnQjtBQUNqQjs7QUFFQTtDQUNDLFdBQVc7QUFDWjs7QUFFQTtDQUNDLFdBQVc7QUFDWjs7QUFFQTs7Ozs7OztDQU9DLFdBQVc7QUFDWjs7QUFFQTs7Ozs7O0NBTUMsV0FBVztBQUNaOztBQUVBOzs7OztDQUtDLGNBQWM7Q0FDZCxvRUFBb0U7Q0FDcEUsaUNBQWlDO0FBQ2xDOztBQUVBOzs7Q0FHQyxXQUFXO0FBQ1o7O0FBRUE7O0NBRUMsY0FBYztBQUNmOztBQUVBOzs7Q0FHQyxXQUFXO0FBQ1o7O0FBRUE7O0NBRUMsaUJBQWlCO0FBQ2xCO0FBQ0E7Q0FDQyxrQkFBa0I7QUFDbkI7O0FBRUE7Q0FDQyxZQUFZO0FBQ2IiLCJzb3VyY2VSb290IjoiIn0= */
+  </style>
+  <style>
+  
+  </style>
+  <style>
+    .markdown-body {
+      font-family: -apple-system,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+      box-sizing: border-box;
+      min-width: 200px;
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 45px;
+    }
+
+    @media not print {
+      .markdown-body {
+        padding: 45px;
+      }
+
+      @media (max-width: 767px) {
+        .markdown-body {
+          padding: 15px;
+        }
+      }
+    }
+
+    .hf-container {
+      color: #24292e;
+      line-height: 1.3;
+    }
+
+    .markdown-body .highlight pre,
+    .markdown-body pre {
+      white-space: pre-wrap;
+    }
+    .markdown-body table {
+      display: table;
+    }
+    .markdown-body img[data-align="center"] {
+      display: block;
+      margin: 0 auto;
+    }
+    .markdown-body img[data-align="right"] {
+      display: block;
+      margin: 0 0 0 auto;
+    }
+    .markdown-body li.task-list-item {
+      list-style-type: none;
+    }
+    .markdown-body li > [type=checkbox] {
+      margin: 0 0 0 -1.3em;
+    }
+    .markdown-body input[type="checkbox"] ~ p {
+      margin-top: 0;
+      display: inline-block;
+    }
+    .markdown-body ol ol,
+    .markdown-body ul ol {
+      list-style-type: decimal;
+    }
+    .markdown-body ol ol ol,
+    .markdown-body ol ul ol,
+    .markdown-body ul ol ol,
+    .markdown-body ul ul ol {
+      list-style-type: decimal;
+    }
+  </style>
+  <style>.markdown-body a.footnote-ref {
+  text-decoration: none;
+}
+
+.footnotes {
+  font-size: .85em;
+  opacity: .8;
+}
+
+.footnotes li[role="doc-endnote"] {
+  position: relative;
+}
+
+.footnotes .footnote-back {
+  position: absolute;
+  font-family: initial;
+  top: .2em;
+  right: 1em;
+  text-decoration: none;
+}
+
+.inline-math.invalid,
+.multiple-math.invalid {
+  color: rgb(255, 105, 105);
+}
+
+.toc-container {
+  width: 100%;
+}
+
+.toc-container .toc-title {
+  font-weight: 700;
+  font-size: 1.2em;
+  margin-bottom: 0;
+}
+
+.toc-container li,
+.toc-container ul,
+.toc-container ul li {
+  list-style: none !important;
+}
+
+.toc-container > ul {
+  padding-left: 0;
+}
+
+.toc-container ul li span {
+  display : flex;
+}
+
+.toc-container ul li span a {
+  color: inherit;
+  text-decoration: none;
+}
+.toc-container ul li span a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+.toc-container ul li span span.dots {
+  flex: 1;
+  height: 0.65em;
+  margin: 0 10px;
+  border-bottom: 2px dotted black;
+}
+
+/*# sourceURL=webpack://./src/muya/lib/assets/styles/exportStyle.css */
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9tdXlhL2xpYi9hc3NldHMvc3R5bGVzL2V4cG9ydFN0eWxlLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLHFCQUFxQjtBQUN2Qjs7QUFFQTtFQUNFLGdCQUFnQjtFQUNoQixXQUFXO0FBQ2I7O0FBRUE7RUFDRSxrQkFBa0I7QUFDcEI7O0FBRUE7RUFDRSxrQkFBa0I7RUFDbEIsb0JBQW9CO0VBQ3BCLFNBQVM7RUFDVCxVQUFVO0VBQ1YscUJBQXFCO0FBQ3ZCOztBQUVBOztFQUVFLHlCQUF5QjtBQUMzQjs7QUFFQTtFQUNFLFdBQVc7QUFDYjs7QUFFQTtFQUNFLGdCQUFnQjtFQUNoQixnQkFBZ0I7RUFDaEIsZ0JBQWdCO0FBQ2xCOztBQUVBOzs7RUFHRSwyQkFBMkI7QUFDN0I7O0FBRUE7RUFDRSxlQUFlO0FBQ2pCOztBQUVBO0VBQ0UsY0FBYztBQUNoQjs7QUFFQTtFQUNFLGNBQWM7RUFDZCxxQkFBcUI7QUFDdkI7QUFDQTtFQUNFLGNBQWM7RUFDZCxxQkFBcUI7QUFDdkI7O0FBRUE7RUFDRSxPQUFPO0VBQ1AsY0FBYztFQUNkLGNBQWM7RUFDZCwrQkFBK0I7QUFDakMiLCJzb3VyY2VSb290IjoiIn0= */</style>
+  <style>.markdown-body{}pre.front-matter{display:none!important;}</style>
+</head>
+<body>
+  <article class="markdown-body"><div class="toc-container"><p class="toc-title">目录</p><ul class="toc-list"><li><span><a class="toc-h1" href="#c标准库是什么？">C++标准库是什么？</a><span class="dots"></span></span></li><li><span><a class="toc-h1" href="#环境准备">环境准备</a><span class="dots"></span></span><ul><li><span><a class="toc-h2" href="#visual-studio">Visual Studio</a><span class="dots"></span></span></li><li><span><a class="toc-h2" href="#gccmingw">GCC(MinGW)</a><span class="dots"></span></span></li><li><span><a class="toc-h2" href="#学习参考">学习参考</a><span class="dots"></span></span></li></ul></li><li><span><a class="toc-h1" href="#c语言库">C语言库</a><span class="dots"></span></span></li><li><span><a class="toc-h1" href="#字符串">字符串</a><span class="dots"></span></span><ul><li><span><a class="toc-h2" href="#basic_string与string">basic_string与string</a><span class="dots"></span></span><ul><li><span><a class="toc-h3" href="#构造">构造</a><span class="dots"></span></span></li><li><span><a class="toc-h3" href="#元素访问">元素访问</a><span class="dots"></span></span></li><li><span><a class="toc-h3" href="#容量">容量</a><span class="dots"></span></span></li><li><span><a class="toc-h3" href="#迭代器">迭代器</a><span class="dots"></span></span></li><li><span><a class="toc-h3" href="#插入">插入</a><span class="dots"></span></span></li><li><span><a class="toc-h3" href="#删除">删除</a><span class="dots"></span></span></li><li><span><a class="toc-h3" href="#检测与比较">检测与比较</a><span class="dots"></span></span></li><li><span><a class="toc-h3" href="#替换与子串">替换与子串</a><span class="dots"></span></span></li><li><span><a class="toc-h3" href="#查找">查找</a><span class="dots"></span></span></li><li><span><a class="toc-h3" href="#其他操作">其他操作</a><span class="dots"></span></span></li></ul></li><li><span><a class="toc-h2" href="#string_view">string_view</a><span class="dots"></span></span></li></ul></li><li><span><a class="toc-h1" href="#容器">容器</a><span class="dots"></span></span><ul><li><span><a class="toc-h2" href="#array">array</a><span class="dots"></span></span><ul><li><span><a class="toc-h3" href="#基本操作">基本操作</a><span class="dots"></span></span></li><li><span><a class="toc-h3" href="#迭代器-1">迭代器</a><span class="dots"></span></span></li></ul></li><li><span><a class="toc-h2" href="#vector">vector</a><span class="dots"></span></span><ul><li><span><a class="toc-h3" href="#构造-1">构造</a><span class="dots"></span></span></li><li><span><a class="toc-h3" href="#就地构造">就地构造</a><span class="dots"></span></span></li></ul></li><li><span><a class="toc-h2" href="#forward_list">forward_list</a><span class="dots"></span></span><ul><li><span><a class="toc-h3" href="#迭代器示意图">迭代器示意图</a><span class="dots"></span></span></li><li><span><a class="toc-h3" href="#sort---andand---reverse">sort   &amp;&amp;   reverse</a><span class="dots"></span></span></li><li><span><a class="toc-h3" href="#merge----andand---splice_after">merge    &amp;&amp;   splice_after</a><span class="dots"></span></span></li><li><span><a class="toc-h3" href="#unique---andand---remove----andand---remove_if">unique   &amp;&amp;   remove    &amp;&amp;   remove_if</a><span class="dots"></span></span></li></ul></li><li><span><a class="toc-h2" href="#list">list</a><span class="dots"></span></span></li><li><span><a class="toc-h2" href="#"></a><span class="dots"></span></span></li><li><span><a class="toc-h2" href="#stack">stack</a><span class="dots"></span></span></li><li><span><a class="toc-h2" href="#queue">queue</a><span class="dots"></span></span></li><li><span><a class="toc-h2" href="#deque">deque</a><span class="dots"></span></span></li><li><span><a class="toc-h2" href="#priority_queue">priority_queue</a><span class="dots"></span></span></li><li><span><a class="toc-h2" href="#set">set</a><span class="dots"></span></span></li><li><span><a class="toc-h2" href="#multiset">multiset</a><span class="dots"></span></span></li><li><span><a class="toc-h2" href="#unordered_set">unordered_set</a><span class="dots"></span></span></li><li><span><a class="toc-h2" href="#unordered_multiset">unordered_multiset</a><span class="dots"></span></span></li><li><span><a class="toc-h2" href="#map">map</a><span class="dots"></span></span></li><li><span><a class="toc-h2" href="#multimap">multimap</a><span class="dots"></span></span></li><li><span><a class="toc-h2" href="#unordered_map">unordered_map</a><span class="dots"></span></span></li><li><span><a class="toc-h2" href="#unordered_multimap">unordered_multimap</a><span class="dots"></span></span></li><li><span><a class="toc-h2" href="#span与容器">span与容器</a><span class="dots"></span></span></li></ul></li><li><span><a class="toc-h1" href="#算法">算法</a><span class="dots"></span></span></li><li><span><a class="toc-h1" href="#迭代器-2">迭代器</a><span class="dots"></span></span></li><li><span><a class="toc-h1" href="#数值操作">数值操作</a><span class="dots"></span></span><ul><li><span><a class="toc-h2" href="#-1"></a><span class="dots"></span></span></li><li><span><a class="toc-h2" href="#随机数">随机数</a><span class="dots"></span></span></li><li><span><a class="toc-h2" href="#位操作">位操作</a><span class="dots"></span></span></li></ul></li><li><span><a class="toc-h1" href="#时间日期">时间日期</a><span class="dots"></span></span></li><li><span><a class="toc-h1" href="#文件系统（filesystem）">文件系统（filesystem）</a><span class="dots"></span></span></li><li><span><a class="toc-h1" href="#正则表达式">正则表达式</a><span class="dots"></span></span><ul><li><span><a class="toc-h2" href="#regex_match">regex_match</a><span class="dots"></span></span></li><li><span><a class="toc-h2" href="#regex_search">regex_search</a><span class="dots"></span></span></li><li><span><a class="toc-h2" href="#regex_replace">regex_replace</a><span class="dots"></span></span></li></ul></li><li><span><a class="toc-h1" href="#多线程">多线程</a><span class="dots"></span></span><ul><li><span><a class="toc-h2" href="#mutex">mutex</a><span class="dots"></span></span></li><li><span><a class="toc-h2" href="#lock_guard">lock_guard</a><span class="dots"></span></span></li><li><span><a class="toc-h2" href="#-2"></a><span class="dots"></span></span></li><li><span><a class="toc-h2" href="#condition_variable">condition_variable</a><span class="dots"></span></span></li><li><span><a class="toc-h2" href="#async">async</a><span class="dots"></span></span></li><li><span><a class="toc-h2" href="#promise-future">promise future</a><span class="dots"></span></span></li><li><span><a class="toc-h2" href="#原子操作">原子操作</a><span class="dots"></span></span></li></ul></li><li><span><a class="toc-h1" href="#通用工具库">通用工具库</a><span class="dots"></span></span></li><li><span><a class="toc-h1" href="#语言支持库">语言支持库</a><span class="dots"></span></span><ul><li><span><a class="toc-h2" href="#三路比较">三路比较</a><span class="dots"></span></span></li></ul></li><li><span><a class="toc-h1" href="#其他">其他</a><span class="dots"></span></span></li></ul></div><h1 class="atx" id="c标准库是什么？">C++标准库是什么？</h1>
+<p>C++标准库是一系列类和函数的集合，属于C++标准的一部分，只要支持C++标准的环境中就可以直接使用。内容丰富，功能强大。对初学者来说也是很好的提升C++技能的学习材料。</p>
+<p>C++标准库主要包括C++库和C语言库，头文件如下图所示。</p>
+<p>C++标准库都定义在命名空间std中。</p>
+<p><img alt="headers_for_std_lib" src="./img/headers_for_std_lib.png"></p>
+<blockquote>
+<p>本课程的目的是带领大家了解一下C++标准库，因此讲解不会太深入，只是大致过一遍让大家知道有这么个东西。上面图片中的内容也不会全部涉及，如有需要的可以自行深入研究。</p>
+</blockquote>
+<p>&nbsp;</p>
+<h1 class="atx" id="环境准备">环境准备</h1>
+<p>安装的环境要能支持C++20以上的版本。能支持C++23最好。<mark>如果某个类或方法编译报错，则需要检查一下是哪个版本的C++才支持的，看看当前使用的版本是否支持</mark></p>
+<h2 class="atx" id="visual-studio">Visual Studio</h2>
+<p>安装器下载地址：<a href="https://visualstudio.microsoft.com/zh-hans/downloads/">https://visualstudio.microsoft.com/zh-hans/downloads/</a></p>
+<p>下载Community 版本的，不需要激活码。</p>
+<p>以Microsoft Visual Studio Community 2022 为例，新建项目之后，在项目 **属性(Properties)--&gt;通用(General)--&gt;C++语言标准(C++ Language Standard)**选择Preview版本即可支持C++23的特性。</p>
+<p><img alt="Visual Studio C++标准设置" src="./img/vs_cpp_std.png"></p>
+<p>&nbsp;</p>
+<h2 class="atx" id="gccmingw">GCC(MinGW)</h2>
+<p>MinGW推荐以下两个版本，选择其中一个即可。<strong>w64devkit提供的工具更多，操作更接近Linux。</strong></p>
+<p>w64devkit：<a href="https://github.com/skeeto/w64devkit/releases">https://github.com/skeeto/w64devkit/releases</a></p>
+<p>mingw-builds：<a href="https://github.com/niXman/mingw-builds-binaries/releases">https://github.com/niXman/mingw-builds-binaries/releases</a></p>
+<p>在编译时，使用**-std=...**指定需要使用的C++版本，例如：</p>
+<pre><code class="fenced-code-block language-c++">g++ -o &lt;outputname&gt; &lt;sourcefile.cpp&gt; -std=c++20</code></pre>
+<p>可使用的C++标准有：c++98 c++11 c++14 c++17 c++20 c++23</p>
+<p>&nbsp;</p>
+<h2 class="atx" id="学习参考">学习参考</h2>
+<p>cppreference中文版：<a href="https://zh.cppreference.com/">https://zh.cppreference.com/</a></p>
+<p>cppreference英文版：<a href="https://en.cppreference.com/">https://en.cppreference.com/</a></p>
+<p>cplusplus：<a href="https://cplusplus.com/">https://cplusplus.com/</a></p>
+<p>learncpp：<a href="https://www.learncpp.com/">https://www.learncpp.com/</a></p>
+<p>hackingcpp：<a href="https://hackingcpp.com/">https://hackingcpp.com/</a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h1 class="atx" id="c语言库">C语言库</h1>
+<table>
+<thead>
+<tr>
+<th align="center">C++头文件</th>
+<th align="center">C语言头文件</th>
+<th align="center">内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="cppref/zh/zh/cpp/header/cstdio.html">cstdio</a></td>
+<td align="center"><a href="./cppref/zh/zh/c/io.html">stdio.h</a></td>
+<td align="center">提供通用文件操作并提供有字符输入/输出能力的函数。</td>
+</tr>
+<tr>
+<td align="center"><a href="cppref/zh/zh/cpp/header/cmath.html">cmath</a></td>
+<td align="center"><a href="./cppref/zh/zh/c/numeric/math.html">math.h</a></td>
+<td align="center">常用数学函数</td>
+</tr>
+<tr>
+<td align="center"><a href="cppref/zh/zh/cpp/header/cstring.html">cstring</a></td>
+<td align="center"><a href="./cppref/zh/zh/c/string/byte.html">string.h</a></td>
+<td align="center">字符串处理函数和一些内存操作函数</td>
+</tr>
+<tr>
+<td align="center"><a href="cppref/zh/zh/cpp/header/cstdlib.html">cstdlib</a></td>
+<td align="center"><a href="./cppref/zh/zh/c/header.html">stdlib.h</a></td>
+<td align="center">基础工具库：<a href="cppref/zh/zh/c/memory.html">动态内存管理</a>、<a href="cppref/zh/zh/c/program.html">程序支持工具</a>、<a href="cppref/zh/zh/c/numeric/random.html">随机数</a>、<a href="cppref/zh/zh/c/algorithm.html">算法</a>、<a href="cppref/zh/zh/c/string/byte.html">字符与数字转换</a></td>
+</tr>
+<tr>
+<td align="center"><a href="cppref/zh/zh/cpp/header/cctype.html">cctype</a></td>
+<td align="center"><a href="cppref/zh/zh/c/string/byte.html">ctype.h</a></td>
+<td align="center">字符分类与大小写转换函数库</td>
+</tr>
+<tr>
+<td align="center"><a href="cppref/zh/zh/cpp/header/cinttypes.html">cinttypes</a></td>
+<td align="center"><a href="cppref/zh/zh/c/types/integer.html">inttypes.h</a></td>
+<td align="center">整数类型格式宏常量</td>
+</tr>
+<tr>
+<td align="center"><a href="cppref/zh/zh/cpp/header/clocale.html">clocale</a></td>
+<td align="center"><a href="cppref/zh/zh/c/locale.html">locale.h</a></td>
+<td align="center">本地化工具库</td>
+</tr>
+<tr>
+<td align="center"><a href="cppref/zh/zh/cpp/header/cstdarg.html">cstdarg</a></td>
+<td align="center"><a href="cppref/zh/zh/c/variadic.html">stdarg.h</a></td>
+<td align="center">变参数函数工具库</td>
+</tr>
+<tr>
+<td align="center"><a href="cppref/zh/zh/cpp/header/cstdint.html">cstdint</a></td>
+<td align="center"><a href="cppref/zh/zh/c/types/integer.html">stdint.h</a></td>
+<td align="center">定宽整数类型及宏常量定义</td>
+</tr>
+<tr>
+<td align="center"><a href="cppref/zh/zh/cpp/header/ctime.html">ctime</a></td>
+<td align="center"><a href="cppref/zh/zh/c/chrono.html">time.h</a></td>
+<td align="center">时间和日期工具</td>
+</tr>
+<tr>
+<td align="center"><a href="cppref/zh/zh/cpp/header/cassert.html">cassert</a></td>
+<td align="center"><a href="cppref/zh/zh/c/error.html">assert.h</a></td>
+<td align="center">断言工具库</td>
+</tr>
+<tr>
+<td align="center"><a href="cppref/zh/zh/cpp/header/cerrno.html">cerrno</a></td>
+<td align="center"><a href="cppref/zh/zh/c/error.html">errno.h</a></td>
+<td align="center">错误号定义与错误处理</td>
+</tr>
+<tr>
+<td align="center"><a href="cppref/zh/zh/cpp/header/cfenv.html">cfenv</a></td>
+<td align="center"><a href="cppref/zh/zh/c/numeric/fenv.html">fenv.h</a></td>
+<td align="center">浮点环境函数与宏</td>
+</tr>
+<tr>
+<td align="center"><a href="cppref/zh/zh/cpp/header/cfloat.html">cfloat</a></td>
+<td align="center"><a href="cppref/zh/zh/c/types/limits.html">float.h</a></td>
+<td align="center">浮点类型极限宏定义</td>
+</tr>
+<tr>
+<td align="center"><a href="cppref/zh/zh/cpp/header/climits.html">climits</a></td>
+<td align="center"><a href="cppref/zh/zh/c/types/limits.html">limits.h</a></td>
+<td align="center">整数类型一些宏定义</td>
+</tr>
+<tr>
+<td align="center"><a href="cppref/zh/zh/cpp/header/csetjmp.html">csetjmp</a></td>
+<td align="center"><a href="cppref/zh/zh/c/program.html">setjmp.h</a></td>
+<td align="center">非局部跳转</td>
+</tr>
+<tr>
+<td align="center"><a href="cppref/zh/zh/cpp/header/csignal.html">csignal</a></td>
+<td align="center"><a href="cppref/zh/zh/c/program.html">signal.h</a></td>
+<td align="center">几个为信号管理的函数和常量宏</td>
+</tr>
+<tr>
+<td align="center"><a href="cppref/zh/zh/cpp/header/cstddef.html">cstddef</a></td>
+<td align="center"><a href="cppref/zh/zh/c/types.html">stddef.h</a></td>
+<td align="center">附加基本类型及便利宏</td>
+</tr>
+<tr>
+<td align="center"><a href="cppref/zh/zh/cpp/header/cuchar.html">cuchar</a></td>
+<td align="center"><a href="cppref/zh/zh/c/string/multibyte.html">uchar.h</a></td>
+<td align="center">UTF-16 和 UTF-32 字符工具</td>
+</tr>
+<tr>
+<td align="center"><a href="cppref/zh/zh/cpp/header/cwchar.html">cwchar</a></td>
+<td align="center"><a href="cppref/zh/zh/c/string/wide.html">wchar.h</a></td>
+<td align="center">扩展多字节和宽字符工具</td>
+</tr>
+<tr>
+<td align="center"><a href="cppref/zh/zh/cpp/header/cwctype.html">cwctype</a></td>
+<td align="center"><a href="cppref/zh/zh/c/string/wide.html">wctype.h</a></td>
+<td align="center">用来确定包含于宽字符数据中的类型的函数</td>
+</tr>
+</tbody></table>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h1 class="atx" id="字符串">字符串</h1>
+<h2 class="atx" id="basic_string与string">basic_string与string</h2>
+<p>C++当中基本数据类型没有字符串，需要处理字符串时用的是字符数组，操作起来相当不方便，因此在C++标准库中提供了一个字符串类<code>std::string</code>，将字符串的一些基本操作封装到类中，简化了字符串的操作。</p>
+<p>string类的定义如下：</p>
+<pre><code class="fenced-code-block language-c++">typedef basic_string&lt;char&gt;    string;</code></pre>
+<p>可以看到，string类由模板类basic_string类型为char时定义而来，因此要学习string有哪些操作，需要学习basic_string。</p>
+<p>&nbsp;</p>
+<p><strong><a href="cppref/zh/zh/cpp/string/basic_string.html">basic_string文档</a></strong></p>
+<p>&nbsp;</p>
+<h3 class="atx" id="构造">构造</h3>
+<pre><code class="fenced-code-block language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;string&gt;</span></span>
+
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">// 用char*赋值构造</span>
+    string str1 <span class="token operator">=</span> <span class="token string">"北国风光，千里冰封，万里雪飘"</span><span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"str1 = "</span> <span class="token operator">&lt;&lt;</span> str1 <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+
+    string <span class="token function">str2</span><span class="token punctuation">(</span><span class="token string">"望长城内外，惟馀莽莽"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"str2 = "</span> <span class="token operator">&lt;&lt;</span> str2 <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+
+    <span class="token comment">// 无参构造，构造一个空字符串，构造之后可以通过 = 进行赋值</span>
+    string str3<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"str3 = "</span> <span class="token operator">&lt;&lt;</span> str3 <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+
+    <span class="token comment">// 用指定字符重复指定次数填充构造</span>
+    string <span class="token function">str4</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token char">'H'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"str4 = "</span> <span class="token operator">&lt;&lt;</span> str4 <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+
+    <span class="token comment">// 拷贝构造</span>
+    string <span class="token function">str5</span><span class="token punctuation">(</span>str2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"str5 = "</span> <span class="token operator">&lt;&lt;</span> str5 <span class="token operator">&lt;&lt;</span> <span class="token string">"\t\t"</span> <span class="token operator">&lt;&lt;</span> <span class="token string">"str2 = "</span> <span class="token operator">&lt;&lt;</span> str2 <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+
+    <span class="token comment">// 移动构造</span>
+    string <span class="token function">str6</span><span class="token punctuation">(</span><span class="token function">move</span><span class="token punctuation">(</span>str5<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"str6 = "</span> <span class="token operator">&lt;&lt;</span> str6 <span class="token operator">&lt;&lt;</span> <span class="token string">"\t\t"</span> <span class="token operator">&lt;&lt;</span> <span class="token string">"str5 = "</span> <span class="token operator">&lt;&lt;</span> str5 <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+
+    <span class="token comment">// 指定字符范围进行构造</span>
+    string <span class="token function">str7</span><span class="token punctuation">(</span>str1<span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    string <span class="token function">str8</span><span class="token punctuation">(</span>str1<span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"str7 = "</span> <span class="token operator">&lt;&lt;</span> str7 <span class="token operator">&lt;&lt;</span> endl <span class="token operator">&lt;&lt;</span> <span class="token string">"str8 = "</span> <span class="token operator">&lt;&lt;</span> str8 <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+
+    <span class="token comment">// assign</span>
+    string str9 <span class="token operator">=</span> <span class="token string">"大河上下"</span><span class="token punctuation">;</span>
+    str9<span class="token punctuation">.</span><span class="token function">assign</span><span class="token punctuation">(</span>str2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"str9 = "</span> <span class="token operator">&lt;&lt;</span> str9 <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+
+    <span class="token comment">// 字符串拼接</span>
+    string str10 <span class="token operator">=</span> str1 <span class="token operator">+</span> str2<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"str10 = "</span> <span class="token operator">&lt;&lt;</span> str10 <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    str10 <span class="token operator">+=</span> <span class="token string">"只识弯弓射大雕"</span><span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"str10 += "</span> <span class="token operator">&lt;&lt;</span> str10 <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>&nbsp;</p>
+<h3 class="atx" id="元素访问">元素访问</h3>
+<pre><code class="fenced-code-block language-c++">#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+using namespace std;
+
+int main()
+{
+    string str1 = "Hello World";
+    string str2 = "人生易老天难老，岁岁重阳";
+    // at与[]
+    string str10 = "Hello World kkkkddd";
+    cout &lt;&lt; "[] " &lt;&lt; str1[10] &lt;&lt; endl;
+    cout &lt;&lt; "at " &lt;&lt; str1.at(3) &lt;&lt; endl;
+    str1.at(3) = 'K';
+    str1[10] = 'a';
+    cout &lt;&lt; "str1 = " &lt;&lt; str1 &lt;&lt; endl;
+
+    // front back
+    cout &lt;&lt; "front() = " &lt;&lt; str1.front() &lt;&lt; endl;
+    cout &lt;&lt; "back() = " &lt;&lt; str1.back() &lt;&lt; endl;
+
+    // c_str data
+    cout &lt;&lt; "c_str() = " &lt;&lt; str1.c_str() &lt;&lt; endl;
+    cout &lt;&lt; "data() = " &lt;&lt; str1.data() &lt;&lt; endl;
+
+    return 0;
+}</code></pre>
+<p>&nbsp;</p>
+<h3 class="atx" id="容量">容量</h3>
+<pre><code class="fenced-code-block language-c++">#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+using namespace std; 
+
+int main()
+{
+    string str1 = "漫天皆白，雪里行军情更迫";
+    string str2 = "Hello Worldddddd";
+    string str3;
+
+    // empty
+    cout &lt;&lt; str1.empty() &lt;&lt; endl;
+    cout &lt;&lt; str3.empty() &lt;&lt; endl;
+
+    // size length
+    cout &lt;&lt; "str1.size() = " &lt;&lt; str1.size() &lt;&lt; "\tstr1.length() = " &lt;&lt; str1.length() &lt;&lt; endl;
+    cout &lt;&lt; "str2.size() = " &lt;&lt; str2.size() &lt;&lt; "\tstr2.length() = " &lt;&lt; str2.length() &lt;&lt; endl;
+    cout &lt;&lt; "str3.size() = " &lt;&lt; str3.size() &lt;&lt; "\tstr3.length() = " &lt;&lt; str3.length() &lt;&lt; endl;
+
+    // max_size
+    cout &lt;&lt; "str1.max_size() = " &lt;&lt; str1.max_size() &lt;&lt; endl;
+    cout &lt;&lt; "str2.max_size() = " &lt;&lt; str2.max_size() &lt;&lt; endl;
+    cout &lt;&lt; "str3.max_size() = " &lt;&lt; str3.max_size() &lt;&lt; endl;
+
+    // capacity
+    cout &lt;&lt; "str1.capacity() = " &lt;&lt; str1.capacity() &lt;&lt; endl;
+    cout &lt;&lt; "str2.capacity() = " &lt;&lt; str2.capacity() &lt;&lt; endl;
+    cout &lt;&lt; "str3.capacity() = " &lt;&lt; str3.capacity() &lt;&lt; endl;
+
+    // reserve
+    str2.reserve(100);
+    cout &lt;&lt; "str2.size() = " &lt;&lt; str2.size() &lt;&lt; "\t\t" &lt;&lt; "str2.capacity() = " &lt;&lt; str2.capacity() &lt;&lt; endl;
+    str2.reserve(10);
+    cout &lt;&lt; "str2.size() = " &lt;&lt; str2.size() &lt;&lt; "\t\t" &lt;&lt; "str2.capacity() = " &lt;&lt; str2.capacity() &lt;&lt; endl;
+
+    // shrink_to_fit
+    str2.shrink_to_fit();
+    cout &lt;&lt; "str2.size() = " &lt;&lt; str2.size() &lt;&lt; "\t\t" &lt;&lt; "str2.capacity() = " &lt;&lt; str2.capacity() &lt;&lt; endl;
+
+    // resize
+    str2.resize(120);
+    cout &lt;&lt; "str2.size() = " &lt;&lt; str2.size() &lt;&lt; "\t\t" &lt;&lt; "str2.capacity() = " &lt;&lt; str2.capacity() &lt;&lt; endl;
+    str2.resize(10);
+    cout &lt;&lt; "str2.size() = " &lt;&lt; str2.size() &lt;&lt; "\t\t" &lt;&lt; "str2.capacity() = " &lt;&lt; str2.capacity() &lt;&lt; endl;
+
+    return 0;
+}</code></pre>
+<p>&nbsp;</p>
+<h3 class="atx" id="迭代器">迭代器</h3>
+<p>迭代器是一种遍历接口，一般是为容器类(如链表、队列等。string类也是一种容器)提供统一的遍历接口，使用人员无需关心容器内存分配与管理细节。</p>
+<p>C++标准库中容器的迭代器分为四种：<strong>普通迭代器（简称迭代器） iterator</strong>、<strong>只读迭代器  const_iterator</strong>、<strong>反向迭代器  reverse_iterator</strong>、<strong>反向只读迭代器  const_reverse_iterator</strong>。</p>
+<pre><code class="fenced-code-block language-c++">#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+using namespace std; 
+
+int main()
+{
+    string str = "Hello World";
+
+    // 普通迭代器， 可用来读写
+    string::iterator iter = str.begin();
+    // auto iter = str.begin();
+    for(; iter != str.end(); iter++)
+    {
+        cout &lt;&lt; *iter &lt;&lt; "\t";
+        *iter = 'A' + (iter - str.begin());
+    }
+    cout &lt;&lt; endl &lt;&lt; str &lt;&lt; endl;
+
+    // 只读迭代器
+    string::const_iterator citer = str.cbegin();
+    for(; citer != str.cend(); citer++)
+    {
+        cout &lt;&lt; *citer &lt;&lt; "\t";
+    }
+    cout &lt;&lt; endl;
+
+    // 反向迭代器
+    string::reverse_iterator riter = str.rbegin();
+    for(; riter != str.rend(); riter++)
+    {
+        cout &lt;&lt; *riter &lt;&lt; "\t";
+        *riter = 'B' + (riter - str.rbegin());
+    }
+    cout &lt;&lt; endl &lt;&lt; str &lt;&lt; endl;
+
+    // 反向只读迭代器
+    string::const_reverse_iterator criter = str.crbegin();
+    for(; criter != str.crend(); criter ++)
+    {
+        cout &lt;&lt; *criter &lt;&lt; "\t";
+    }
+
+    return 0;
+}</code></pre>
+<p>&nbsp;</p>
+<h3 class="atx" id="插入">插入</h3>
+<pre><code class="fenced-code-block language-c++">#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+using namespace std; 
+
+int main()
+{
+    string str = "Hello World";
+    string str2 = "STRING2";
+
+    // 在指定位置开始重复插入指定次数的单个字符
+    str.insert(2, 5, 'A');
+    cout &lt;&lt; str &lt;&lt; endl;
+
+    // 在指定位置开始插入字符串
+    str.insert(5, "This is A New Insert");
+    cout &lt;&lt; str &lt;&lt; endl;
+
+    // 在指定位置插入另一个string
+    str.insert(10, str2);
+    cout &lt;&lt; str &lt;&lt; endl;
+
+    // 在指定位置插入另一个string指定范围内的内容（起始位置，字符数）
+    str.insert(0, str2, 2, 2);
+    cout &lt;&lt; str &lt;&lt; endl;
+
+    // 在结尾处插入一个字符
+    str.push_back('R');
+    cout &lt;&lt; str &lt;&lt; endl;
+
+    // 在结尾处追加：可以是单个字符、字符串、string，可以指定追加范围和追加字符数量
+    str.append("What to do?");
+    cout &lt;&lt; str &lt;&lt; endl;
+
+    return 0;
+}</code></pre>
+<p>&nbsp;</p>
+<h3 class="atx" id="删除">删除</h3>
+<pre><code class="fenced-code-block language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;string&gt;</span></span>
+
+using namespace std<span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    string str <span class="token operator">=</span> <span class="token string">"Hello World"</span><span class="token punctuation">;</span>
+    string str2 <span class="token operator">=</span> <span class="token string">"STRING2"</span><span class="token punctuation">;</span>
+
+
+    <span class="token comment">// 清除全部内容</span>
+    str2<span class="token punctuation">.</span><span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> str2 <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+
+    <span class="token comment">// 删除最后一个字符</span>
+    str<span class="token punctuation">.</span><span class="token function">pop_back</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> str <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+
+    <span class="token comment">// 删除指定索引与数量的字符</span>
+    str<span class="token punctuation">.</span><span class="token function">erase</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> str <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+
+    <span class="token comment">// 删除指定迭代器范围内的字符</span>
+    str<span class="token punctuation">.</span><span class="token function">erase</span><span class="token punctuation">(</span>str<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> str<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> str <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>&nbsp;</p>
+<h3 class="atx" id="检测与比较">检测与比较</h3>
+<pre><code class="fenced-code-block language-c++">#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+using namespace std;
+
+int main()
+{
+    string str = "Hello World";
+    string str2 = "STRING2";
+
+    // 是否以指定字符开头 可以是单个字符
+    cout &lt;&lt; str.starts_with("He") &lt;&lt; endl;
+
+    // 检测是否以指定字符串结尾 可以是单个字符
+    cout &lt;&lt; str.ends_with(".jpg") &lt;&lt; endl;
+
+    // 检测是否包含指定字符串 可以是单个字符
+    cout &lt;&lt; str.contains("llo") &lt;&lt; endl;
+
+    // 以字典序与另一个string相比，如果小于另一个返回负数，大于返回正数，内容相同返回0
+    cout &lt;&lt; str.compare(str2) &lt;&lt; endl;
+
+    // 以字典序比较两个string，内容相同返回true，否则返回false
+    bool cmp_result = str == str2;
+    cout &lt;&lt; cmp_result &lt;&lt; endl;
+
+    // 三路比较，返回strong_odering
+    strong_ordering order = str &lt;=&gt; str2;
+    // 再将order与0相比，如果order &gt; 0， 则str &gt; str2（字典序）
+    // 如果order &lt; 0， 则 str &lt; str2
+    // 如果order == 0， 则 str == str2
+    bool gt = order &gt; 0;
+    bool lt = order &lt; 0;
+    bool eq = order == 0;
+    cout &lt;&lt; "gt = " &lt;&lt; gt &lt;&lt; endl;
+    cout &lt;&lt; "lt = " &lt;&lt; lt &lt;&lt; endl;
+    cout &lt;&lt; "eq = " &lt;&lt; eq &lt;&lt; endl;
+    // 或者用is_gt is_lt  is_eq判断
+    cout &lt;&lt; "is_gt " &lt;&lt; is_gt(order) &lt;&lt; endl;
+    cout &lt;&lt; "is_lt " &lt;&lt; is_lt(order) &lt;&lt; endl;
+    cout &lt;&lt; "is_eq " &lt;&lt; is_eq(order) &lt;&lt; endl;
+
+    return 0;
+}</code></pre>
+<p>&nbsp;</p>
+<h3 class="atx" id="替换与子串">替换与子串</h3>
+<pre><code class="fenced-code-block language-c++">#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+using namespace std;
+
+int main()
+{
+    string str = "Hello World";
+    string str2 = "STRING2";
+
+    // 用给定字符串或string替换指定部分 可以用起始位置索引+替换字符个数指定范围，也可以用迭代器起止指定
+    // 用于替换的字符串或string也可以指东圃
+    str.replace(2, 10, "NIHAOAHAHAHAH");
+    cout &lt;&lt; str &lt;&lt; endl;
+
+    // 指定位置以后到结束的子串
+    string str3 = str.substr(5);
+    cout &lt;&lt; str3 &lt;&lt; endl;
+
+    // 指定起始位置和字符数量的子串
+    str3 = str.substr(5, 2);
+    cout &lt;&lt; str3 &lt;&lt; endl;
+
+    return 0;
+}</code></pre>
+<p>&nbsp;</p>
+<h3 class="atx" id="查找">查找</h3>
+<pre><code class="fenced-code-block language-c++">#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+using namespace std;
+
+int main()
+{
+    string str = "Hello World";
+    string str2 = "STRING2";
+
+    // 查找给定的子串(字符串或另一个string)，若存在则返回第一个符合的子串开始的位置，不存在则返回-1 (string::npos，转为有符号整型后为-1)
+    cout &lt;&lt; str.find("ll") &lt;&lt; endl;
+    cout &lt;&lt; (int)str.find("WDDS") &lt;&lt; endl;
+
+    // 可以指定开始查找的位置
+    cout &lt;&lt; str.find("Wor", 5) &lt;&lt; endl;
+    cout &lt;&lt; str.find("Wor", 9) &lt;&lt; endl;
+
+    // 用法同find， 但是从后开始查找，返回倒数第一个符合的子串开始位置，查找不到则返回string::npos
+    cout &lt;&lt; str.rfind("o") &lt;&lt; endl;
+
+    // 写不动文档了，find_first_of find_first_not_of find_last_of find_last_not_of大家有兴趣自行试一下
+
+    return 0;
+}</code></pre>
+<p>&nbsp;</p>
+<h3 class="atx" id="其他操作">其他操作</h3>
+<pre><code class="fenced-code-block language-c++">#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+using namespace std;
+
+int main()
+{
+    string str = "1234ABCD";
+
+    // string转为数值
+    int a1 = stoi(str);
+    cout &lt;&lt; a1 &lt;&lt; endl;
+
+    // 数值转为string
+    string str2 = "Hello From number" + to_string(100032);
+    cout &lt;&lt; str2 &lt;&lt; endl;
+
+    // 生成字符串hash
+    hash&lt;string&gt; hs1;
+    cout &lt;&lt; "hash of str = " &lt;&lt; hs1(str) &lt;&lt; endl;
+    cout &lt;&lt; "hash of str2 = " &lt;&lt; hs1(str2) &lt;&lt; endl;
+
+
+    return 0;
+}</code></pre>
+<p>&nbsp;</p>
+<h2 class="atx" id="string_view">string_view</h2>
+<p>用于解决string在参数传递时内容会复制问题，可以减少开销，提升性能。</p>
+<pre><code class="fenced-code-block language-c++">void fun1(string str)
+{
+    cout &lt;&lt; "fun1 str.data() = " &lt;&lt; (uintptr_t)str.data() &lt;&lt; endl;
+}
+
+void fun2(string &amp;str)
+{
+    cout &lt;&lt; "fun2 str.data() = " &lt;&lt; (uintptr_t)str.data() &lt;&lt; endl;
+}
+
+void fun(string_view sv)
+{
+    cout &lt;&lt; "fun string_view data() = " &lt;&lt; (uintptr_t)sv.data() &lt;&lt; endl;
+}
+
+
+
+int main()
+{
+    char s[] = "西风烈，长空雁叫霜晨月";
+    cout &lt;&lt; "char s[]地址 = " &lt;&lt; (uintptr_t)s &lt;&lt; endl;
+    string str(s);
+    cout &lt;&lt; "str.data()地址 = " &lt;&lt; (uintptr_t)str.data() &lt;&lt; endl;
+    string str2(str);
+    cout &lt;&lt; "str2.data()地址 = " &lt;&lt; (uintptr_t)str2.data() &lt;&lt; endl;
+
+    fun1(s);
+    fun1(str);
+
+    // fun2不能接收char*
+    fun2(str);
+    // fun2(s);
+
+    string_view sv1(s);
+    string_view sv2(str);
+    cout &lt;&lt; "sv1.data()地址 = " &lt;&lt; (uintptr_t)sv1.data() &lt;&lt; endl;
+    cout &lt;&lt; "sv2.data()地址 = " &lt;&lt; (uintptr_t)sv2.data() &lt;&lt; endl;
+
+    fun(s);
+    fun(sv1);
+    fun(str);
+
+    return 0;
+}</code></pre>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h1 class="atx" id="容器">容器</h1>
+<h2 class="atx" id="array">array</h2>
+<p>C++传统C风格的数组实际上只是一个裸数组，携带的信息很少，不像Java中的数组有边界检查以及数组大小等信息，使用的时候需要考虑的方面有很多。</p>
+<p><code>std::array</code>是C++ 11中提供的一个封装了因定大小数组容器，可以用来替代传统数组。</p>
+<p>&nbsp;</p>
+<p><a href="cppref/zh/zh/cpp/container/array.html">array文档</a></p>
+<p>&nbsp;</p>
+<h3 class="atx" id="基本操作">基本操作</h3>
+<pre><code class="fenced-code-block language-c++">#include &lt;iostream&gt;
+#include &lt;array&gt;
+
+using namespace std;
+
+int main()
+{
+    array&lt;int, 10&gt; arr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    array&lt;int, 1&gt; arr2;
+
+    // 用指定值填充数组
+    arr.fill(100);
+
+    // 访问元素 没有边界检查
+    arr[0] = 111;
+    cout &lt;&lt; "arr[0] = " &lt;&lt; arr[0] &lt;&lt; endl;
+    cout &lt;&lt; "arr[-1] = " &lt;&lt; arr[-1] &lt;&lt; endl;
+    cout &lt;&lt; "arr[11] = " &lt;&lt; arr[11] &lt;&lt; endl;
+
+    // 访问元素 有边界检查
+    arr.at(2) = 1234;
+    cout &lt;&lt; "arr.at(2) = " &lt;&lt; arr.at(2) &lt;&lt; endl;
+    // cout &lt;&lt; "arr.at(-1) = " &lt;&lt; arr.at(-1) &lt;&lt; endl; // 会报错，终止程序
+    // cout &lt;&lt; "arr.at(11) = " &lt;&lt; arr.at(11) &lt;&lt; endl; // 会报错，终止程序
+
+    // 访问第一个元素
+    arr.front() = 147852;
+    cout &lt;&lt; "arr.front() = " &lt;&lt; arr.front() &lt;&lt; endl;
+    // 访问最后一个元素
+    arr.back() = 999;
+    cout &lt;&lt; "arr.back() = " &lt;&lt; arr.back() &lt;&lt; endl;
+
+    // 访问底层数组
+    int *data = arr.data();
+    for (int i = 0; i &lt; arr.size(); i++)
+    {
+        cout &lt;&lt; "data[" &lt;&lt; i &lt;&lt; "] = " &lt;&lt; data[i] &lt;&lt; endl;
+    }
+
+    // 检查是否为空
+    cout &lt;&lt; boolalpha;
+    cout &lt;&lt; "arr.empty() = " &lt;&lt; arr.empty() &lt;&lt; endl;
+    cout &lt;&lt; "arr2.empty() = " &lt;&lt; arr2.empty() &lt;&lt; endl;
+
+    // 大小
+    cout &lt;&lt; "arr.size() = " &lt;&lt; arr.size() &lt;&lt; endl;
+    cout &lt;&lt; "arr.max_size() = " &lt;&lt; arr.max_size() &lt;&lt; endl;
+
+    // for (int i = 0; i &lt; arr.size(); i++)
+    // {
+    //     cout &lt;&lt; arr[i] &lt;&lt; "\t";
+    // }
+
+    // C++ 11 之后的range循环
+    for (auto &amp;a : arr)
+    {
+        cout &lt;&lt; a &lt;&lt; "\t";
+    }
+    return 0;
+}</code></pre>
+<p>&nbsp;</p>
+<h3 class="atx" id="迭代器-1">迭代器</h3>
+<p>遍历</p>
+<pre><code class="fenced-code-block language-c++">#include &lt;iostream&gt;
+#include &lt;array&gt;
+
+using namespace std;
+
+int main()
+{
+    array&lt;int, 10&gt; arr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    array&lt;int, 1&gt; arr2;
+
+    // 普通迭代器
+    array&lt;int, 10&gt;::iterator iter = arr.begin();
+    // C++ 11之后可以用auto
+    // auto iter = arr.begin();
+    *(iter + 2) = 11111;
+    for(; iter != arr.end(); iter ++)
+    {
+        cout &lt;&lt; *iter &lt;&lt; "\t";
+    }
+
+    // 返回迭代器
+    array&lt;int, 10&gt;::reverse_iterator riter = arr.rbegin();
+    for(; riter != arr.rend(); riter++)
+    {
+        cout &lt;&lt; *riter &lt;&lt; "\t";
+    }
+
+    return 0;
+}</code></pre>
+<p>访问指针成员</p>
+<pre><code class="fenced-code-block language-c++">#include &lt;iostream&gt;
+#include &lt;array&gt;
+
+using namespace std;
+
+class Person
+{
+private:
+    const char * name;
+    int age;
+public:
+    int number;
+    Person() : Person("", 0, 0) {}
+
+    Person(const char *name, int age, int number) : name(name), age(age), number(number) {}
+
+    void set(const char *name, int age, int number)
+    {
+        this-&gt;name = name;
+        this-&gt;age = age;
+        this-&gt;number = number;
+    }
+
+    void sayHello()
+    {
+        cout &lt;&lt; "Hello EveryBody" &lt;&lt; endl;
+        cout &lt;&lt; "My name is " &lt;&lt; name &lt;&lt; endl;
+        cout &lt;&lt; "And I'm " &lt;&lt; age &lt;&lt; " years old." &lt;&lt; endl;
+        cout &lt;&lt; "My number is " &lt;&lt; number &lt;&lt; endl;
+        cout &lt;&lt; "\n\n" &lt;&lt; endl;
+    }
+};
+
+
+int main()
+{
+    // array&lt;Person, 3&gt; persons;
+    // persons[0].set("Tom", 18, 112211);
+    // persons[1].set("Jerry", 20, 112212);
+    // persons[2].set("Lee", 22, 112213);
+
+    array&lt;Person, 3&gt; persons = {Person("Tom", 18, 112201), Person("Jerry", 20, 112202), Person("Lee", 22, 112203)};
+
+    array&lt;Person, 3&gt;::iterator iter = persons.begin();
+    for(; iter != persons.end(); iter++)
+    {
+        cout &lt;&lt; "NUMBER = " &lt;&lt; iter-&gt;number &lt;&lt; endl;
+        iter-&gt;sayHello();
+    }
+
+
+    return 0;
+}</code></pre>
+<p>&nbsp;</p>
+<h2 class="atx" id="vector">vector</h2>
+<p><code>std::vector</code>是一个动态数组容器，可以在使用时动态修改数组大小。<a href="cppref/zh/zh/cpp/container/vector.html">std::array文档</a></p>
+<h3 class="atx" id="构造-1">构造</h3>
+<pre><code class="fenced-code-block language-c++">#include &lt;iostream&gt;
+#include &lt;vector&gt;
+
+using namespace std;
+
+int main()
+{
+    // 无参构造
+    vector&lt;int&gt; vec1;
+
+    // 指定初始大小 用对应类型的0值填充
+    vector&lt;int&gt; vec2(5);
+
+    // 指定初始大小并用指定的值填充
+    vector&lt;char&gt; vec3(5, 'A');
+
+    // 初始化
+    vector&lt;int&gt; vec4 = {1, 2, 3, 4, 5, 6, 7};
+
+    // 用迭代器初始化
+    vector&lt;int&gt; vec5(vec4.begin(), vec4.end());
+
+    // 复制构造
+    vector&lt;int&gt; vec6(vec5);
+
+    // 移动构造
+    vector&lt;int&gt; vec7(move(vec6));
+
+
+    // 循环
+    for (auto &amp;v : vec3)
+    {
+        cout &lt;&lt; v &lt;&lt; "\t";
+    }
+    return 0;
+}</code></pre>
+<p>insert讲解一下内存重新分配的一些知识。</p>
+<h3 class="atx" id="就地构造">就地构造</h3>
+<p>当<code>std::vector</code>用于存放复合数据类型（结构体、类）时，直接用<code>insert</code>和<code>push_back</code>时，会多次构造和拷贝对应的对象，因此C++ 11以后容器类加入了<code>insert</code>和<code>push_back</code>对应的**就地构造（原位构造）**的插入方法<code>emplace</code>和<code>emplace_back</code>，可以只用构造一次对象，提高性能。</p>
+<ul>
+<li><code>emplace_back</code>参数直接为对应类的构造函数的参数</li>
+<li><code>emplace</code>第一个参数为插入位置，其余参数为对应构造函数的参数</li>
+</ul>
+<p>示例：</p>
+<pre><code class="fenced-code-block language-c++">#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;string&gt;
+
+using namespace std;
+
+
+class Person
+{
+private:
+    string name;
+    int age;
+    int number;
+public:
+    Person() : name("none"), age(0), number(-1)
+    {
+        cout &lt;&lt; "Person无参构造调用" &lt;&lt; endl;
+    }
+
+    Person(const string name, int age, int number) : name(name), age(age), number(number)
+    {
+        cout &lt;&lt; "Person三参构造调用" &lt;&lt; endl;
+    }
+
+    Person(const Person &amp;person) : name(person.name), age(person.age), number(person.number)
+    {
+        cout &lt;&lt; "Person拷贝构造调用" &lt;&lt; endl;
+    }
+
+    Person(Person &amp;&amp;person) : name(move(person.name)), age(move(person.age)), number(move(person.number))
+    {
+        cout &lt;&lt; "Person移动构造调用" &lt;&lt; endl;
+    }
+
+    Person&amp; operator = (const Person &amp;other) = default;
+    Person&amp; operator = (Person &amp;&amp;other) = default;
+
+    friend ostream&amp; operator &lt;&lt; (ostream&amp; , const Person&amp; );
+
+};
+
+ostream&amp; operator &lt;&lt; (ostream&amp; out, const Person&amp; person)
+{
+    return out &lt;&lt; "{" &lt;&lt; "name: " &lt;&lt; person.name 
+                &lt;&lt; ", age: " &lt;&lt; person.age
+                &lt;&lt; ", number: " &lt;&lt; person.number &lt;&lt; "}";
+}
+
+int main()
+{
+    vector&lt;Person&gt; vec;
+    vec.reserve(5);
+
+    vec.push_back(Person("张三", 18, 11212));
+    Person person("李四", 20, 1122);
+    vec.push_back(person);
+
+    vec.emplace_back("王五", 22, 20012);
+    vec.emplace(vec.begin(), "赵六", 23, 200145);
+
+
+    for(auto &amp;p : vec)
+    {
+        cout &lt;&lt; p &lt;&lt; endl;
+    }
+
+    return 0;
+}</code></pre>
+<p>&nbsp;</p>
+<h2 class="atx" id="forward_list">forward_list</h2>
+<p><code>std::forward_list</code>为单向链表。<a href="cppref/zh/zh/cpp/container/forward_list.html">std::forward_list文档</a></p>
+<h3 class="atx" id="迭代器示意图">迭代器示意图</h3>
+<p><img alt="" src="./img/forward_list_iterator.png"></p>
+<p><strong>单向链表迭代器只能做自增，不能与数字相加减，也不能两个迭代器相减。</strong></p>
+<p>&nbsp;</p>
+<h3 class="atx" id="sort---andampandamp---reverse">sort   &amp;&amp;   reverse</h3>
+<p>sort是将链表数据进行升序排序，也可以自定义比较函数。reverse将链表元素进行逆序。</p>
+<pre><code class="fenced-code-block language-c++">#include &lt;iostream&gt;
+#include &lt;forward_list&gt;
+
+using namespace std;
+
+class Person
+{
+private:
+    string name;
+    int age;
+    int number;
+public:
+    Person() : name("none"), age(0), number(-1)
+    {}
+
+    Person(const string name, int age, int number) : name(name), age(age), number(number)
+    {}
+
+    Person(const Person &amp;person) : name(person.name), age(person.age), number(person.number)
+    {}
+
+    Person(Person &amp;&amp;person) : name(move(person.name)), age(move(person.age)), number(move(person.number))
+    {}
+
+    Person&amp; operator = (const Person &amp;other) = default;
+    Person&amp; operator = (Person &amp;&amp;other) = default;
+
+    int GetAge() const { return age; }
+
+    friend ostream&amp; operator &lt;&lt; (ostream&amp; , const Person&amp; );
+
+};
+
+
+ostream&amp; operator &lt;&lt; (ostream&amp; out, const Person&amp; person)
+{
+    return out &lt;&lt; "{" &lt;&lt; "name: " &lt;&lt; person.name 
+                &lt;&lt; ", age: " &lt;&lt; person.age
+                &lt;&lt; ", number: " &lt;&lt; person.number &lt;&lt; "}";
+}
+
+bool comp(const Person &amp;p1, const Person &amp;p2)
+{
+    return p1.GetAge() &lt; p2.GetAge();
+}
+int main()
+{
+    forward_list&lt;int&gt; fls = {5, 6, 2, 3, 1};
+
+    // 升序排序
+    fls.sort();
+
+    // 配合reverse可进行降序排序
+    fls.sort();
+    fls.reverse();
+
+    for (auto &amp;v : fls)
+    {
+        cout &lt;&lt; v &lt;&lt; "\t\t";
+    }
+
+    // 对于复合数据类型可自定义排序函数 比如按年龄排序
+    forward_list&lt;Person&gt; person_list = {{"张三", 22, 2001}, {"李四", 20, 2002}, {"王五", 21, 2003}};
+    person_list.sort(comp);
+
+    // 也可以用lambda表达式
+    // person_list.sort([](const Person &amp;p1, const Person &amp;p2) { return p1.GetAge() &gt; p2.GetAge(); });
+
+
+    for (auto &amp;vv : person_list)
+    {
+        cout &lt;&lt; vv &lt;&lt; "\t\t";
+    }
+    return 0;
+}</code></pre>
+<p>&nbsp;</p>
+<h3 class="atx" id="merge----andampandamp---splice_after">merge    &amp;&amp;   splice_after</h3>
+<p><code>merge</code>将两个单项链表合并为一个。如果是两个已排好序的链表，则合并后按升序排列。如果两个链表无序，也能合并，但目前我还没找着按什么规则合并。</p>
+<p>合并后第二个链表会直接变为空。</p>
+<p><code>splice_after</code>将另一个链表的指定范围内的元素转移到本列表指定位置之后。第二个链表未指定范围则为全链表内容。</p>
+<p>转移后的元素将不会继续在第二个链表中存在。</p>
+<p>示例</p>
+<pre><code class="fenced-code-block language-c++">#include &lt;iostream&gt;
+#include &lt;forward_list&gt;
+
+using namespace std;
+
+
+int main()
+{
+    forward_list&lt;int&gt; fls = {5, 6, 2, 3, 1};
+    forward_list&lt;int&gt; fls2 = {0, 4, 17, 12, 15,18};
+
+
+    fls.sort();
+    fls2.sort();
+    fls2.merge(fls);
+
+    for (auto &amp;v : fls2)
+    {
+        cout &lt;&lt; v &lt;&lt; "\t\t";
+    }
+    return 0;
+}</code></pre>
+<pre><code class="fenced-code-block language-c++">#include &lt;iostream&gt;
+#include &lt;forward_list&gt;
+
+using namespace std;
+
+int main()
+{
+    forward_list&lt;int&gt; fls = {5, 6, 2, 3, 1};
+    forward_list&lt;int&gt; fls2 = {11, 14, 25, 30};
+    forward_list&lt;int&gt; fls3(fls2);
+    forward_list&lt;int&gt; fls4 = {100, 200, 300, 400};
+
+    // 合并全部
+    fls.splice_after(fls.begin(), fls3); 
+
+    // 合并指定位置之后的
+    auto iter = fls2.begin();
+    iter ++;
+    iter ++;
+    fls.splice_after(fls2.begin(), fls2, iter);
+
+    // 指定范围
+    auto iter2 = fls4.begin();
+    iter2 ++;
+    fls.splice_after(fls.begin(), fls4, iter2, fls4.end());
+
+
+
+    for (auto &amp;vv : fls)
+    {
+        cout &lt;&lt; vv &lt;&lt; "\t\t";
+    }
+    return 0;
+}</code></pre>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h3 class="atx" id="unique---andampandamp---remove----andampandamp---remove_if">unique   &amp;&amp;   remove    &amp;&amp;   remove_if</h3>
+<p><code>remove</code>移除指定值的元素</p>
+<p><code>remove_if</code>移除满足指定条件的元素</p>
+<p>示例</p>
+<pre><code class="fenced-code-block language-c++">#include &lt;iostream&gt;
+#include &lt;forward_list&gt;
+
+using namespace std;
+
+// 一个元素返回true时移除对应元素
+bool pre(const int &amp;val)
+{
+    return val &gt; 3; // 移除大于3的元素
+}
+
+int main()
+{
+    forward_list&lt;int&gt; fls = {5, 6, 2, 3, 1};
+
+    fls.remove(3);
+    fls.remove_if(pre);
+    // 也可以用lambda表达式
+    fls.remove_if([](const int &amp;val) { return val &gt; 3; });
+
+
+    for (auto &amp;vv : fls)
+    {
+        cout &lt;&lt; vv &lt;&lt; "\t\t";
+    }
+    return 0;
+}</code></pre>
+<p><code>unique</code>用于移除相邻重复的元素，只保留一个。不相邻的不影响。也可以自定义两个元素是否相等的比较函数来移除。</p>
+<pre><code class="fenced-code-block language-c++">#include &lt;iostream&gt;
+#include &lt;forward_list&gt;
+
+using namespace std;
+
+int main()
+{
+    forward_list&lt;int&gt; fls = {1, 1, 1, 6, 1, 3, 1};
+
+    fls.unique();
+
+    fls.unique([](const int &amp;v1, const int &amp;v2) { return v1 == v2; }); // 效果跟上面的一样，可以用这种方式来自定义比较函数
+
+    for (auto &amp;vv : fls)
+    {
+        cout &lt;&lt; vv &lt;&lt; "\t\t";
+    }
+    return 0;
+}</code></pre>
+<h2 class="atx" id="list">list</h2>
+<p><code>std::list</code>为双向链表。<a href="cppref/zh/zh/cpp/container/list.html">std::list文档</a></p>
+<h2 class="atx" id=""></h2>
+<h2 class="atx" id="stack">stack</h2>
+<p><img alt="" src="file:///C:/Users/YAN/Desktop/STD/img/stack.png"></p>
+<p><code>std::stack</code>为栈，是一种后进先出数据结构。<a href="cppref/zh/zh/cpp/container/stack.html">std::stack文档</a></p>
+<p>示例：</p>
+<pre><code class="fenced-code-block language-c++">#include &lt;iostream&gt;
+#include &lt;stack&gt;
+#include &lt;string&gt;
+/*
+using namespace std;
+
+int main()
+{
+    stack&lt;string&gt; str_stack;
+
+    // 入栈， 如果是复合数据结构，用emplace就地构造代替push入栈
+    str_stack.push("粒粒皆辛苦");
+    str_stack.push("谁知盘中餐");
+    str_stack.push("汗滴禾下土");
+    str_stack.push("锄禾日当午");
+
+    // 出栈
+    while(!str_stack.empty())
+    {
+        string str = str_stack.top(); // 先用top获取到栈顶元素
+        str_stack.pop(); // 弹出栈顶元素
+        cout &lt;&lt; str &lt;&lt; "--已出栈，感觉良好。栈里还有" &lt;&lt; str_stack.size() &lt;&lt; "个元素" &lt;&lt; endl; 
+    }
+
+    return 0;
+}</code></pre>
+<p>&nbsp;</p>
+<p><strong>课后练习</strong></p>
+<p>提供一个字符串，利用栈，判断其中的括号是否匹配。</p>
+<p>&nbsp;</p>
+<h2 class="atx" id="queue">queue</h2>
+<p><code>std::queue</code>为队列，是一种先进先出数据结构。<a href="cppref/zh/zh/cpp/container/queue.html">std::queue文档</a></p>
+<p><img alt="" src="./img/queue.png"></p>
+<p>示例</p>
+<pre><code class="fenced-code-block language-c++">#include &lt;iostream&gt;
+#include &lt;queue&gt;
+
+using namespace std;
+
+int main()
+{
+    queue&lt;const char *&gt; q;
+
+    // 入队，如果是复合数据类型，用emplace就地构造代替push入队
+    q.push("张三");
+    q.push("李四");
+    q.push("王五");
+
+    // 出队
+    while (!q.empty())
+    {
+        const char *name = q.front(); // 先获取队首元素
+        q.pop(); // 将队首元素出队
+        cout &lt;&lt; name &lt;&lt; "已出队，感觉良好。队里还有" &lt;&lt; q.size() &lt;&lt; "个人" &lt;&lt; endl;
+    }
+
+
+    return 0;
+}</code></pre>
+<p>&nbsp;</p>
+<p><strong>课后练习</strong></p>
+<p>有余力的同学可以研究一下用队列求解迷宫路径问题。</p>
+<p>&nbsp;</p>
+<h2 class="atx" id="deque">deque</h2>
+<p><code>std::deque</code>是双端队列，即在队列两端都可以进行操作，也可以进行随机下标访问。其操作基本上与<code>std::vector</code>一样，比<code>std::vector</code>多了在头部进行插入和移除的操作。</p>
+<p>一般来说，<code>std::vector</code>用在需要频繁进行随机下标访问的场景，如果需要频繁在头部和尾部进行插入和删除操作，则用<code>std::deque</code>。</p>
+<p><a href="cppref/zh/zh/cpp/container/deque.html">std::deque文档</a></p>
+<p>&nbsp;</p>
+<h2 class="atx" id="priority_queue">priority_queue</h2>
+<p><code>std::priority_queue</code>为优先队列。是一种可以根据优先级的高低确定出队顺序的数据结构。如果是复合数据类型，需要提供比较函数或者重载<kbd>&lt;</kbd>运算符。 </p>
+<p><a href="cppref/zh/zh/cpp/container/priority_queue.html">std::priority_queue文档</a></p>
+<p>示例</p>
+<p><strong>自定义数据类型的比较</strong></p>
+<pre><code class="fenced-code-block language-c++">#include &lt;iostream&gt;
+#include &lt;queue&gt;
+#include &lt;vector&gt;
+#include &lt;string&gt;
+
+using namespace std;
+
+class Person
+{
+private:
+    int age;
+    string name;
+
+public:
+    Person() : Person(0, "") {}
+    Person(const int age, const string name) : age(age), name(name) {}
+
+    int GetAge() const
+    {
+        return age;
+    }
+
+    friend ostream&amp; operator &lt;&lt; (ostream&amp; out, const Person&amp; person);
+    friend bool operator &lt; (const Person &amp;p1, const Person &amp;p2);
+};
+
+
+ostream&amp; operator &lt;&lt; (ostream&amp; out, const Person&amp; person)
+{
+    return out &lt;&lt; "{" &lt;&lt; "name: " &lt;&lt; person.name 
+                &lt;&lt; ", age: " &lt;&lt; person.age &lt;&lt; "}";
+}
+
+bool operator &lt; (const Person &amp;p1, const Person &amp;p2)
+{
+    return p1.age &lt; p2.age;
+}
+
+
+
+
+int main()
+{
+    priority_queue&lt;Person&gt; q;
+    q.emplace(60, "Tom");
+    q.emplace(70, "Jerry");
+    q.emplace(65, "Lee");
+
+
+
+
+    // 出队
+    while (!q.empty())
+    {
+        auto top = q.top(); // 先获取队首元素
+        q.pop(); // 将队首元素出队
+        cout &lt;&lt; top &lt;&lt; "\t";
+    }
+
+    return 0;
+}</code></pre>
+<p><strong>自定义比较器</strong></p>
+<pre><code class="fenced-code-block language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;queue&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;vector&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;string&gt;</span></span>
+
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Person</span>
+<span class="token punctuation">{</span>
+<span class="token keyword">private</span><span class="token operator">:</span>
+    <span class="token keyword">int</span> age<span class="token punctuation">;</span>
+    string name<span class="token punctuation">;</span>
+
+<span class="token keyword">public</span><span class="token operator">:</span>
+    <span class="token function">Person</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">:</span> <span class="token function">Person</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token string">""</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token function">Person</span><span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token keyword">int</span> age<span class="token punctuation">,</span> <span class="token keyword">const</span> string name<span class="token punctuation">)</span> <span class="token operator">:</span> <span class="token function">age</span><span class="token punctuation">(</span>age<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">name</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+    <span class="token keyword">int</span> <span class="token function">GetAge</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">const</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> age<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">friend</span> ostream<span class="token operator">&amp;</span> <span class="token keyword">operator</span> <span class="token operator">&lt;&lt;</span> <span class="token punctuation">(</span>ostream<span class="token operator">&amp;</span> out<span class="token punctuation">,</span> <span class="token keyword">const</span> Person<span class="token operator">&amp;</span> person<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">friend</span> <span class="token keyword">bool</span> <span class="token keyword">operator</span> <span class="token operator">&lt;</span> <span class="token punctuation">(</span><span class="token keyword">const</span> Person <span class="token operator">&amp;</span>p1<span class="token punctuation">,</span> <span class="token keyword">const</span> Person <span class="token operator">&amp;</span>p2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+
+ostream<span class="token operator">&amp;</span> <span class="token keyword">operator</span> <span class="token operator">&lt;&lt;</span> <span class="token punctuation">(</span>ostream<span class="token operator">&amp;</span> out<span class="token punctuation">,</span> <span class="token keyword">const</span> Person<span class="token operator">&amp;</span> person<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">return</span> out <span class="token operator">&lt;&lt;</span> <span class="token string">"{"</span> <span class="token operator">&lt;&lt;</span> <span class="token string">"name: "</span> <span class="token operator">&lt;&lt;</span> person<span class="token punctuation">.</span>name 
+                <span class="token operator">&lt;&lt;</span> <span class="token string">", age: "</span> <span class="token operator">&lt;&lt;</span> person<span class="token punctuation">.</span>age <span class="token operator">&lt;&lt;</span> <span class="token string">"}"</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">bool</span> <span class="token keyword">operator</span> <span class="token operator">&lt;</span> <span class="token punctuation">(</span><span class="token keyword">const</span> Person <span class="token operator">&amp;</span>p1<span class="token punctuation">,</span> <span class="token keyword">const</span> Person <span class="token operator">&amp;</span>p2<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">return</span> p1<span class="token punctuation">.</span>age <span class="token operator">&lt;</span> p2<span class="token punctuation">.</span>age<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+
+<span class="token comment">// 方式一 模仿less定义比较器</span>
+<span class="token keyword">struct</span> <span class="token class-name">Comp</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">bool</span> <span class="token keyword">operator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token keyword">const</span> Person<span class="token operator">&amp;</span> p1<span class="token punctuation">,</span> <span class="token keyword">const</span> Person<span class="token operator">&amp;</span> p2<span class="token punctuation">)</span> <span class="token keyword">const</span>
+    <span class="token punctuation">{</span> <span class="token keyword">return</span> p1<span class="token punctuation">.</span><span class="token function">GetAge</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&gt;</span> p2<span class="token punctuation">.</span><span class="token function">GetAge</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 方式二 定义普通比较函数</span>
+<span class="token keyword">bool</span> <span class="token function">cmp</span><span class="token punctuation">(</span><span class="token keyword">const</span> Person<span class="token operator">&amp;</span> p1<span class="token punctuation">,</span> <span class="token keyword">const</span> Person<span class="token operator">&amp;</span> p2<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">return</span> p1<span class="token punctuation">.</span><span class="token function">GetAge</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span> p2<span class="token punctuation">.</span><span class="token function">GetAge</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">typedef</span> <span class="token keyword">bool</span> <span class="token punctuation">(</span><span class="token operator">*</span>Comp2<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token keyword">const</span> Person<span class="token operator">&amp;</span> p1<span class="token punctuation">,</span> <span class="token keyword">const</span> Person<span class="token operator">&amp;</span> p2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">// 方式三 通过lambda表达式定义比较函数</span>
+    <span class="token keyword">auto</span> cmp3 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token keyword">const</span> Person<span class="token operator">&amp;</span> p1<span class="token punctuation">,</span> <span class="token keyword">const</span> Person<span class="token operator">&amp;</span> p2<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> p1<span class="token punctuation">.</span><span class="token function">GetAge</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span> p2<span class="token punctuation">.</span><span class="token function">GetAge</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// priority_queue&lt;Person, vector&lt;Person&gt;, Comp&gt; q;</span>
+    <span class="token comment">// priority_queue&lt;Person, vector&lt;Person&gt;, bool (*)(const Person&amp; p1, const Person&amp; p2))&gt; q(cmp);</span>
+    <span class="token comment">// priority_queue&lt;Person, vector&lt;Person&gt;, Comp2&gt; q(cmp3);</span>
+    priority_queue<span class="token operator">&lt;</span>Person<span class="token punctuation">,</span> vector<span class="token operator">&lt;</span>Person<span class="token operator">&gt;</span><span class="token punctuation">,</span> <span class="token keyword">decltype</span><span class="token punctuation">(</span>cmp3<span class="token punctuation">)</span><span class="token operator">&gt;</span> <span class="token function">q</span><span class="token punctuation">(</span>cmp3<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    q<span class="token punctuation">.</span><span class="token function">emplace</span><span class="token punctuation">(</span><span class="token number">60</span><span class="token punctuation">,</span> <span class="token string">"Tom"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    q<span class="token punctuation">.</span><span class="token function">emplace</span><span class="token punctuation">(</span><span class="token number">70</span><span class="token punctuation">,</span> <span class="token string">"Jerry"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    q<span class="token punctuation">.</span><span class="token function">emplace</span><span class="token punctuation">(</span><span class="token number">65</span><span class="token punctuation">,</span> <span class="token string">"Lee"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+
+
+    <span class="token comment">// 出队</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token operator">!</span>q<span class="token punctuation">.</span><span class="token function">empty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">auto</span> top <span class="token operator">=</span> q<span class="token punctuation">.</span><span class="token function">top</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 先获取队首元素</span>
+        q<span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 将队首元素出队</span>
+        cout <span class="token operator">&lt;&lt;</span> top <span class="token operator">&lt;&lt;</span> <span class="token string">"\t"</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>&nbsp;</p>
+<h2 class="atx" id="set">set</h2>
+<h2 class="atx" id="multiset">multiset</h2>
+<h2 class="atx" id="unordered_set">unordered_set</h2>
+<h2 class="atx" id="unordered_multiset">unordered_multiset</h2>
+<h2 class="atx" id="map">map</h2>
+<h2 class="atx" id="multimap">multimap</h2>
+<h2 class="atx" id="unordered_map">unordered_map</h2>
+<h2 class="atx" id="unordered_multimap">unordered_multimap</h2>
+<h2 class="atx" id="span与容器">span与容器</h2>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h1 class="atx" id="算法">算法</h1>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h1 class="atx" id="迭代器-2">迭代器</h1>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h1 class="atx" id="数值操作">数值操作</h1>
+<h2 class="atx" id="-1"></h2>
+<h2 class="atx" id="随机数">随机数</h2>
+<h2 class="atx" id="位操作">位操作</h2>
+<pre><code class="fenced-code-block language-cpp"></code></pre>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h1 class="atx" id="时间日期">时间日期</h1>
+<p>时间点的定义</p>
+<pre><code class="fenced-code-block language-c++">chrono::system_clock::time_point tp = chrono::system_clock::now();
+// 等价于
+chrono::time_point&lt;chrono::system_clock, chrono::nanoseconds&gt; tp = chrono::system_clock::now();</code></pre>
+<p>时间点类型的转换：将纳秒时间点转为秒时间点</p>
+<pre><code class="fenced-code-block language-c++">chrono::time_point&lt;chrono::system_clock, chrono::seconds&gt; tp2 = chrono::time_point_cast&lt;chrono::seconds&gt;(tp);</code></pre>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h1 class="atx" id="文件系统（filesystem）">文件系统（filesystem）</h1>
+<p>C++ 17之后正式引入了filesystem用于遍历操作目录。命名空间为<code>std::filesystem</code>。使用多个命名空间时，不建议都使用<code>using namespace ...</code>的形式，但可以用下面的方式对命名空间进行简化别名：</p>
+<pre><code class="fenced-code-block language-c++">namespace fs = std::filesystem;
+
+fs::path pth = fs::current_path();</code></pre>
+<p>如此之后则可以用<code>fs</code>代替命名空间<code>std::filesystem</code>。</p>
+<p><a href="cppref/zh/zh/cpp/filesystem.html">filesystem文档</a></p>
+<p>&nbsp;</p>
+<p>示例：</p>
+<p>列出当前目录下所有<code>.cpp</code>文件</p>
+<pre><code class="fenced-code-block language-c++">#include &lt;iostream&gt;
+#include &lt;filesystem&gt;
+
+using namespace std;
+namespace fs = std::filesystem;
+
+int main()
+{
+    fs::directory_iterator diter(fs::current_path());
+
+    for (const fs::directory_entry &amp;entry : diter)
+    {
+        if (entry.path().string().ends_with(".cpp")) // ends_with需要C++ 20才支持
+        {
+            cout &lt;&lt; entry.path().string() &lt;&lt; endl;
+        }
+
+    }
+
+    return 0;
+}</code></pre>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h1 class="atx" id="正则表达式">正则表达式</h1>
+<h2 class="atx" id="regex_match">regex_match</h2>
+<pre><code class="fenced-code-block language-c++">#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;regex&gt;
+
+using namespace std;
+
+int main()
+{
+    // 是否为有效IP地址
+    regex re("^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$");
+    string str = "192.168.0.256";
+    cout &lt;&lt; boolalpha &lt;&lt; regex_match(str, re) &lt;&lt; endl;
+
+    // 判断是否为有效邮箱地址
+    regex re2("^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$");
+    string str2 = "zhangsa@qq.com";
+    cout &lt;&lt; boolalpha &lt;&lt; regex_match(str2, re2) &lt;&lt; endl;
+}</code></pre>
+<h2 class="atx" id="regex_search">regex_search</h2>
+<p><code>match_results</code>两种常用特化类型</p>
+<pre><code class="fenced-code-block language-c++">typedef match_results&lt;const char*&gt;         cmatch;
+typedef match_results&lt;string::const_iterator&gt;     smatch;</code></pre>
+<pre><code class="fenced-code-block language-c++">#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;regex&gt;
+
+using namespace std;
+
+int main()
+{
+    string str = "abc123def456ghi789jkl";
+    regex re("(\\d)(\\d)(\\d)");
+    smatch sm;
+    if (regex_search(str, sm, re))
+    {
+        cout &lt;&lt; sm.str() &lt;&lt; endl;
+        cout &lt;&lt; sm.size() &lt;&lt; endl;
+        cout &lt;&lt; sm[0] &lt;&lt; endl;
+        cout &lt;&lt; sm[1] &lt;&lt; endl;
+        cout &lt;&lt; sm[2] &lt;&lt; endl;
+        cout &lt;&lt; sm[3] &lt;&lt; endl;
+        cout &lt;&lt; sm.prefix() &lt;&lt; endl;
+        cout &lt;&lt; sm.suffix() &lt;&lt; endl;
+        cout &lt;&lt; sm.position() &lt;&lt; endl;
+    }
+    else
+    {
+        cout &lt;&lt; "没匹配到" &lt;&lt; endl;
+    }
+
+    while(regex_search(str, sm, re))
+    {
+        cout &lt;&lt; sm.str() &lt;&lt; "\t";
+        str = sm.suffix();
+    }
+}</code></pre>
+<h2 class="atx" id="regex_replace">regex_replace</h2>
+<pre><code class="fenced-code-block language-c++">#include &lt;iostream&gt;
+#include &lt;regex&gt;
+#include &lt;string&gt;
+
+using namespace std; 
+
+int main()
+{
+    string str = "abc123def456ghi789jkl";
+    regex re("\\d{3}");
+
+    string str2 = regex_replace(str, re, "*");
+    cout &lt;&lt; str2 &lt;&lt; endl;
+
+    str2 = regex_replace(str, re, "($&amp;)");
+    cout &lt;&lt; str2 &lt;&lt; endl;
+}</code></pre>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h1 class="atx" id="多线程">多线程</h1>
+<h2 class="atx" id="mutex">mutex</h2>
+<pre><code class="fenced-code-block language-c++">#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;chrono&gt;
+#include &lt;thread&gt;
+#include &lt;mutex&gt;
+
+using namespace std; 
+
+int i = 0;
+mutex mtx;
+
+void tf()
+{
+    while (i &lt; 10)
+    {
+        mtx.lock();
+        lock_guard&lt;mutex&gt; lock(mtx);
+        cout &lt;&lt; "子线程：" &lt;&lt; i &lt;&lt; endl;
+        i++;
+        mtx.unlock();
+        this_thread::sleep_for(chrono::milliseconds(10));
+    }
+
+}
+
+int main()
+{
+    thread th(tf);
+    while (i &lt; 10)
+    {
+        mtx.lock();
+        cout &lt;&lt; "主线程进行中：" &lt;&lt; i &lt;&lt; endl;
+        i++;
+        mtx.unlock();
+        this_thread::sleep_for(chrono::milliseconds(10));
+    }
+    th.join();
+
+    return 0;
+}</code></pre>
+<h2 class="atx" id="lock_guard">lock_guard</h2>
+<pre><code class="fenced-code-block language-c++">#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;chrono&gt;
+#include &lt;thread&gt;
+#include &lt;mutex&gt;
+
+using namespace std; 
+
+int i = 0;
+mutex mtx;
+
+void tf()
+{
+    while (i &lt; 10)
+    {
+        // mtx.lock();
+        lock_guard&lt;mutex&gt; lock(mtx);
+        cout &lt;&lt; "子线程：" &lt;&lt; i &lt;&lt; endl;
+        i++;
+        // mtx.unlock();
+        this_thread::sleep_for(chrono::milliseconds(10));
+    }
+
+}
+
+int main()
+{
+    thread th(tf);
+    while (i &lt; 10)
+    {
+        // mtx.lock();
+        lock_guard&lt;mutex&gt; lock(mtx);
+        cout &lt;&lt; "主线程进行中：" &lt;&lt; i &lt;&lt; endl;
+        i++;
+        // mtx.unlock();
+        this_thread::sleep_for(chrono::milliseconds(10));
+    }
+    th.join();
+
+    return 0;
+}</code></pre>
+<h2 class="atx" id="-2"></h2>
+<h2 class="atx" id="condition_variable">condition_variable</h2>
+<p>多个线程轮流输出数字</p>
+<pre><code class="fenced-code-block language-c++">#include &lt;iostream&gt;
+#include &lt;thread&gt;
+#include &lt;mutex&gt;
+#include &lt;condition_variable&gt;
+
+// 创建互斥量和条件变量来进行线程同步
+std::mutex mtx;
+std::condition_variable cv;
+int current_number = 1;
+
+void print_thread(int thread_id, int thread_count) {
+    for (int i = 0; i &lt; 100; ++i) {
+        // 加锁
+        std::unique_lock&lt;std::mutex&gt; lock(mtx);
+
+        // 等待条件满足
+        cv.wait(lock, [&amp;] { return (current_number % thread_count) == thread_id; });
+
+        // 输出数字
+        std::cout &lt;&lt; "Thread " &lt;&lt; thread_id &lt;&lt; ": " &lt;&lt; current_number &lt;&lt; std::endl;
+
+        // 增加数字并通知其他线程
+        ++current_number;
+        cv.notify_all();
+    }
+}
+
+int main() {
+    const int num_threads = 3; // 定义线程数量
+
+    // 创建多个线程
+    std::vector&lt;std::thread&gt; threads;
+    for (int i = 0; i &lt; num_threads; ++i) {
+        threads.emplace_back(print_thread, i, num_threads);
+    }
+
+    // 唤醒第一个线程开始输出
+    cv.notify_all();
+
+    // 等待所有线程执行完毕
+    for (auto&amp; t : threads) {
+        t.join();
+    }
+
+    return 0;
+}</code></pre>
+<p>启动三个线程轮流输出ABC</p>
+<pre><code class="fenced-code-block language-c++">#include &lt;iostream&gt;
+#include &lt;thread&gt;
+#include &lt;mutex&gt;
+#include &lt;condition_variable&gt;
+
+using namespace std; 
+
+
+class PrintChar
+{
+private:
+    int loop_num;
+    int index;
+    mutex mtx;
+    condition_variable cv;
+public:
+    PrintChar(int loop_num) : loop_num(loop_num), index(0) {}
+    void A()
+    {
+        for (int i = 0; i &lt; loop_num; i++)
+        {
+            unique_lock&lt;mutex&gt; ulk(mtx);
+
+            cv.wait(ulk, [&amp;]() { return index % 3 == 0; });
+            cout &lt;&lt; "A";
+            this_thread::sleep_for(chrono::milliseconds(100));
+            index ++;
+            cv.notify_all();
+        }
+
+    }
+    void B()
+    {
+        for (int i = 0; i &lt; loop_num; i++)
+        {
+            unique_lock&lt;mutex&gt; ulk(mtx);
+
+            cv.wait(ulk, [&amp;]() { return index % 3 == 1; });
+            cout &lt;&lt; "B";
+            this_thread::sleep_for(chrono::milliseconds(100));
+            index ++;
+            cv.notify_all();
+        }
+
+    }
+    void C()
+    {
+        for (int i = 0; i &lt; loop_num; i++)
+        {
+            unique_lock&lt;mutex&gt; ulk(mtx);
+
+            cv.wait(ulk, [&amp;]() { return index % 3 == 2; });
+            cout &lt;&lt; "C";
+            this_thread::sleep_for(chrono::milliseconds(100));
+            index ++;
+            cv.notify_all();
+        }
+
+    }
+
+};
+
+int main()
+{
+    int num = 0;
+    cout &lt;&lt; "请输入循环次数：" ;
+    cin &gt;&gt; num;
+
+    PrintChar p(num);
+    thread th1(&amp;PrintChar::A, &amp;p);
+    thread th2(&amp;PrintChar::B, &amp;p);
+    thread th3(&amp;PrintChar::C, &amp;p);
+
+    th1.join();
+    th2.join();
+    th3.join();
+
+
+    return 0;
+}</code></pre>
+<h2 class="atx" id="async">async</h2>
+<p>通过async启动并行计算，对比单线程计算时间</p>
+<pre><code class="fenced-code-block language-c++">#include &lt;iostream&gt;
+#include &lt;future&gt;
+
+using namespace std;
+
+uint64_t parallel_sum(uint64_t begin, uint64_t end)
+{
+    uint64_t sum = 0;
+    for (uint64_t i = begin; i &lt; end; i++)
+    {
+        sum += i;
+    }
+    return sum;
+}
+
+int main()
+{
+    auto t1 = chrono::high_resolution_clock::now();
+    uint64_t sum = 0;
+    for (uint64_t i = 0; i &lt; 10000000; i++)
+    {
+        sum += i;
+    }
+    auto t2 = chrono::high_resolution_clock::now();
+    auto t = t2 - t1;
+    cout &lt;&lt; sum &lt;&lt; endl &lt;&lt; t.count() &lt;&lt; endl;
+
+    t1 = chrono::high_resolution_clock::now();
+    auto f1 = async(launch::async, parallel_sum, 0, 2000000);
+    auto f2 = async(launch::async, parallel_sum, 2000000, 4000000);
+    auto f3 = async(launch::async, parallel_sum, 4000000, 6000000);
+    auto f4 = async(launch::async, parallel_sum, 6000000, 8000000);
+    auto f5 = async(launch::async, parallel_sum, 8000000, 10000000);
+    sum = f1.get() + f2.get() + f3.get() + f4.get() + f5.get();
+    t2 = chrono::high_resolution_clock::now();
+    t = t2 - t1;
+    cout &lt;&lt; sum &lt;&lt; endl &lt;&lt; t.count() &lt;&lt; endl;
+
+    return 0;
+}</code></pre>
+<h2 class="atx" id="promise-future">promise future</h2>
+<pre><code class="fenced-code-block language-c++">#include &lt;vector&gt;
+#include &lt;thread&gt;
+#include &lt;future&gt;
+#include &lt;iostream&gt;
+#include &lt;chrono&gt;
+
+using namespace std;
+
+void sumfromto(int start, int end, promise&lt;int&gt; ps)
+{
+    int sum = 0;
+    for (int i = start; i &lt;= end; i++)
+    {
+        sum += i;
+    }
+    ps.set_value(sum);
+}
+
+int main()
+{
+    promise&lt;int&gt; ps;
+    future&lt;int&gt; sum_future = ps.get_future();
+    thread th(sumfromto, 1, 100, move(ps));
+    cout &lt;&lt; sum_future.get() &lt;&lt; endl;
+    th.join();
+}</code></pre>
+<h2 class="atx" id="原子操作">原子操作</h2>
+<pre><code class="fenced-code-block language-c++">#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;chrono&gt;
+#include &lt;thread&gt;
+#include &lt;mutex&gt;
+#include &lt;atomic&gt;
+
+using namespace std; 
+
+// int total(0);
+atomic_int total(0);
+mutex mtx;
+
+void fun()
+{
+    for (int i = 0; i &lt; 1000000; i++)
+    {
+        // mtx.lock();
+        total ++;
+        total --;
+        // mtx.unlock();
+    }
+
+}
+
+int main()
+{
+    auto start = chrono::steady_clock::now();
+
+    vector&lt;thread&gt; vec;
+    for (int i = 0; i &lt; 8; i++)
+    {
+        vec.emplace_back(fun);
+    }
+
+    for (int i = 0; i &lt; 8; i++)
+    {
+        vec[i].join();
+    }
+    cout &lt;&lt; "total = " &lt;&lt; total &lt;&lt; endl;
+    auto end = chrono::steady_clock::now();
+    auto dur = chrono::duration_cast&lt;chrono::milliseconds&gt;(end - start);
+    cout &lt;&lt; dur &lt;&lt; endl;
+    return 0;
+}</code></pre>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h1 class="atx" id="通用工具库">通用工具库</h1>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h1 class="atx" id="语言支持库">语言支持库</h1>
+<h2 class="atx" id="三路比较">三路比较</h2>
+<table>
+<thead>
+<tr>
+<th align="center">序列类型</th>
+<th align="center">特点</th>
+<th align="center">举例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">partial_ordering</td>
+<td align="center">1. 等价的值不一定完全相等，a等价于b，可能存在函数F，F(a)不等于F(b)<br>2. 存在不能比较的值</td>
+<td align="center">1. 0.0和-0.0虽然 等价，但二进制值不同，如果函数F为取两者的二进制值，则F(0.0)和F(-0.0)不相等<br>2. 浮点数当中NaN即为不可比较值</td>
+</tr>
+<tr>
+<td align="center">weak_ordering</td>
+<td align="center">1. 等价的值并不一定完全相等。a等价于b，可能存在函数F，F(a)不等于F(b)<br>2. 不存在不能比较的值</td>
+<td align="center">以忽略大小写的方式比较"ABC"和"abc"是等价的，但是这并不是完全相同的两个值</td>
+</tr>
+<tr>
+<td align="center">strong_ordering</td>
+<td align="center">1. 等价的值完全相等，只要a==b， 就有F(a)==F(b)<br>2. 不存在不能比较的值</td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h1 class="atx" id="其他">其他</h1>
+</article>
+</body>
+</html>

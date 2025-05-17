@@ -3,6 +3,7 @@
 
 # 配置相关
 .vscode/
+.idea/
 .env
 
 # 杂项

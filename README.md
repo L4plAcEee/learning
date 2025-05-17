@@ -6,11 +6,11 @@
 
 ## 目录结构
 
-build       <- 构建内容
-contests    <- 竞赛题解
-leetcode    <- 力扣题解
-luguo       <- 洛谷题解
-resarch     <- 算法研究
+build       <- 构建内容 
+contests    <- 竞赛题解  
+leetcode    <- 力扣题解  
+luguo       <- 洛谷题解  
+resarch     <- 算法研究  
 
 ---
 

@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr" class="client-nojs">
+<head>
+<title>标点</title>
+<meta charset="UTF-8">
+<meta name="generator" content="MediaWiki 1.21.2">
+<link rel="shortcut icon" href="../../../common/favicon.ico">
+<link rel="stylesheet" href="../../../common/ext.css">
+<meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="../../../common/site_modules.css">
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}#toc{display:none}.editsection{display:none}
+/* cache key: mwiki1-mwiki_zh_:resourceloader:filter:minify-css:7:15cea3ec788a65b5187d4018eed543bf */</style>
+
+<script src="../../../common/startup_scripts.js"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"cpp/language/punctuators","wgTitle":"cpp/language/punctuators","wgCurRevisionId":73216,"wgArticleId":13923,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"zh","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"zh","wgMonthNames":["","1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],"wgMonthNamesShort":["","1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],"wgRelevantPageName":"cpp/language/punctuators","wgUserVariant":"zh","wgRestrictionEdit":[],"wgRestrictionMove":[]});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":0,"showtoolbar":1,"skin":"cppreference2","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":0,
+"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"variant":"zh","language":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"gadget-MathJax":1,"gadget-ColiruCompiler":1});;},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});;},{},{});
+/* cache key: mwiki1-mwiki_zh_:resourceloader:filter:minify-js:7:258d7cd6aa9aa67dee25e01fb6a9e505 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-cpp {line-height: normal;}
+.source-cpp li, .source-cpp pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for cpp
+ * CSS class: source-cpp, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.cpp.source-cpp .de1, .cpp.source-cpp .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.cpp.source-cpp  {font-family:monospace;}
+.cpp.source-cpp .imp {font-weight: bold; color: red;}
+.cpp.source-cpp li, .cpp.source-cpp .li1 {font-weight: normal; vertical-align:top;}
+.cpp.source-cpp .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.cpp.source-cpp .li2 {font-weight: bold; vertical-align:top;}
+.cpp.source-cpp .kw1 {color: #0000dd;}
+.cpp.source-cpp .kw2 {color: #0000ff;}
+.cpp.source-cpp .kw3 {color: #0000dd;}
+.cpp.source-cpp .kw4 {color: #0000ff;}
+.cpp.source-cpp .co1 {color: #909090;}
+.cpp.source-cpp .co2 {color: #339900;}
+.cpp.source-cpp .coMULTI {color: #ff0000; font-style: italic;}
+.cpp.source-cpp .es0 {color: #008000; font-weight: bold;}
+.cpp.source-cpp .es1 {color: #008000; font-weight: bold;}
+.cpp.source-cpp .es2 {color: #008000; font-weight: bold;}
+.cpp.source-cpp .es3 {color: #008000; font-weight: bold;}
+.cpp.source-cpp .es4 {color: #008000; font-weight: bold;}
+.cpp.source-cpp .es5 {color: #008000; font-weight: bold;}
+.cpp.source-cpp .br0 {color: #008000;}
+.cpp.source-cpp .sy0 {color: #008000;}
+.cpp.source-cpp .sy1 {color: #000080;}
+.cpp.source-cpp .sy2 {color: #000040;}
+.cpp.source-cpp .sy3 {color: #000040;}
+.cpp.source-cpp .sy4 {color: #008080;}
+.cpp.source-cpp .st0 {color: #008000;}
+.cpp.source-cpp .nu0 {color: #000080;}
+.cpp.source-cpp .nu6 {color: #000080;}
+.cpp.source-cpp .nu8 {color: #000080;}
+.cpp.source-cpp .nu12 {color: #000080;}
+.cpp.source-cpp .nu16 {color:#000080;}
+.cpp.source-cpp .nu17 {color:#000080;}
+.cpp.source-cpp .nu18 {color:#000080;}
+.cpp.source-cpp .nu19 {color:#000080;}
+.cpp.source-cpp .ln-xtra, .cpp.source-cpp li.ln-xtra, .cpp.source-cpp div.ln-xtra {background-color: #ffc;}
+.cpp.source-cpp span.xtra { display:block; }
+
+/*]]>*/
+</style><!--[if lt IE 7]><style type="text/css">body{behavior:url("/mwiki/skins/cppreference2/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-cpp_language_punctuators skin-cppreference2 action-view cpp-navbar">
+        <!-- header -->
+        <!-- /header -->
+        <!-- content -->
+<div id="cpp-content-base">
+            <div id="content">
+                <a id="top"></a>
+                <div id="mw-js-message" style="display:none;"></div>
+                                <!-- firstHeading -->
+<h1 id="firstHeading" class="firstHeading">标点</h1>
+                <!-- /firstHeading -->
+                <!-- bodyContent -->
+                <div id="bodyContent">
+                                        <!-- tagline -->
+                    <div id="siteSub">来自cppreference.com</div>
+                    <!-- /tagline -->
+                                        <!-- subtitle -->
+                    <div id="contentSub"><span class="subpages">&lt; <a href="../../cpp.html" title="cpp">cpp</a>‎ | <a href="../language.html" title="cpp/language">language</a></span></div>
+                    <!-- /subtitle -->
+                                                            <!-- bodycontent -->
+                    <div id="mw-content-text" lang="zh" dir="ltr" class="mw-content-ltr"><div class="t-navbar" style=""><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../../cpp.html" title="cpp"> C++</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em">
+<tr class="t-nv"><td colspan="5"> <a href="../language.html" title="cpp/language">语言</a> </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="../header.html" title="cpp/header">标准库头文件</a> </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="../freestanding.html" title="cpp/freestanding"> 自立与有宿主实现</a> </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="../named_req.html" title="cpp/named req">具名要求</a> </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="../utility.html#.E8.AF.AD.E8.A8.80.E6.94.AF.E6.8C.81" title="cpp/utility">语言支持库</a> </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="../concepts.html" title="cpp/concepts">概念库</a> <span class="t-mark-rev t-since-cxx20">(C++20)</span> </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="../error.html" title="cpp/error">诊断库</a> </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="../utility.html" title="cpp/utility">工具库</a> </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="../string.html" title="cpp/string">字符串库</a> </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="../container.html" title="cpp/container">容器库</a> </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="../iterator.html" title="cpp/iterator">迭代器库</a> </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="../ranges.html" title="cpp/ranges"> 范围库</a> <span class="t-mark-rev t-since-cxx20">(C++20)</span> </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="../algorithm.html" title="cpp/algorithm">算法库</a> </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="../numeric.html" title="cpp/numeric">数值库</a> </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="../locale.html" title="cpp/locale">本地化库</a> </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="../io.html" title="cpp/io">输入/输出库</a> </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="../filesystem.html" title="cpp/filesystem">文件系统库</a> <span class="t-mark-rev t-since-cxx17">(C++17)</span> </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="../regex.html" title="cpp/regex">正则表达式库</a> <span class="t-mark-rev t-since-cxx11">(C++11)</span> </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="../atomic.html" title="cpp/atomic">原子操作库</a> <span class="t-mark-rev t-since-cxx11">(C++11)</span> </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="../thread.html" title="cpp/thread">线程支持库</a> <span class="t-mark-rev t-since-cxx11">(C++11)</span> </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="../experimental.html" title="cpp/experimental">技术规范</a> </td></tr>
+</table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../language.html" title="cpp/language">C++ 语言</a></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="basic_concepts.html" title="cpp/language/basic concepts">基本概念</a><div class="t-navbar-menu"><div><div style="display:inline-block">
+<div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em">
+<tr class="t-nv"><td colspan="5"> <a href="../keywords.html" title="cpp/keyword"> 语言关键词</a> </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="charset.html" title="cpp/language/charset"> 字符集与编码</a> </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="translation_phases.html" title="cpp/language/translation phases"> 翻译阶段</a> </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="../comments.html" title="cpp/comment"> 注释</a> </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="main_function.html" title="cpp/language/main function"> <code>main()</code> 函数</a> </td></tr>
+<tr class="t-nv"><td colspan="5"> <strong class="selflink"> 标点</strong> </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="name.html" title="cpp/language/identifiers"> 名字和标识符</a> </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="incomplete_type.html" title="cpp/language/type"> 类型</a> </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="types.html" title="cpp/language/types"> 基础类型</a> </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="object.html" title="cpp/language/object"> 对象</a> </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="scope.html" title="cpp/language/scope"> 作用域</a> </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="lifetime.html" title="cpp/language/lifetime"> 对象生存期</a> </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="storage_duration.html" title="cpp/language/storage duration"> 存储期与连接</a> </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="definition.html" title="cpp/language/definition"> 定义和单一定义规则（ODR）</a> </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="lookup.html" title="cpp/language/lookup"> 名字查找</a> </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="qualified_lookup.html" title="cpp/language/qualified lookup"> 有限定名字查找</a> </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="unqualified_lookup.html" title="cpp/language/unqualified lookup"> 无限定名字查找</a> </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="as_if.html" title="cpp/language/as if"> “如同”规则</a></td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="ub.html" title="cpp/language/ub"> 未定义行为</a></td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="memory_model.html" title="cpp/language/memory model"> 内存模型</a> </td></tr>
+</table></div>
+</div><div></div></div></div></div><div class="t-navbar-sep"> </div></div>
+<h3><span class="mw-headline" id=".7B_.7D"> <code>{</code> <code>} </code> </span></h3>
+<ul><li> 在 <a href="class.html" title="cpp/language/class">class/struct</a> 或 <a href="union.html" title="cpp/language/union">union</a> 定义中分隔<a href="class.html#.E6.88.90.E5.91.98.E8.AF.B4.E6.98.8E" title="cpp/language/class">成员说明</a>。
+</li><li> 在 <a href="enum.html" title="cpp/language/enum">enum</a> 定义中分隔枚举项列表。
+</li><li> 分隔<a href="statements.html#.E5.A4.8D.E5.90.88.E8.AF.AD.E5.8F.A5" title="cpp/language/statements">复合语句</a>。复合语句可能是下列构造的一部分
+</li></ul>
+<dl><dd><ul><li> <a href="function.html#.E5.87.BD.E6.95.B0.E5.AE.9A.E4.B9.89" title="cpp/language/function">函数定义</a>
+</li><li> <a href="try_catch.html" title="cpp/language/try catch">try 块或 catch 子句</a>
+</li><li> <a href="function-try-block.html" title="cpp/language/function-try-block">函数 try 块</a>
+</li><li> <a href="lambda.html" title="cpp/language/lambda">lambda 表达式</a> <span class="t-mark-rev t-since-cxx11">(C++11 起)</span>
+</li></ul>
+</dd></dl>
+<ul><li> 在<a href="initialization.html" title="cpp/language/initialization">初始化</a>中分隔初始化器。<span class="t-rev-inl t-since-cxx11"><span>这种初始化被称为<a href="list_initialization.html" title="cpp/language/list initialization">列表初始化</a>。</span> <span><span class="t-mark-rev t-since-cxx11">(C++11 起)</span></span></span>
+</li><li> 在<a href="namespace.html" title="cpp/language/namespace">命名空间定义</a>中分隔命名空间体。
+</li><li> 在<a href="language_linkage.html" title="cpp/language/language linkage">语言链接说明</a>中分隔声明。
+</li><li> 在 <a href="constraints.html#requires_.E8.A1.A8.E8.BE.BE.E5.BC.8F" title="cpp/language/constraints">requires 表达式</a>中分隔要求。<span class="t-mark-rev t-since-cxx20">(C++20 起)</span>
+</li><li> 在<a href="constraints.html#.E5.A4.8D.E5.90.88.E8.A6.81.E6.B1.82" title="cpp/language/constraints">复合要求</a>中分隔表达式。<span class="t-mark-rev t-since-cxx20">(C++20 起)</span>
+</li><li> 在<a href="modules.html" title="cpp/language/modules">导出声明</a>中分隔声明。<span class="t-mark-rev t-since-cxx20">(C++20 起)</span>
+</li></ul>
+<h3><span class="mw-headline" id=".5B_.5D"> <code>[</code> <code>]</code> </span></h3>
+<ul><li> <a href="operator_member_access.html#.E5.86.85.E5.BB.BA.E7.9A.84.E4.B8.8B.E6.A0.87.E8.BF.90.E7.AE.97.E7.AC.A6" title="cpp/language/operator member access">下标运算符</a>；<a href="operators.html#.E6.95.B0.E7.BB.84.E4.B8.8B.E6.A0.87.E8.BF.90.E7.AE.97.E7.AC.A6" title="cpp/language/operators">运算符重载</a>中 <span class="t-c"><span class="mw-geshi cpp source-cpp">operator<span class="br0">[</span><span class="br0">]</span></span></span> 的一部分。
+</li><li> <a href="declarations.html" title="cpp/language/declarations">声明</a>或<a href="incomplete_type.html#.E7.B1.BB.E5.9E.8B.E7.9A.84.E5.91.BD.E5.90.8D" title="cpp/language/type">类型标识</a>（例如在 <a href="new.html" title="cpp/language/new">new 表达式</a>中）中<a href="declarations.html#.E5.A3.B0.E6.98.8E.E7.AC.A6" title="cpp/language/declarations">数组声明符</a>的一部分。
+</li><li> <a href="../memory/new/operator_new.html" title="cpp/memory/new/operator new">运算符重载（分配函数）</a>中 <span class="t-c"><span class="mw-geshi cpp source-cpp">new<span class="br0">[</span><span class="br0">]</span></span></span> 运算符的一部分。
+</li><li> <a href="delete.html" title="cpp/language/delete">delete 表达式</a>及<a href="../memory/new/operator_delete.html" title="cpp/memory/new/operator delete">运算符重载（解分配函数）</a>中 <span class="t-c"><span class="mw-geshi cpp source-cpp">delete<span class="br0">[</span><span class="br0">]</span></span></span> 运算符的一部分。
+</li><li> 在 <a href="lambda.html" title="cpp/language/lambda">lambda 表达式</a>中分隔<a href="lambda.html#Lambda_.E6.8D.95.E8.8E.B7" title="cpp/language/lambda">捕获</a>。<span class="t-mark-rev t-since-cxx11">(C++11 起)</span>
+</li><li> 在<a href="attributes.html" title="cpp/language/attributes">属性说明符</a>中分隔属性。<span class="t-mark-rev t-since-cxx11">(C++11 起)</span>
+</li><li> 在<a href="structured_binding.html" title="cpp/language/structured binding">结构化绑定声明</a>中分隔标识符列表。<span class="t-mark-rev t-since-cxx17">(C++17 起)</span>
+</li></ul>
+<h3><span class="mw-headline" id=".23"> <code>#</code> </span></h3>
+<ul><li> 引入<a href="../preprocessor.html" title="cpp/preprocessor">预处理指令</a>。
+</li><li> <a href="../preprocessor/replace.html#.23_.E4.B8.8E_.23.23_.E8.BF.90.E7.AE.97.E7.AC.A6" title="cpp/preprocessor/replace">字符串化的预处理运算符</a>。
+</li></ul>
+<h3><span class="mw-headline" id=".23.23"> <code>##</code> </span></h3>
+<ul><li> <a href="../preprocessor/replace.html#.23_.E4.B8.8E_.23.23_.E8.BF.90.E7.AE.97.E7.AC.A6" title="cpp/preprocessor/replace">粘贴记号的预处理运算符</a>。
+</li></ul>
+<h3><span class="mw-headline" id=".28_.29"> <code>(</code> <code>)</code> </span></h3>
+<ul><li> 在表达式中<a href="expressions.html#.E5.88.9D.E7.AD.89.E8.A1.A8.E8.BE.BE.E5.BC.8F" title="cpp/language/expressions">指示分组</a>。
+</li><li> <a href="operator_other.html#.E5.86.85.E5.BB.BA.E7.9A.84.E5.87.BD.E6.95.B0.E8.B0.83.E7.94.A8.E8.BF.90.E7.AE.97.E7.AC.A6" title="cpp/language/operator other">函数调用运算符</a>；<a href="operators.html#.E5.87.BD.E6.95.B0.E8.B0.83.E7.94.A8.E8.BF.90.E7.AE.97.E7.AC.A6" title="cpp/language/operators">运算符重载</a>中 <span class="t-c"><span class="mw-geshi cpp source-cpp">operator<span class="br0">(</span><span class="br0">)</span></span></span> 的一部分。
+</li><li> 在<a href="explicit_cast.html" title="cpp/language/explicit cast">函数风格转型</a>中分隔表达式/初始化器。
+</li><li> 在 <a href="static_cast.html" title="cpp/language/static cast"><code>static_cast</code></a>、 <a href="const_cast.html" title="cpp/language/const cast"><code>const_cast</code></a>、 <a href="reinterpret_cast.html" title="cpp/language/reinterpret cast"><code>reinterpret_cast</code></a> 或 <a href="dynamic_cast.html" title="cpp/language/dynamic cast"><code>dynamic_cast</code></a> 中分隔表达式。
+</li><li> 在 <a href="typeid.html" title="cpp/language/typeid"><code>typeid</code></a>、 <a href="sizeof.html" title="cpp/language/sizeof"><code>sizeof</code></a><span class="t-rev-inl t-since-cxx11"><span>、 <a href="sizeof....html" title="cpp/language/sizeof..."><code>sizeof...</code></a>、 <a href="alignof.html" title="cpp/language/alignof"><code>alignof</code></a> 或 <a href="noexcept.html" title="cpp/language/noexcept"><code>noexcept</code></a></span> <span><span class="t-mark-rev t-since-cxx11">(C++11 起)</span></span></span> 表达式中分隔操作数。
+</li><li> 在<a href="new.html" title="cpp/language/new">布置 new 表达式</a>中分隔布置实参。
+</li><li> 在 <a href="new.html" title="cpp/language/new">new 表达式</a>中可选地分隔类型标识。
+</li><li> 在 <a href="new.html" title="cpp/language/new">new 表达式</a>中分隔初始化器。
+</li><li> 在 <a href="explicit_cast.html" title="cpp/language/explicit cast">C 风格转型</a>中分隔类型标识。
+</li><li> 在<a href="declarations.html" title="cpp/language/declarations">声明</a>或<a href="incomplete_type.html#.E7.B1.BB.E5.9E.8B.E7.9A.84.E5.91.BD.E5.90.8D" title="cpp/language/type">类型标识</a>中指示分组。
+</li><li> 在下列构造中分隔形参列表
+</li></ul>
+<dl><dd><ul><li> <a href="function.html" title="cpp/language/function">函数声明符</a>（在<a href="declarations.html" title="cpp/language/declarations">声明</a>或<a href="incomplete_type.html#.E7.B1.BB.E5.9E.8B.E7.9A.84.E5.91.BD.E5.90.8D" title="cpp/language/type">类型标识</a>）中
+</li><li> <a href="lambda.html" title="cpp/language/lambda">lambda 表达式</a> <span class="t-mark-rev t-since-cxx11">(C++11 起)</span>
+</li><li> <a href="class_template_argument_deduction.html" title="cpp/language/class template argument deduction">用户定义推导指引</a> <span class="t-mark-rev t-since-cxx17">(C++17 起)</span>
+</li><li> <a href="constraints.html#requires_.E8.A1.A8.E8.BE.BE.E5.BC.8F" title="cpp/language/constraints">requires 表达式</a> <span class="t-mark-rev t-since-cxx20">(C++20 起)</span>
+</li></ul>
+</dd></dl>
+<ul><li> 在<a href="direct_initialization.html" title="cpp/language/direct initialization">直接初始化</a>中分隔初始化器。
+</li><li> 在 <a href="asm.html" title="cpp/language/asm">asm 声明</a>中分隔字符串字面量。
+</li><li> 在<a href="initializer_list.html" title="cpp/language/initializer list" class="mw-redirect">成员初始化器列表</a>中分隔属于基类或成员的初始化器。
+</li><li> 在 <a href="if.html" title="cpp/language/if"><code>if</code></a><span class="t-rev-inl t-since-cxx17"><span> （包括 <code>constexpr</code> <code>if</code>）</span> <span><span class="t-mark-rev t-since-cxx17">(C++17 起)</span></span></span>、 <a href="switch.html" title="cpp/language/switch"><code>switch</code></a>、 <a href="while.html" title="cpp/language/while"><code>while</code></a>、 <a href="do.html" title="cpp/language/do"><code>do-while</code></a> 或 <a href="for.html" title="cpp/language/for"><code>for</code></a><span class="t-rev-inl t-since-cxx11"><span>（包括<a href="range-for.html" title="cpp/language/range-for">基于范围的 <code>for</code></a>）</span> <span><span class="t-mark-rev t-since-cxx11">(C++11 起)</span></span></span>语句中分隔控制子句。
+</li><li> 在 <a href="try_catch.html" title="cpp/language/try catch">catch 子句</a>中分隔形参声明。
+</li><li> 在<a href="../preprocessor/replace.html#.E4.BB.BF.E5.87.BD.E6.95.B0.E5.AE.8F" title="cpp/preprocessor/replace">仿函数宏定义</a>中分隔宏形参。
+</li><li> <code>defined</code><span class="t-rev-inl t-since-cxx17"><span>、 <code>__has_include</code></span> <span><span class="t-mark-rev t-since-cxx17">(C++17 起)</span></span></span><span class="t-rev-inl t-since-cxx20"><span>、 <code>__has_cpp_attribute</code></span> <span><span class="t-mark-rev t-since-cxx20">(C++20 起)</span></span></span> 预处理运算符的一部分。
+</li><li> 在 <a href="static_assert.html" title="cpp/language/static assert"><code>static_assert</code></a> 声明中分隔操作数。<span class="t-mark-rev t-since-cxx11">(C++11 起)</span>
+</li><li> 在 <a href="decltype.html" title="cpp/language/decltype"><code>decltype</code></a> 说明符、 <a href="noexcept_spec.html" title="cpp/language/noexcept spec"><code>noexcept</code></a> 说明符、 <a href="alignas.html" title="cpp/language/alignas"><code>alignas</code></a> 说明符<span class="t-rev-inl t-since-cxx20"><span>、 <a href="explicit.html" title="cpp/language/explicit">条件性 <code>explicit</code> 说明符</a></span> <span><span class="t-mark-rev t-since-cxx20">(C++20 起)</span></span></span> 中分隔操作数。<span class="t-mark-rev t-since-cxx11">(C++11 起)</span>
+</li><li> 在<a href="attributes.html" title="cpp/language/attributes">属性</a>中分隔属性实参。<span class="t-mark-rev t-since-cxx11">(C++11 起)</span>
+</li><li> <a href="decltype.html" title="cpp/language/decltype"><code>decltype(auto)</code></a> 说明符的一部分。<span class="t-mark-rev t-since-cxx14">(C++14 起)</span>
+</li><li> 分隔<a href="fold.html" title="cpp/language/fold">折叠表达式</a>。<span class="t-mark-rev t-since-cxx17">(C++17 起)</span>
+</li><li> 变参数宏定义中 <a href="../preprocessor/replace.html" title="cpp/preprocessor/replace"><tt>__VA_OPT__</tt></a> 替换的一部分。<span class="t-mark-rev t-since-cxx20">(C++20 起)</span>
+</li></ul>
+<h3><span class="mw-headline" id=".3B"> <code>;</code> </span></h3>
+<ul><li> 指示以下构造的末尾
+</li></ul>
+<dl><dd><ul><li> <a href="statements.html" title="cpp/language/statements">语句</a>（包括 for 语句的初始化语句）
+</li><li> <a href="declarations.html" title="cpp/language/declarations">声明</a>或<a href="class.html#.E6.88.90.E5.91.98.E8.AF.B4.E6.98.8E" title="cpp/language/class">成员声明</a>
+</li><li> <a href="modules.html" title="cpp/language/modules">模块声明</a>、导入声明、全局模块片段器引入或私有模块片段引入器<span class="t-mark-rev t-since-cxx20">(C++20 起)</span>
+</li><li> <a href="constraints.html#requires_.E8.A1.A8.E8.BE.BE.E5.BC.8F" title="cpp/language/constraints">要求</a> <span class="t-mark-rev t-since-cxx20">(C++20 起)</span>
+</li></ul>
+</dd></dl>
+<ul><li> 分隔 <a href="for.html" title="cpp/language/for">for 语句</a>的第二与第三子句。
+</li></ul>
+<h3><span class="mw-headline" id=":"> <code>:</code> </span></h3>
+<ul><li> <a href="operator_other.html#.E6.9D.A1.E4.BB.B6.E8.BF.90.E7.AE.97.E7.AC.A6" title="cpp/language/operator other">条件运算符</a>的一部分。
+</li><li> <a href="statements.html#.E6.A0.87.E7.AD.BE" title="cpp/language/statements">标签声明</a>的一部分。
+</li><li> 在<a href="class.html" title="cpp/language/class">类定义</a>的类头中引入<a href="derived_class.html" title="cpp/language/derived class">基子句</a>。
+</li><li> 成员说明中<a href="access.html" title="cpp/language/access">访问说明符</a>的一部分。
+</li><li> <a href="bitfield.html" title="cpp/language/bitfield" class="mw-redirect">位域成员声明</a>中引入宽度。
+</li><li> <a href="initializer_list.html" title="cpp/language/constructor">构造函数</a>定义中引入成员初始化器列表。
+</li><li> <a href="range-for.html" title="cpp/language/range-for">基于范围的 for</a> 语句中分隔范围声明与范围初始化器。<span class="t-mark-rev t-since-cxx11">(C++11 起)</span>
+</li><li> 引入<a href="enum.html" title="cpp/language/enum">枚举基</a>，它指定枚举的底层类型。<span class="t-mark-rev t-since-cxx11">(C++11 起)</span>
+</li><li> 在<a href="attributes.html" title="cpp/language/attributes">属性说明符</a>中分隔属性 using 前缀与属性列表。<span class="t-mark-rev t-since-cxx17">(C++17 起)</span>
+</li><li> 在<a href="modules.html" title="cpp/language/modules">模块声明</a>或模块划分的导入声明中引入模块划分名。<span class="t-mark-rev t-since-cxx20">(C++20 起)</span>
+</li><li> 私有模块片段引入器（<span class="t-c"><span class="mw-geshi cpp source-cpp">module <span class="sy4">:</span><span class="kw1">private</span><span class="sy4">;</span></span></span>）的一部分。<span class="t-mark-rev t-since-cxx20">(C++20 起)</span>
+</li></ul>
+<h3><span class="mw-headline" id="..."> <code>...</code> </span></h3>
+<ul><li> 函数声明符<span class="t-rev-inl t-since-cxx11"><span>或 lambda 表达式</span> <span><span class="t-mark-rev t-since-cxx11">(C++11 起)</span></span></span><span class="t-rev-inl t-since-cxx17"><span>或用户定义推导指引</span> <span><span class="t-mark-rev t-since-cxx17">(C++17 起)</span></span></span>中<a href="function.html#.E5.BD.A2.E5.8F.82.E5.88.97.E8.A1.A8" title="cpp/language/function">形参列表</a>的一部分，标识<a href="variadic_arguments.html" title="cpp/language/variadic arguments">变参数函数</a>.
+</li><li> 在 <a href="try_catch.html" title="cpp/language/try catch">catch 子句</a>中标识万应处理。
+</li><li> 在<a href="../preprocessor/replace.html" title="cpp/preprocessor/replace">宏定义</a>中标识变参数宏。<span class="t-mark-rev t-since-cxx11">(C++11 起)</span>
+</li><li> 指示<a href="parameter_pack.html" title="cpp/language/parameter pack">包</a>声明与展开。<span class="t-mark-rev t-since-cxx11">(C++11 起)</span>
+</li></ul>
+<h3><span class="mw-headline" id=".3F"> <code>?</code> </span></h3>
+<ul><li> <a href="operator_other.html#.E6.9D.A1.E4.BB.B6.E8.BF.90.E7.AE.97.E7.AC.A6" title="cpp/language/operator other">条件运算符</a>的一部分。
+</li></ul>
+<h3><span class="mw-headline" id="::"> <code>::</code> </span></h3>
+<ul><li> 下列构造中的作用域解析运算符
+</li></ul>
+<dl><dd><ul><li> <a href="qualified_lookup.html" title="cpp/language/qualified lookup">有限定名</a>
+</li><li> <a href="pointer.html#.E6.88.90.E5.91.98.E6.8C.87.E9.92.88" title="cpp/language/pointer">成员指针声明</a>
+</li><li> <a href="new.html" title="cpp/language/new">new</a> 或 <a href="delete.html" title="cpp/language/delete">delete</a> 表达式，指示仅查找全局分配或解分配函数
+</li></ul>
+</dd></dl>
+<ul><li> 在<a href="attributes.html" title="cpp/language/attributes">属性</a>中指示属性作用域。<span class="t-mark-rev t-since-cxx11">(C++11 起)</span>
+</li><li> <a href="namespace.html" title="cpp/language/namespace">嵌套命名空间定义</a>的一部分。<span class="t-mark-rev t-since-cxx17">(C++17 起)</span>
+</li></ul>
+<h3><span class="mw-headline" id="."> <code>.</code> </span></h3>
+<ul><li> <a href="operator_member_access.html#.E5.86.85.E5.BB.BA.E7.9A.84.E6.88.90.E5.91.98.E8.AE.BF.E9.97.AE.E8.BF.90.E7.AE.97.E7.AC.A6" title="cpp/language/operator member access">成员访问运算符</a>。
+</li><li> 在<a href="aggregate_initialization.html" title="cpp/language/aggregate initialization">聚合初始化</a>中引入指派符。<span class="t-mark-rev t-since-cxx20">(C++20 起)</span>
+</li><li> <a href="modules.html" title="cpp/language/modules">模块名或模块划分名</a>的一部分。<span class="t-mark-rev t-since-cxx20">(C++20 起)</span>
+</li></ul>
+<h3><span class="mw-headline" id="..2A"> <code>.*</code> </span></h3>
+<ul><li> <a href="operator_member_access.html#.E5.86.85.E5.BB.BA.E7.9A.84.E6.88.90.E5.91.98.E6.8C.87.E9.92.88.E8.AE.BF.E9.97.AE.E8.BF.90.E7.AE.97.E7.AC.A6" title="cpp/language/operator member access">成员指针访问运算符</a>。
+</li></ul>
+<h3><span class="mw-headline" id="-.3E"> <code>-&gt;</code> </span></h3>
+<ul><li> <a href="operator_member_access.html#.E5.86.85.E5.BB.BA.E7.9A.84.E6.88.90.E5.91.98.E8.AE.BF.E9.97.AE.E8.BF.90.E7.AE.97.E7.AC.A6" title="cpp/language/operator member access">成员访问运算符</a>；<a href="operators.html" title="cpp/language/operators">运算符重载</a>中 <span class="t-c"><span class="mw-geshi cpp source-cpp">operator<span class="sy2">-</span><span class="sy1">&gt;</span></span></span> 的一部分。
+</li><li> 在<a href="function.html" title="cpp/language/function">函数声明符</a>或 <a href="lambda.html" title="cpp/language/lambda">lambda 表达式</a>中引入尾随返回类型。<span class="t-mark-rev t-since-cxx11">(C++11 起)</span>
+</li><li> 在<a href="class_template_argument_deduction.html" title="cpp/language/class template argument deduction">用户定义推导指引</a>中引入结果类型。<span class="t-mark-rev t-since-cxx17">(C++17 起)</span>
+</li><li> 在<a href="constraints.html#.E5.A4.8D.E5.90.88.E8.A6.81.E6.B1.82" title="cpp/language/constraints">复合要求</a>中引入返回类型要求。<span class="t-mark-rev t-since-cxx20">(C++20 起)</span>
+</li></ul>
+<h3><span class="mw-headline" id="-.3E.2A"> <code>-&gt;*</code> </span></h3>
+<ul><li> <a href="operator_member_access.html#.E5.86.85.E5.BB.BA.E7.9A.84.E6.88.90.E5.91.98.E6.8C.87.E9.92.88.E8.AE.BF.E9.97.AE.E8.BF.90.E7.AE.97.E7.AC.A6" title="cpp/language/operator member access">成员指针访问运算符</a>；<a href="operators.html#.E7.BD.95.E6.9C.89.E9.87.8D.E8.BD.BD.E7.9A.84.E8.BF.90.E7.AE.97.E7.AC.A6" title="cpp/language/operators">运算符重载</a>中 <span class="t-c"><span class="mw-geshi cpp source-cpp">operator<span class="sy2">-</span><span class="sy1">&gt;</span><span class="sy2">*</span></span></span> 的一部分。
+</li></ul>
+<h3><span class="mw-headline" id=".7E"> <code>~</code> </span></h3>
+<ul><li> <a href="operator_arithmetic.html#.E9.80.90.E4.BD.8D.E9.80.BB.E8.BE.91.E8.BF.90.E7.AE.97.E7.AC.A6" title="cpp/language/operator arithmetic">一元补运算符（又称逐位非运算符）</a>；<a href="operators.html" title="cpp/language/operators">运算符重载</a>中 <span class="t-c"><span class="mw-geshi cpp source-cpp">operator~</span></span> 的一部分。
+</li><li> 指名<a href="destructor.html" title="cpp/language/destructor">析构函数</a>或伪析构函数的标识符的一部分。
+</li></ul>
+<h3><span class="mw-headline" id=".21"> <code>!</code> </span></h3>
+<ul><li> <a href="operator_logical.html" title="cpp/language/operator logical">逻辑非运算符</a>；<a href="operators.html" title="cpp/language/operators">运算符重载</a>中 <span class="t-c"><span class="mw-geshi cpp source-cpp">operator<span class="sy3">!</span></span></span> 的一部分。
+</li><li> <a href="if.html#consteval_if" title="cpp/language/if">consteval <code>if</code> 语句的反向变体</a>的一部分。<span class="t-mark-rev t-since-cxx23">(C++23 起)</span>
+</li></ul>
+<h3><span class="mw-headline" id=".2B"> <code>+</code> </span></h3>
+<ul><li> <a href="operator_arithmetic.html#.E4.B8.80.E5.85.83.E7.AE.97.E6.9C.AF.E8.BF.90.E7.AE.97.E7.AC.A6" title="cpp/language/operator arithmetic">一元加运算符</a>；<a href="operators.html" title="cpp/language/operators">运算符重载</a>中 <span class="t-c"><span class="mw-geshi cpp source-cpp">operator<span class="sy2">+</span></span></span> 的一部分。
+</li><li> <a href="operator_arithmetic.html#.E5.8A.A0.E6.80.A7.E8.BF.90.E7.AE.97.E7.AC.A6" title="cpp/language/operator arithmetic">二元加运算符</a>；<a href="operators.html" title="cpp/language/operators">运算符重载</a>中 <span class="t-c"><span class="mw-geshi cpp source-cpp">operator<span class="sy2">+</span></span></span> 的一部分。
+</li></ul>
+<h3><span class="mw-headline" id="-"> <code>-</code> </span></h3>
+<ul><li> <a href="operator_arithmetic.html#.E4.B8.80.E5.85.83.E7.AE.97.E6.9C.AF.E8.BF.90.E7.AE.97.E7.AC.A6" title="cpp/language/operator arithmetic">一元减运算符</a>；<a href="operators.html" title="cpp/language/operators">运算符重载</a>中 <span class="t-c"><span class="mw-geshi cpp source-cpp">operator<span class="sy2">-</span></span></span> 的一部分。
+</li><li> <a href="operator_arithmetic.html#.E5.8A.A0.E6.80.A7.E8.BF.90.E7.AE.97.E7.AC.A6" title="cpp/language/operator arithmetic">二元减运算符</a>；<a href="operators.html" title="cpp/language/operators">运算符重载</a>中 <span class="t-c"><span class="mw-geshi cpp source-cpp">operator<span class="sy2">-</span></span></span> 的一部分。
+</li></ul>
+<h3><span class="mw-headline" id=".2A"> <code>*</code> </span></h3>
+<ul><li> <a href="operator_member_access.html#.E5.86.85.E5.BB.BA.E7.9A.84.E9.97.B4.E6.8E.A5.E8.BF.90.E7.AE.97.E7.AC.A6" title="cpp/language/operator member access">间接运算符</a>；<a href="operators.html" title="cpp/language/operators">运算符重载</a>中 <span class="t-c"><span class="mw-geshi cpp source-cpp">operator<span class="sy2">*</span></span></span> 的一部分。
+</li><li> <a href="operator_arithmetic.html#.E4.B9.98.E6.80.A7.E8.BF.90.E7.AE.97.E7.AC.A6" title="cpp/language/operator arithmetic">乘运算符</a>；<a href="operators.html" title="cpp/language/operators">运算符重载</a>中 <span class="t-c"><span class="mw-geshi cpp source-cpp">operator<span class="sy2">*</span></span></span> 的一部分。
+</li><li> <a href="declarations.html#.E5.A3.B0.E6.98.8E.E7.AC.A6" title="cpp/language/declarations">声明符</a>中或<a href="incomplete_type.html#.E7.B1.BB.E5.9E.8B.E7.9A.84.E5.91.BD.E5.90.8D" title="cpp/language/type">类型标识</a>中的指针运算符或成员指针运算符
+</li><li> <a href="lambda.html#Lambda_.E6.8D.95.E8.8E.B7" title="cpp/language/lambda">Lambda 捕获</a>列表中 <span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="sy2">*</span>this</span></span> 的一部分，以按复制捕获当前对象。<span class="t-mark-rev t-since-cxx17">(C++17 起)</span>
+</li></ul>
+<h3><span class="mw-headline" id=".2F"> <code>/</code> </span></h3>
+<ul><li> <a href="operator_arithmetic.html#.E4.B9.98.E6.80.A7.E8.BF.90.E7.AE.97.E7.AC.A6" title="cpp/language/operator arithmetic">除运算符</a>；<a href="operators.html" title="cpp/language/operators">运算符重载</a>中 <span class="t-c"><span class="mw-geshi cpp source-cpp">operator<span class="sy2">/</span></span></span> 的一部分。
+</li></ul>
+<h3><span class="mw-headline" id=".25"> <code>%</code> </span></h3>
+<ul><li> <a href="operator_arithmetic.html#.E4.B9.98.E6.80.A7.E8.BF.90.E7.AE.97.E7.AC.A6" title="cpp/language/operator arithmetic">模运算符</a>；<a href="operators.html" title="cpp/language/operators">运算符重载</a>中 <span class="t-c"><span class="mw-geshi cpp source-cpp">operator<span class="sy2">%</span></span></span> 的一部分.
+</li></ul>
+<h3><span class="mw-headline" id=".5E"> <code>^</code> </span></h3>
+<ul><li> <a href="operator_arithmetic.html#.E9.80.90.E4.BD.8D.E9.80.BB.E8.BE.91.E8.BF.90.E7.AE.97.E7.AC.A6" title="cpp/language/operator arithmetic">逐位异或运算符</a>；<a href="operators.html" title="cpp/language/operators">运算符重载</a>中 <span class="t-c"><span class="mw-geshi cpp source-cpp">operator<span class="sy3">^</span></span></span> 。
+</li></ul>
+<h3><span class="mw-headline" id=".26"> <code>&amp;</code> </span></h3>
+<ul><li> <a href="operator_member_access.html#.E5.86.85.E5.BB.BA.E7.9A.84.E5.8F.96.E5.9C.B0.E5.9D.80.E8.BF.90.E7.AE.97.E7.AC.A6" title="cpp/language/operator member access">取地址运算符</a>；<a href="operators.html#.E7.BD.95.E6.9C.89.E9.87.8D.E8.BD.BD.E7.9A.84.E8.BF.90.E7.AE.97.E7.AC.A6" title="cpp/language/operators">运算符重载</a>中 <span class="t-c"><span class="mw-geshi cpp source-cpp">operator<span class="sy3">&amp;</span></span></span> 的一部分。
+</li><li> <a href="operator_arithmetic.html#.E9.80.90.E4.BD.8D.E9.80.BB.E8.BE.91.E8.BF.90.E7.AE.97.E7.AC.A6" title="cpp/language/operator arithmetic">逐位与运算符</a>；<a href="operators.html" title="cpp/language/operators">运算符重载</a>中 <span class="t-c"><span class="mw-geshi cpp source-cpp">operator<span class="sy3">&amp;</span></span></span> 的一部分。
+</li><li> <a href="declarations.html#.E5.A3.B0.E6.98.8E.E7.AC.A6" title="cpp/language/declarations">声明符</a>中或<a href="incomplete_type.html#.E7.B1.BB.E5.9E.8B.E7.9A.84.E5.91.BD.E5.90.8D" title="cpp/language/type">类型标识</a>中的左值引用运算符。
+</li><li> 在 <a href="lambda.html#Lambda_.E6.8D.95.E8.8E.B7" title="cpp/language/lambda">lambda 捕获</a>中指示按引用捕获。<span class="t-mark-rev t-since-cxx11">(C++11 起)</span>
+</li><li> <a href="member_functions.html" title="cpp/language/member functions">成员函数声明</a>中的<a href="member_functions.html#.E5.BC.95.E7.94.A8.E9.99.90.E5.AE.9A.E7.9A.84.E6.88.90.E5.91.98.E5.87.BD.E6.95.B0" title="cpp/language/member functions">引用限定符</a>。<span class="t-mark-rev t-since-cxx11">(C++11 起)</span>
+</li></ul>
+<h3><span class="mw-headline" id=".7C"> <code>|</code> </span></h3>
+<ul><li> <a href="operator_arithmetic.html#.E9.80.90.E4.BD.8D.E9.80.BB.E8.BE.91.E8.BF.90.E7.AE.97.E7.AC.A6" title="cpp/language/operator arithmetic">逐位或运算符</a>；<a href="operators.html" title="cpp/language/operators">运算符重载</a>中 <span class="t-c"><span class="mw-geshi cpp source-cpp">operator<span class="sy3">|</span></span></span> 的一部分。
+</li></ul>
+<h3><span class="mw-headline" id=".3D"> <code>=</code> </span></h3>
+<ul><li> <a href="operator_assignment.html" title="cpp/language/operator assignment">简单赋值运算符</a>；<a href="operators.html#.E8.B5.8B.E5.80.BC.E8.BF.90.E7.AE.97.E7.AC.A6" title="cpp/language/operators">运算符重载</a>中 <span class="t-c"><span class="mw-geshi cpp source-cpp">operator<span class="sy1">=</span></span></span> 的一部分，它可能是特殊成员函数（<a href="copy_assignment.html" title="cpp/language/copy assignment">复制赋值运算符</a><span class="t-rev-inl t-since-cxx11"><span>或<a href="move_assignment.html" title="cpp/language/move assignment">移动赋值运算符</a></span> <span><span class="t-mark-rev t-since-cxx11">(C++11 起)</span></span></span>）。
+</li><li> 在<a href="initialization.html" title="cpp/language/initialization">初始化</a>中指示<a href="copy_initialization.html" title="cpp/language/copy initialization">复制初始化</a><span class="t-rev-inl t-since-cxx11"><span>或<a href="list_initialization.html" title="cpp/language/list initialization">复制列表初始化</a></span> <span><span class="t-mark-rev t-since-cxx11">(C++11 起)</span></span></span>。
+</li><li> 在<a href="function.html" title="cpp/language/function">函数声明</a>中引入<a href="default_arguments.html" title="cpp/language/default arguments">默认实参</a>。
+</li><li> 在<a href="template_parameters.html" title="cpp/language/template parameters">模板形参列表</a>中引入<a href="template_parameters.html#.E9.BB.98.E8.AE.A4.E6.A8.A1.E6.9D.BF.E5.AE.9E.E5.8F.82" title="cpp/language/template parameters">默认模板实参</a>。
+</li><li> 在<a href="namespace_alias.html" title="cpp/language/namespace alias">命名空间别名定义</a>中分隔别名与别名指代的命名空间。
+</li><li> 在<a href="enum.html" title="cpp/language/enum">枚举定义</a>中引入枚举项的值。
+</li><li> <a href="abstract_class.html" title="cpp/language/abstract class">纯虚函数声明</a>中纯说明符的一部分。
+</li><li> <a href="lambda.html#Lambda_.E6.8D.95.E8.8E.B7" title="cpp/language/lambda">lambda 捕获</a>中的捕获预置符，指示按复制捕获。<span class="t-mark-rev t-since-cxx11">(C++11 起)</span>
+</li><li> <a href="function.html#.E5.87.BD.E6.95.B0.E5.AE.9A.E4.B9.89" title="cpp/language/function">函数定义</a>中的预置定义（<span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="sy1">=</span><span class="kw1">default</span><span class="sy4">;</span></span></span>）或被删除定义（<span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="sy1">=</span>delete<span class="sy4">;</span></span></span>）。<span class="t-mark-rev t-since-cxx11">(C++11 起)</span>
+</li><li> 在<a href="type_alias.html" title="cpp/language/type alias">类型别名声明</a>中分隔别名与别名指代的类型。<span class="t-mark-rev t-since-cxx11">(C++11 起)</span>
+</li><li> 在<a href="constraints.html" title="cpp/language/constraints">概念定义</a>中分隔概念名与约束表达式。<span class="t-mark-rev t-since-cxx20">(C++20 起)</span>
+</li></ul>
+<h3><span class="mw-headline" id=".2B.3D"> <code>+=</code> </span></h3>
+<ul><li> <a href="operator_assignment.html" title="cpp/language/operator assignment">复合赋值运算符</a>；<a href="operators.html" title="cpp/language/operators">运算符重载</a>中 <span class="t-c"><span class="mw-geshi cpp source-cpp">operator<span class="sy2">+</span><span class="sy1">=</span></span></span> 的一部分。
+</li></ul>
+<h3><span class="mw-headline" id="-.3D"> <code>-=</code> </span></h3>
+<ul><li> <a href="operator_assignment.html" title="cpp/language/operator assignment">复合赋值运算符</a>；<a href="operators.html" title="cpp/language/operators">运算符重载</a>中 <span class="t-c"><span class="mw-geshi cpp source-cpp">operator<span class="sy2">-</span><span class="sy1">=</span></span></span> 的一部分。
+</li></ul>
+<h3><span class="mw-headline" id=".2A.3D"> <code>*=</code> </span></h3>
+<ul><li> <a href="operator_assignment.html" title="cpp/language/operator assignment">复合赋值运算符</a>；<a href="operators.html" title="cpp/language/operators">运算符重载</a>中 <span class="t-c"><span class="mw-geshi cpp source-cpp">operator<span class="sy2">*</span><span class="sy1">=</span></span></span> 的一部分。
+</li></ul>
+<h3><span class="mw-headline" id=".2F.3D"> <code>/=</code> </span></h3>
+<ul><li> <a href="operator_assignment.html" title="cpp/language/operator assignment">复合赋值运算符</a>；<a href="operators.html" title="cpp/language/operators">运算符重载</a>中 <span class="t-c"><span class="mw-geshi cpp source-cpp">operator<span class="sy2">/</span><span class="sy1">=</span></span></span> 的一部分。
+</li></ul>
+<h3><span class="mw-headline" id=".25.3D"> <code>%=</code> </span></h3>
+<ul><li> <a href="operator_assignment.html" title="cpp/language/operator assignment">复合赋值运算符</a>；<a href="operators.html" title="cpp/language/operators">运算符重载</a>中 <span class="t-c"><span class="mw-geshi cpp source-cpp">operator<span class="sy2">%</span><span class="sy1">=</span></span></span> 的一部分。
+</li></ul>
+<h3><span class="mw-headline" id=".5E.3D"> <code>^=</code> </span></h3>
+<ul><li> <a href="operator_assignment.html" title="cpp/language/operator assignment">复合赋值运算符</a>；<a href="operators.html" title="cpp/language/operators">运算符重载</a>中 <span class="t-c"><span class="mw-geshi cpp source-cpp">operator<span class="sy3">^</span><span class="sy1">=</span></span></span> 的一部分。
+</li></ul>
+<h3><span class="mw-headline" id=".26.3D"> <code>&amp;=</code> </span></h3>
+<ul><li> <a href="operator_assignment.html" title="cpp/language/operator assignment">复合赋值运算符</a>；<a href="operators.html" title="cpp/language/operators">运算符重载</a>中 <span class="t-c"><span class="mw-geshi cpp source-cpp">operator<span class="sy3">&amp;</span><span class="sy1">=</span></span></span> 的一部分。
+</li></ul>
+<h3><span class="mw-headline" id=".7C.3D"> <code>|=</code> </span></h3>
+<ul><li> <a href="operator_assignment.html" title="cpp/language/operator assignment">复合赋值运算符</a>；<a href="operators.html" title="cpp/language/operators">运算符重载</a>中 <span class="t-c"><span class="mw-geshi cpp source-cpp">operator<span class="sy3">|</span><span class="sy1">=</span></span></span> 的一部分。
+</li></ul>
+<h3><span class="mw-headline" id=".3D.3D"> <code>==</code> </span></h3>
+<ul><li> <a href="operator_comparison.html" title="cpp/language/operator comparison">相等运算符</a>；<a href="operators.html#.E6.AF.94.E8.BE.83.E8.BF.90.E7.AE.97.E7.AC.A6" title="cpp/language/operators">运算符重载</a>中 <span class="t-c"><span class="mw-geshi cpp source-cpp">operator<span class="sy1">==</span></span></span> 的一部分。
+</li></ul>
+<h3><span class="mw-headline" id=".21.3D"> <code>!=</code> </span></h3>
+<ul><li> <a href="operator_comparison.html" title="cpp/language/operator comparison">不相等运算符</a>；<a href="operators.html#.E6.AF.94.E8.BE.83.E8.BF.90.E7.AE.97.E7.AC.A6" title="cpp/language/operators">运算符重载</a>中 <span class="t-c"><span class="mw-geshi cpp source-cpp">operator<span class="sy3">!</span><span class="sy1">=</span></span></span> 的一部分。
+</li></ul>
+<h3><span class="mw-headline" id=".3C"> <code>&lt;</code> </span></h3>
+<ul><li> <a href="operator_comparison.html" title="cpp/language/operator comparison">小于运算符</a>；<a href="operators.html#.E6.AF.94.E8.BE.83.E8.BF.90.E7.AE.97.E7.AC.A6" title="cpp/language/operators">运算符重载</a>中 <span class="t-c"><span class="mw-geshi cpp source-cpp">operator<span class="sy1">&lt;</span></span></span> 的一部分。
+</li><li> 在 <a href="static_cast.html" title="cpp/language/static cast"><code>static_cast</code></a>、 <a href="const_cast.html" title="cpp/language/const cast"><code>const_cast</code></a>、 <a href="reinterpret_cast.html" title="cpp/language/reinterpret cast"><code>reinterpret_cast</code></a> 或 <a href="dynamic_cast.html" title="cpp/language/dynamic cast"><code>dynamic_cast</code></a> 中引入类型标识。
+</li><li> 引入<a href="template_parameters.html#.E6.A8.A1.E6.9D.BF.E5.AE.9E.E5.8F.82" title="cpp/language/template parameters">模板实参列表</a>。
+</li><li> 在以下构造中引入<a href="template_parameters.html" title="cpp/language/template parameters">模板形参列表</a>
+</li></ul>
+<dl><dd><ul><li> <a href="templates.html" title="cpp/language/templates">模板声明</a>
+</li><li> <a href="partial_specialization.html" title="cpp/language/partial specialization">部分特化</a>
+</li><li> <a href="lambda.html" title="cpp/language/lambda">lambda 表达式</a><span class="t-mark-rev t-since-cxx20">(C++20 起)</span>
+</li></ul>
+</dd></dl>
+<ul><li> <a href="template_specialization.html" title="cpp/language/template specialization">模板特化声明</a>中 <span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="kw1">template</span><span class="sy1">&lt;&gt;</span></span></span> 的一部分。
+</li><li> 指示下列构造中的头文件名
+</li></ul>
+<dl><dd><ul><li> <a href="../preprocessor/include.html" title="cpp/preprocessor/include"><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="co2">#include</span></span></span> 指令</a>
+</li><li> <a href="../preprocessor/include.html" title="cpp/preprocessor/include"><span class="t-c"><span class="mw-geshi cpp source-cpp">__has_include</span></span> 预处理表达式</a><span class="t-mark-rev t-since-cxx17">(C++17 起)</span>
+</li><li> <a href="modules.html" title="cpp/language/modules"><span class="t-c"><span class="mw-geshi cpp source-cpp">import</span></span> 声明</a><span class="t-mark-rev t-since-cxx20">(C++20 起)</span>
+</li></ul>
+</dd></dl>
+<h3><span class="mw-headline" id=".3E"> <code>&gt;</code> </span></h3>
+<ul><li> <a href="operator_comparison.html" title="cpp/language/operator comparison">大于运算符</a>；<a href="operators.html#.E6.AF.94.E8.BE.83.E8.BF.90.E7.AE.97.E7.AC.A6" title="cpp/language/operators">运算符重载</a>中 <span class="t-c"><span class="mw-geshi cpp source-cpp">operator<span class="sy1">&gt;</span></span></span> 的一部分。
+</li><li> 在 <a href="static_cast.html" title="cpp/language/static cast"><code>static_cast</code></a>、 <a href="const_cast.html" title="cpp/language/const cast"><code>const_cast</code></a>、 <a href="reinterpret_cast.html" title="cpp/language/reinterpret cast"><code>reinterpret_cast</code></a> 或 <a href="dynamic_cast.html" title="cpp/language/dynamic cast"><code>dynamic_cast</code></a> 中指示类型标识的末尾。
+</li><li> 指示<a href="template_parameters.html#.E6.A8.A1.E6.9D.BF.E5.AE.9E.E5.8F.82" title="cpp/language/template parameters">模板实参列表</a>的末尾。
+</li><li> 在以下构造中指示<a href="template_parameters.html" title="cpp/language/template parameters">模板形参列表</a>的末尾
+</li></ul>
+<dl><dd><ul><li> <a href="templates.html" title="cpp/language/templates">模板声明</a>
+</li><li> <a href="partial_specialization.html" title="cpp/language/partial specialization">部分特化</a>
+</li><li> <a href="lambda.html" title="cpp/language/lambda">lambda 表达式</a><span class="t-mark-rev t-since-cxx20">(C++20 起)</span>
+</li></ul>
+</dd></dl>
+<ul><li> <a href="template_specialization.html" title="cpp/language/template specialization">模板特化声明</a>中 <span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="kw1">template</span><span class="sy1">&lt;&gt;</span></span></span> 的一部分。
+</li><li> 指示下列构造中头文件名的末尾
+</li></ul>
+<dl><dd><ul><li> <a href="../preprocessor/include.html" title="cpp/preprocessor/include"><span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="co2">#include</span></span></span> 指令</a>
+</li><li> <a href="../preprocessor/include.html" title="cpp/preprocessor/include"><span class="t-c"><span class="mw-geshi cpp source-cpp">__has_include</span></span> 预处理表达式</a><span class="t-mark-rev t-since-cxx17">(C++17 起)</span>
+</li><li> <a href="modules.html" title="cpp/language/modules"><span class="t-c"><span class="mw-geshi cpp source-cpp">import</span></span> 声明</a><span class="t-mark-rev t-since-cxx20">(C++20 起)</span>
+</li></ul>
+</dd></dl>
+<h3><span class="mw-headline" id=".3C.3D"> <code>&lt;=</code> </span></h3>
+<ul><li> <a href="operator_comparison.html" title="cpp/language/operator comparison">小于或等于运算符</a>；<a href="operators.html#.E6.AF.94.E8.BE.83.E8.BF.90.E7.AE.97.E7.AC.A6" title="cpp/language/operators">运算符重载</a>中 <span class="t-c"><span class="mw-geshi cpp source-cpp">operator<span class="sy1">&lt;=</span></span></span> 的一部分。
+</li></ul>
+<h3><span class="mw-headline" id=".3E.3D"> <code>&gt;=</code> </span></h3>
+<ul><li> <a href="operator_comparison.html" title="cpp/language/operator comparison">大于或等于运算符</a>；<a href="operators.html#.E6.AF.94.E8.BE.83.E8.BF.90.E7.AE.97.E7.AC.A6" title="cpp/language/operators">运算符重载</a>中 <span class="t-c"><span class="mw-geshi cpp source-cpp">operator<span class="sy1">&gt;=</span></span></span> 的一部分。
+</li></ul>
+<p><br>
+</p>
+<h3><span class="mw-headline" id=".3C.3D.3E_.28C.2B.2B20_.E8.B5.B7.29"> <code>&lt;=&gt;</code> <span class="t-mark-rev t-since-cxx20">(C++20 起)</span> </span></h3>
+<ul><li> <a href="operator_comparison.html#.E4.B8.89.E8.B7.AF.E6.AF.94.E8.BE.83" title="cpp/language/operator comparison">三路比较（飞船）运算符</a>；<a href="operators.html#.E6.AF.94.E8.BE.83.E8.BF.90.E7.AE.97.E7.AC.A6" title="cpp/language/operators">运算符重载</a>中 <span class="t-c"><span class="mw-geshi cpp source-cpp">operator<span class="sy1">&lt;=&gt;</span></span></span> 的一部分。
+</li></ul>
+<h3><span class="mw-headline" id=".26.26"> <code>&amp;&amp;</code> </span></h3>
+<ul><li> <a href="operator_logical.html" title="cpp/language/operator logical">逻辑与运算符</a>；<a href="operators.html#.E7.BD.95.E6.9C.89.E9.87.8D.E8.BD.BD.E7.9A.84.E8.BF.90.E7.AE.97.E7.AC.A6" title="cpp/language/operators">运算符重载</a>中 <span class="t-c"><span class="mw-geshi cpp source-cpp">operator<span class="sy3">&amp;&amp;</span></span></span> 的一部分。
+</li><li> <a href="declarations.html#.E5.A3.B0.E6.98.8E.E7.AC.A6" title="cpp/language/declarations">声明符</a>中或<a href="incomplete_type.html#.E7.B1.BB.E5.9E.8B.E7.9A.84.E5.91.BD.E5.90.8D" title="cpp/language/type">类型标识</a>中的右值引用运算符。<span class="t-mark-rev t-since-cxx11">(C++11 起)</span>
+</li><li> <a href="member_functions.html" title="cpp/language/member functions">成员函数声明</a>中的<a href="member_functions.html#.E5.BC.95.E7.94.A8.E9.99.90.E5.AE.9A.E7.9A.84.E6.88.90.E5.91.98.E5.87.BD.E6.95.B0" title="cpp/language/member functions">引用限定符</a>。<span class="t-mark-rev t-since-cxx11">(C++11 起)</span>
+</li></ul>
+<h3><span class="mw-headline" id=".7C.7C"> <code>||</code> </span></h3>
+<ul><li> <a href="operator_logical.html" title="cpp/language/operator logical">逻辑或运算符</a>；<a href="operators.html#.E7.BD.95.E6.9C.89.E9.87.8D.E8.BD.BD.E7.9A.84.E8.BF.90.E7.AE.97.E7.AC.A6" title="cpp/language/operators">运算符重载</a>中 <span class="t-c"><span class="mw-geshi cpp source-cpp">operator<span class="sy3">||</span></span></span> 的一部分。
+</li></ul>
+<h3><span class="mw-headline" id=".3C.3C"> <code>&lt;&lt;</code> </span></h3>
+<ul><li> <a href="operator_arithmetic.html#.E7.A7.BB.E4.BD.8D.E8.BF.90.E7.AE.97.E7.AC.A6" title="cpp/language/operator arithmetic">移位运算符</a>；运算符重载（<a href="operators.html#.E9.80.90.E4.BD.8D.E7.AE.97.E6.9C.AF.E8.BF.90.E7.AE.97.E7.AC.A6" title="cpp/language/operators">诸位运算符</a>或<a href="operators.html#.E6.B5.81.E7.9A.84.E6.8F.90.E5.8F.96.E4.B8.8E.E6.8F.92.E5.85.A5" title="cpp/language/operators">流插入运算符</a>）中 <span class="t-c"><span class="mw-geshi cpp source-cpp">operator<span class="sy1">&lt;&lt;</span></span></span> 的一部分。
+</li></ul>
+<h3><span class="mw-headline" id=".3E.3E"> <code>&gt;&gt;</code> </span></h3>
+<ul><li> <a href="operator_arithmetic.html#.E7.A7.BB.E4.BD.8D.E8.BF.90.E7.AE.97.E7.AC.A6" title="cpp/language/operator arithmetic">移位运算符</a>；运算符重载（<a href="operators.html#.E9.80.90.E4.BD.8D.E7.AE.97.E6.9C.AF.E8.BF.90.E7.AE.97.E7.AC.A6" title="cpp/language/operators">诸位运算符</a>或<a href="operators.html#.E6.B5.81.E7.9A.84.E6.8F.90.E5.8F.96.E4.B8.8E.E6.8F.92.E5.85.A5" title="cpp/language/operators">流提取运算符</a>）中 <span class="t-c"><span class="mw-geshi cpp source-cpp">operator<span class="sy1">&gt;&gt;</span></span></span> 的一部分。
+</li><li> 在 <a href="static_cast.html" title="cpp/language/static cast"><code>static_cast</code></a>、 <a href="const_cast.html" title="cpp/language/const cast"><code>const_cast</code></a>、 <a href="reinterpret_cast.html" title="cpp/language/reinterpret cast"><code>reinterpret_cast</code></a> 或 <a href="dynamic_cast.html" title="cpp/language/dynamic cast"><code>dynamic_cast</code></a>、<a href="template_parameters.html#.E6.A8.A1.E6.9D.BF.E5.AE.9E.E5.8F.82" title="cpp/language/template parameters">模板实参列表</a>或<a href="template_parameters.html" title="cpp/language/template parameters">模板形参列表</a>中能被重新分析成两个 <span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="sy1">&gt;</span></span></span> 。<span class="t-mark-rev t-since-cxx11">(C++11 起)</span>
+</li></ul>
+<h3><span class="mw-headline" id=".3C.3C.3D"> <code>&lt;&lt;=</code> </span></h3>
+<ul><li> <a href="operator_assignment.html" title="cpp/language/operator assignment">复合赋值运算符</a>；<a href="operators.html" title="cpp/language/operators">运算符重载</a>中 <span class="t-c"><span class="mw-geshi cpp source-cpp">operator<span class="sy1">&lt;&lt;=</span></span></span> 的一部分。
+</li></ul>
+<h3><span class="mw-headline" id=".3E.3E.3D"> <code>&gt;&gt;=</code> </span></h3>
+<ul><li> <a href="operator_assignment.html" title="cpp/language/operator assignment">复合赋值运算符</a>；<a href="operators.html" title="cpp/language/operators">运算符重载</a>中 <span class="t-c"><span class="mw-geshi cpp source-cpp">operator<span class="sy1">&gt;&gt;=</span></span></span> 的一部分。
+</li></ul>
+<h3><span class="mw-headline" id=".2B.2B"> <code>++</code> </span></h3>
+<ul><li> <a href="operator_incdec.html" title="cpp/language/operator incdec">自增运算符</a>；<a href="operators.html" title="cpp/language/operators">运算符重载</a>中 <span class="t-c"><span class="mw-geshi cpp source-cpp">operator<span class="sy2">++</span></span></span> 的一部分。
+</li></ul>
+<h3><span class="mw-headline" id="--"> <code>--</code> </span></h3>
+<ul><li> <a href="operator_incdec.html" title="cpp/language/operator incdec">自减运算符</a>；<a href="operators.html" title="cpp/language/operators">运算符重载</a>中 <span class="t-c"><span class="mw-geshi cpp source-cpp">operator<span class="sy2">--</span></span></span> 的一部分。
+</li></ul>
+<h3><span class="mw-headline" id=".2C"> <code>,</code> </span></h3>
+<ul><li> <a href="operator_other.html#.E5.86.85.E5.BB.BA.E7.9A.84.E9.80.97.E5.8F.B7.E8.BF.90.E7.AE.97.E7.AC.A6" title="cpp/language/operator other">逗号运算符</a>；<a href="operators.html#.E7.BD.95.E6.9C.89.E9.87.8D.E8.BD.BD.E7.9A.84.E8.BF.90.E7.AE.97.E7.AC.A6" title="cpp/language/operators">运算符重载</a>中 <span class="t-c"><span class="mw-geshi cpp source-cpp">operator,</span></span> 的一部分。
+</li><li> 下列构造中的列表分隔符
+</li></ul>
+<dl><dd><ul><li> <a href="declarations.html" title="cpp/language/declarations">声明</a>中的声明符列表
+</li><li> <a href="initialization.html" title="cpp/language/initialization">初始化</a>中的初始化器列表
+</li><li> <a href="new.html" title="cpp/language/new">布置 new</a> 中的布置实参列表
+</li><li> <a href="operator_other.html#.E5.87.BD.E6.95.B0.E8.B0.83.E7.94.A8.E8.BF.90.E7.AE.97.E7.AC.A6" title="cpp/language/operator other">函数调用表达式</a>中的实参列表
+</li><li> <a href="operator_member_access.html#.E5.86.85.E5.BB.BA.E7.9A.84.E4.B8.8B.E6.A0.87.E8.BF.90.E7.AE.97.E7.AC.A6" title="cpp/language/operator member access">多实参下标表达式</a>中的实参列表<span class="t-mark-rev t-since-cxx23">(C++23 起)</span>
+</li><li> <a href="enum.html" title="cpp/language/enum">枚举</a>声明中的枚举项列表
+</li><li> <a href="class.html" title="cpp/language/class">类</a>声明中的<a href="derived_class.html" title="cpp/language/derived class">基类</a>列表
+</li><li> <a href="initializer_list.html" title="cpp/language/constructor">构造函数</a>定义中的成员初始化器列表
+</li><li> <a href="function.html#.E5.BD.A2.E5.8F.82.E5.88.97.E8.A1.A8" title="cpp/language/function">函数形参列表</a>
+</li><li> <a href="template_parameters.html" title="cpp/language/template parameters">模板形参列表</a>
+</li><li> <a href="template_parameters.html#.E6.A8.A1.E6.9D.BF.E5.AE.9E.E5.8F.82" title="cpp/language/template parameters">模板实参列表</a>
+</li><li> <a href="../preprocessor/replace.html" title="cpp/preprocessor/replace">仿函数宏定义</a>中的宏形参列表
+</li><li> <a href="lambda.html#Lambda_.E6.8D.95.E8.8E.B7" title="cpp/language/lambda">lambda 捕获</a>列表<span class="t-mark-rev t-since-cxx11">(C++11 起)</span>
+</li><li> <a href="attributes.html" title="cpp/language/attributes">属性</a>列表<span class="t-mark-rev t-since-cxx11">(C++11 起)</span>
+</li><li> <a href="namespace.html#using_.E5.A3.B0.E6.98.8E" title="cpp/language/namespace">using 声明</a> 中的声明符列表<span class="t-mark-rev t-since-cxx17">(C++17 起)</span>
+</li><li> <a href="structured_binding.html" title="cpp/language/structured binding">结构化绑定</a>声明中的标识符列表<span class="t-mark-rev t-since-cxx17">(C++17 起)</span>
+</li></ul>
+</dd></dl>
+<ul><li> 在 <a href="static_assert.html" title="cpp/language/static assert"><code>static_assert</code></a> 声明中分隔参数。<span class="t-mark-rev t-since-cxx11">(C++11 起)</span>
+</li></ul>
+<h3><span class="mw-headline" id=".E5.BC.95.E7.94.A8">引用</span></h3>
+<div class="t-ref-std-c++20">
+<ul><li> C++20 标准（ISO/IEC 14882:2020）：
+</li></ul>
+<dl><dd><ul><li> 5.12 Operators and punctuators [lex.operators]
+</li></ul>
+</dd></dl>
+</div>
+<div class="t-ref-std-c++17">
+<ul><li> C++17 标准（ISO/IEC 14882:2017）：
+</li></ul>
+<dl><dd><ul><li> 5.12 Operators and punctuators [lex.operators]
+</li></ul>
+</dd></dl>
+</div>
+<div class="t-ref-std-c++14">
+<ul><li> C++14 标准（ISO/IEC 14882:2014）：
+</li></ul>
+<dl><dd><ul><li> 2.13 Operators and punctuators [lex.operators]
+</li></ul>
+</dd></dl>
+</div>
+<div class="t-ref-std-c++11">
+<ul><li> C++11 标准（ISO/IEC 14882:2011）：
+</li></ul>
+<dl><dd><ul><li> 2.13 Operators and punctuators [lex.operators]
+</li></ul>
+</dd></dl>
+</div>
+<div class="t-ref-std-c++03">
+<ul><li> C++03 标准（ISO/IEC 14882:2003）：
+</li></ul>
+<dl><dd><ul><li> 2.12 Operators and punctuators [lex.operators]
+</li></ul>
+</dd></dl>
+</div>
+<div class="t-ref-std-c++98">
+<ul><li> C++98 标准（ISO/IEC 14882:1998）：
+</li></ul>
+<dl><dd><ul><li> 2.12 Operators and punctuators [lex.operators]
+</li></ul>
+</dd></dl>
+</div>
+<h3><span class="mw-headline" id=".E5.8F.82.E9.98.85">参阅</span></h3>
+<table class="t-dsc-begin">
+
+<tr class="t-dsc">
+<td>  <a href="operator_alternative.html" title="cpp/language/operator alternative">替用表示</a>
+</td>
+<td> 某些运算符的替用拼写</td></tr>
+
+</table>
+
+<!-- 
+NewPP limit report
+Preprocessor visited node count: 8219/1000000
+Preprocessor generated node count: 14819/1000000
+Post‐expand include size: 81520/2097152 bytes
+Template argument size: 23998/2097152 bytes
+Highest expansion depth: 13/40
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key mwiki1-mwiki_zh_:pcache:idhash:13923-0!*!0!!zh!*!zh!* and timestamp 20211216193240 -->
+</div>                    <!-- /bodycontent -->
+                                        <!-- printfooter -->
+                    <div class="printfooter">
+                    来自“<a href="https://zh.cppreference.com/mwiki/index.php?title=cpp/language/punctuators&amp;oldid=73216">https://zh.cppreference.com/mwiki/index.php?title=cpp/language/punctuators&amp;oldid=73216</a>”                    </div>
+                    <!-- /printfooter -->
+                                                            <!-- catlinks -->
+                    <!-- /catlinks -->
+                                                            <div class="visualClear"></div>
+                    <!-- debughtml -->
+                                        <!-- /debughtml -->
+                </div>
+                <!-- /bodyContent -->
+            </div>
+        </div>
+        <!-- /content -->
+        <!-- footer -->
+        <div id="cpp-footer-base" class="noprint">
+            <div id="footer">
+                        <div id="cpp-navigation">
+            <h5>导航</h5>
+            <ul><li><a href="https://zh.cppreference.com/w/cpp/language/punctuators">Online version</a></li><li>Offline version retrieved 2022-01-01 00:37.</li></ul></div>
+                        <ul id="footer-info">
+                                    <li id="footer-info-lastmod"> 本页面最后修改于2021年12月13日 (星期一) 18:53。</li>
+                                    <li id="footer-info-viewcount">此页面已被浏览过57次。</li>
+                            </ul>
+                    </div>
+        </div>
+        <!-- /footer -->
+        <script>if(window.mw){
+mw.loader.state({"site":"loading","user":"missing","user.groups":"ready"});
+}</script>
+<script src="../../../common/skin_scripts.js"></script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.action.view.postEdit","mediawiki.user","mediawiki.page.ready","mediawiki.searchSuggest","mediawiki.hidpi","ext.gadget.MathJax","ext.gadget.ColiruCompiler"], null, true);
+}</script>
+<script src="../../../common/site_scripts.js"></script>
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-2828341-1']);
+_gaq.push(['_setDomainName', 'cppreference.com']);
+_gaq.push(['_trackPageview']);
+</script><!-- Served in 3.482 secs. -->
+	</body>
+<!-- Cached 20211216193240 -->
+</html>
