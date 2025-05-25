@@ -2,13 +2,9 @@
 .venv/
 
 # 配置相关
-.vscode/
-.idea/
 .env
 
 # 杂项
-*.exe
-
-# 缓存
+build/*
 __pycache__/
-build/main.exe
+
