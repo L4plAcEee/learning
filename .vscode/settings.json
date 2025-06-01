@@ -107,8 +107,8 @@
     // $fileName
     // $fileNameWithoutExt
     "code-runner.executorMap": {
-        "haskell": "ghc -outputdir build -o build/$fileNameWithoutExt $fileName && build\\$fileNameWithoutExt",
-        "cpp": "& $workspaceRoot\\scripts\\run_cpp.bat \"$fileName\""
+        "haskell": "& \"$workspaceRoot\\scripts\\run_haskell.bat\" \"$fullFileName\"",
+        "cpp": "& $workspaceRoot\\scripts\\run_cpp.bat \"$fullFileName\""
     },
     // 在集成终端里运行，而不是输出面板
     "code-runner.runInTerminal": true,

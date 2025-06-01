@@ -5,8 +5,10 @@
 .env
 
 # 杂项
-build/*
+build/
 __pycache__/
 
 *.exe
+*.o
+*.hi
 
