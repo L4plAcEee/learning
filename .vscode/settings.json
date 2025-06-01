@@ -98,5 +98,15 @@
         "typeinfo": "cpp",
         "valarray": "cpp",
         "variant": "cpp"
-    }
+    },  
+    "code-runner.executorMap": {
+        "haskell": "ghc -outputdir build -o build/$fileNameWithoutExt $fileName && build\\$fileNameWithoutExt",
+        "cpp": "powershell -ExecutionPolicy Bypass -File \"${workspaceFolder}/build_and_run.ps1\" \"${file}\""
+    },
+    // 在集成终端里运行，而不是输出面板
+    "code-runner.runInTerminal": true,
+    // 让工作目录始终是当前文件夹
+    "code-runner.fileDirectoryAsCwd": true,
+    // 每次运行前清除上一次输出
+    "code-runner.clearPreviousOutput": true
 }
