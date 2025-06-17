@@ -1,4 +1,5 @@
 @echo off
+chcp 65001
 
 REM 1. 获取第一个参数：要编译的 CPP 文件绝对路径
 set "CPP_FILE=%~1"

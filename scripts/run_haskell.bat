@@ -1,4 +1,5 @@
 @echo off
+chcp 65001
 
 REM 1. 获取第一个参数：要编译的 Haskell 文件绝对路径
 set "HS_FILE=%~1"
