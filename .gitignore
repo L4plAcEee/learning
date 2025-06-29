@@ -3,6 +3,8 @@
 
 # 配置相关
 .env
+.idea/
+.vscode/
 
 # 杂项
 build/
